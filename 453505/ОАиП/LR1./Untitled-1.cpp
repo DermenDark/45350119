@@ -1,6 +1,6 @@
 #include <iostream>
 #include <cmath> // Для функции sin
-
+//ttytyytytt
 int main() {
     double start, end, step;
 
