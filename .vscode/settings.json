@@ -59,5 +59,27 @@
   "gtest-adapter.debugConfig": [
     "C/C++ Runner: Debug Session"
   ],
-  "gtest-adapter.supportLocation": false
+  "gtest-adapter.supportLocation": false,
+  "editor.tokenColorCustomizations": {
+    "textMateRules": [
+      {
+        "scope": "googletest.failed",
+        "settings": {
+          "foreground": "#f00"
+        }
+      },
+      {
+        "scope": "googletest.passed",
+        "settings": {
+          "foreground": "#0f0"
+        }
+      },
+      {
+        "scope": "googletest.run",
+        "settings": {
+          "foreground": "#0f0"
+        }
+      }
+    ]
+  }
 }
