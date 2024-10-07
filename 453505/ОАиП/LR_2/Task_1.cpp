@@ -3,7 +3,7 @@
 int main() {
     int x=0;
     int result=0;
-    int massiv[4]={8,32,69,23};
+    int massiv[4]={8,32,69,23};//коэфициенты а,б,с
     
     std::cout << "x: ";
     std::cin >> x;
@@ -11,7 +11,7 @@ int main() {
     for(int i = 0 ; i < 4; i++ ){
         int poow = 1;
         for(int step = 0; step<i; step++){
-            poow *= x;
+            poow *= x;//расчет для разных корней
             }
         
         result = (result + massiv[i]*poow);
