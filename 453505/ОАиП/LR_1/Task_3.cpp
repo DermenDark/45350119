@@ -1,5 +1,5 @@
 #include <iostream>
-#include <cmath> // Для функции sin
+#include <cmath> // Для функции sin(x)
 
 int main() {
     int start, end, step;
