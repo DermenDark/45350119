@@ -3,7 +3,7 @@
 
 
 int main() {
-    double x,y,a,b,c,d,k,p;
+    double x,b,c,d,k,p,n,q;
 
     std::cout << "Введите значение x: ";
     std::cin >> x;
@@ -11,17 +11,20 @@ int main() {
     std::cin >> c;
     std::cout << "Введите значение d: ";
     std::cin >> d;
+    
     std::cout << "Введите значение k: ";
     std::cin >> k;
     std::cout << "Введите значение p: ";
     std::cin >> p;
+    std::cout << "Введите значение n: ";
+    std::cin >> n;
     
-    b= exp(k);
-    a= (x+sin(p*(180/3.141592)));
+    b= cos(x*(180/3.141592));
+    c= (p-n);
     
-    y= (1 + (k*k)/( 2*a*b) - b + d*c);
+    q= ((b*b)/(k*d) + b*pow(c,3));
     
-    std::cout << "Получено значение y: "<<y;
+    std::cout << "Получено значение q: "<<q;
 
     return 0;
 }
