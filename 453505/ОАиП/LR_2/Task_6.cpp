@@ -3,28 +3,28 @@
 
 
 int main() {
-    double x,b,c,d,k,p,n,q;
+    double x,y,a,b,z,k,c,d,t;
 
     std::cout << "Введите значение x: ";
     std::cin >> x;
-    std::cout << "Введите значение c: ";
-    std::cin >> c;
+    std::cout << "Введите значение y: ";
+    std::cin >> y;
+    std::cout << "Введите значение z: ";
+    std::cin >> z;
+    
     std::cout << "Введите значение d: ";
     std::cin >> d;
-    
+    std::cout << "Введите значение c: ";
+    std::cin >> c;
     std::cout << "Введите значение k: ";
     std::cin >> k;
-    std::cout << "Введите значение p: ";
-    std::cin >> p;
-    std::cout << "Введите значение n: ";
-    std::cin >> n;
     
-    b= cos(x*(180/3.141592));
-    c= (p-n);
+    a= (x*y);
+    b= sqrt(z);
     
-    q= ((b*b)/(k*d) + b*pow(c,3));
+    t= (cos(x*(180/3.141592))+ (a*a)/(k-c*d)-b);
     
-    std::cout << "Получено значение q: "<<q;
+    std::cout << "Получено значение t: "<<t;
 
     return 0;
 }
