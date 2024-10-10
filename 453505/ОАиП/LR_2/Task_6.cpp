@@ -3,21 +3,25 @@
 
 
 int main() {
-    double x,y,s,a,b,d;
+    double x,y,a,b,c,d,k,p;
 
     std::cout << "Введите значение x: ";
     std::cin >> x;
-    std::cout << "Введите значение y: ";
-    std::cin >> y;
+    std::cout << "Введите значение c: ";
+    std::cin >> c;
     std::cout << "Введите значение d: ";
     std::cin >> d;
+    std::cout << "Введите значение k: ";
+    std::cin >> k;
+    std::cout << "Введите значение p: ";
+    std::cin >> p;
     
-    b= (x+d);
-    a= ((d*x)/b);
-    s= ( (a*a + b*cos(x*(180/3.141592)) )/( pow(d,3) + (a + d - b) ) );
+    b= exp(k);
+    a= (x+sin(p*(180/3.141592)));
     
-    std::cout << "Получено значение s: "<<s;
+    y= (1 + (k*k)/( 2*a*b) - b + d*c);
+    
+    std::cout << "Получено значение y: "<<y;
 
     return 0;
 }
-
