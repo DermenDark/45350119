@@ -1,20 +1,47 @@
 #include <iostream>
 
+double pooow(double osnov,int step){
+    double res=1;
+    for(int n=0;n<step; n++){
+        res *= osnov;
+        
+    }
+    return res;
+}
+
 int main() {
-    double x,y,z;
+    double y,a,b,c;
+    int N;
 
-    std::cout << "Введите значение x: ";
-    std::cin >> x;
-    std::cout << "Введите значение y: ";
-    std::cin >> y;
-    std::cout << "Введите значение z: ";
-    std::cin >> z;
+    std::cout << "Введите значение a: ";
+    std::cin >> a;
+    std::cout << "Введите значение b: ";
+    std::cin >> b;
+    std::cout << "Введите значение c: ";
+    std::cin >> c;
+    
+    std::cout << "Введите значение N: ";
+    std::cin >> N;
 
-    if (x <y+z && y <x+z && z <y+x) {
-        std::cout << "треугольник существует! ";
+    switch ( N ) {
+    case 2:
+      y=(b*c-a*a);
+      break;
+    case 3:
+      y= (a-b*c);
+      break;
+    case 7:
+      y= (a*a +c);
+      break;
+    case 56:
+      y= b*c;
+      break;
+    default:
+      y= pooow(a+b,3);
+      break;
     }
-    else{
-        std::cout << "нет такого треугольника ";
-    }
+    
+    std::cout << "\nПолучено значение y: "<<y;
+
     return 0;
 }
