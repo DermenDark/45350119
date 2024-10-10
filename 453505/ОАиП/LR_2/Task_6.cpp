@@ -3,24 +3,31 @@
 
 
 int main() {
-    double x,y,a,c,s,k,d;
+    double x,y,a,b,c,d,p,h,k;
 
     std::cout << "Введите значение x: ";
     std::cin >> x;
-    std::cout << "Введите значение y: ";
-    std::cin >> y;
     
-    std::cout << "Введите значение c: ";
-    std::cin >> c;
+    std::cout << "Введите значение p: ";
+    std::cin >> p;
+    std::cout << "Введите значение h: ";
+    std::cin >> h;
+    
     std::cout << "Введите значение k: ";
     std::cin >> k;
+    std::cout << "Введите значение c: ";
+    std::cin >> c;
     
-    a= x+y;
-    d= fabs(c-a);
+    std::cout << "Введите значение d: ";
+    std::cin >> d;
+
     
-    s= (10,1+ a/c - d/(k*k));
+    a= x-p;
+    b= log(h);
     
-    std::cout << "Получено значение s: "<<s;
+    y= (0,78*b + pow(a,3)/(k*c*d));
+    
+    std::cout << "Получено значение y: "<<y;
 
     return 0;
 }
