@@ -1,51 +1,49 @@
 #include <iostream>
-#include <cmath>
 
-double factorial(int n) {
-    double res = 1;
-    for (int i = 1; i <= n; i++) {
-        res *= i;
-    }
-    return res;
-}
-double pooow(double osnov,int step){
-    double res=1;
-    for(int n=0;n<step; n++){
-        res *= osnov;
-        
-    }
-    return res;
-}
-double sinn(double kor){
-    double x_2;
 
-    x_2= (kor / 6.28318530716);
-    int x_3 = (kor / 6.28318530716);
+double my_sqrt(double x) {
+    if (x < 0) return -1;
+    double guess = x / 2.0;
+    for (int i = 0; i < 10; ++i) {
+        guess = (guess + x / guess) / 2.0;
+    }
+    return guess;
+}
+
+double my_cubic_root(double x) {
+    if (x < 0)
+        return -my_cubic_root(-x);
     
-    double ress = (x_2-x_3)*6.28318530716;
-
-    double res=0,prom;
-    for(int n=1; n<70;n++){
-        prom= pooow(ress,(2*n-1))/factorial(2*n-1);
-        if (n % 2 != 1) {
-            prom= -prom;
-        }
-        std::cout << "\nRes: "<< n<<"-("<<prom;
-        res += prom;
+    double guess = x / 3.0;
+    for (int i = 0; i < 10; ++i) {
+        guess = (2 * guess + x / (guess * guess)) / 3.0;
     }
-
-    return res;
+    return guess;
 }
 
 int main() {
-    double x=0,result_1=0,res;
-    int massiv[4]={8,32,69,23};
-
-    std::cout << "x: ";
-    std::cin >> x;
-  
-    result_1=sinn(x);
-    res = sin(x);
-    std::cout << "\nRes_1= "<< result_1<<"\nres="<<res;
+    double p, q;
+    
+    std::cout << "Введите коэффициенты p и q для уравнения x^3 + px + q = 0: ";
+    std::cin >> p >> q;
+    
+    double delta = (q / 2) * (q / 2) + (p / 3) * (p / 3) * (p / 3);
+    std::cout << "Дискриминант = " << delta << std::endl;
+    
+    if (delta > 0) {
+        double u = my_cubic_root(-q / 2 + my_sqrt(delta));
+        double v = my_cubic_root(-q / 2 - my_sqrt(delta));
+        double x1 = u + v;
+        std::cout << "Один корень: x = " << x1 << std::endl;
+    } 
+    else if (delta == 0) {
+        double u = my_cubic_root(-q / 2);
+        double x1 = 2 * u;
+        std::cout << "Два корня (один повторяется): x1 = " << x1 << std::endl;
+    } 
+    else {
+        std::cout << "Все корни комплексные числа." << std::endl;
+    }
+    
     return 0;
 }
