@@ -15,10 +15,11 @@ int main()
 {   int a,b,c;
     double x_1=0,x_2=0,x_3=0,x_4=0;
     
+    std::cout << "Введите коэффициенты a,b и c для уравнения ax^4 + bx^3 + cx^2 + bx + a = 0: ";
     std::cin >> a>>b>>c;
-    // std::cout<< a<< b<< c;
     
     double d = (b*b-4*a*(c - 2*a));
+    std::cout << "Дискриминант = " << d << std::endl;
 
     if(d>0){
         
