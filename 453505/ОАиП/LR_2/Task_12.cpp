@@ -25,31 +25,30 @@ int main()
         
         double t_1=(-b+sqrt(d))/2*a;
         double t_2=(-b-sqrt(d))/2*a;
-        std::cout<<t_1<<t_2;
         if(t_1>0){ 
             x_1 = sqrt(t_1);
             x_2 = -sqrt(t_1);
-            std::cout<<"x= "<< x_1<<" x= "<<x_2;
+            std::cout<<"\nx= "<< x_1<<" \nx= "<<x_2;
         }
         else if(t_1=0){
             x_1=sqrt(t_1);
-            std::cout<< " x= "<<x_1;
+            std::cout<< " \nx= "<<x_1;
         }
         else{
-            std::cout<< "нет корней t_1";
+            std::cout<< "\nнет корней t_1";
         }
         
         if(t_2>0){ 
             x_3 = sqrt(t_2); 
             x_4 = -sqrt(t_2);
-            std::cout<<" x= "<<x_3<<" x= "<<x_4;
+            std::cout<<" \nx= "<<x_3<<" \nx= "<<x_4;
         }
         else if(t_2=0){
             x_3=sqrt(t_2);
             std::cout<< " x= "<<x_3;
         }
         else{
-            std::cout<< "нет корней t_2";
+            std::cout<< "\nнет корней t_2";
         }
     }
     else if(d==0){
@@ -58,16 +57,16 @@ int main()
         if(t_1>0){ 
             x_1 = sqrt(t_1);
             x_2 = -sqrt(t_1);
-            std::cout<<"x= "<< x_1<<" x= "<<x_2;
+            std::cout<<"\nx= "<< x_1<<" \nx= "<<x_2;
         }
         else if(t_1=0){
             x_1=sqrt(t_1);
             std::cout<< " x= "<<x_1;
         }
-        else{std::cout<< "нет корней";}
+        else{std::cout<< "\nнет корней";}
     }
     else{
-        std::cout<< "нет корней";
+        std::cout<< "\nнет корней";
     }
         
     return 0;
