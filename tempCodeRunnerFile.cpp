@@ -1,0 +1,1 @@
+bytePtr[i]

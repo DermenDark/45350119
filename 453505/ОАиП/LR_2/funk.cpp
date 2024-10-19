@@ -33,12 +33,14 @@ double sinn(double kor){
     double x_2,e=6.28318530716;
 
     x_2= (kor / e);
-    int x_3 = (kor / e);
+    std::cout << "\nRes1: "<< x_2;
+
+    long long int x_3 = (kor / e);
     
     double ress = (x_2-x_3)*e;
 
     double res=0,prom;
-    for(int n=1; n<70;n++){
+    for(int n=1; n<15;n++){
         prom= pooow(ress,(2*n-1))/factorial(2*n-1);
         if (n % 2 != 1) {
             prom= -prom;
@@ -51,9 +53,9 @@ double sinn(double kor){
 }
 
 int main() {
-    double x=0,result_1=0,res;
+    double x=0,res;
     int massiv[4]={8,32,69,23};
-
+    double result_1 = sinn(1e300);
     double y =sqrt(170);
 
     std::cout << "\nRes_1= "<< result_1<<"\nres="<<y;
