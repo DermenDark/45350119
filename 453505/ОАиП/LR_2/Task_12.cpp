@@ -1,51 +1,74 @@
 #include <iostream>
-#include <cmath>
 
-double factorial(int n) {
-    double res = 1;
-    for (int i = 1; i <= n; i++) {
-        res *= i;
-    }
-    return res;
-}
-double pooow(double osnov,int step){
-    double res=1;
-    for(int n=0;n<step; n++){
-        res *= osnov;
-        
-    }
-    return res;
-}
-double sinn(double kor){
-    double x_2;
+double sqrt(double number) {
+    double x = number;
+    double y = 1.0;
+    double e = 0.00001; // точность
 
-    x_2= (kor / 6.28318530716);
-    int x_3 = (kor / 6.28318530716);
+    while (x - y > e) {
+        x = (x + y) / 2;
+        y = number / x;
+    }
+    return x;
+}
+
+int main()
+{   int a,b,c,x;
+    double x_1=0,x_2=0,x_3=0,x_4=0;
     
-    double ress = (x_2-x_3)*6.28318530716;
-
-    double res=0,prom;
-    for(int n=1; n<70;n++){
-        prom= pooow(ress,(2*n-1))/factorial(2*n-1);
-        if (n % 2 != 1) {
-            prom= -prom;
+    std::cin >> a>>b>>c;
+    // std::cout<< a<< b<< c;
+    
+    double d =(b*b-4*a*c);
+    
+    if(d>0){
+        
+        double t_1=(-b+sqrt(d))/2*a;
+        double t_2=(-b-sqrt(d))/2*a;
+        std::cout<<t_1<<t_2;
+        if(t_1>0){ 
+            x_1 = sqrt(t_1);
+            x_2 = -sqrt(t_1);
+            std::cout<<"x= "<< x_1<<" x= "<<x_2;
         }
-        std::cout << "\nRes: "<< n<<"-("<<prom;
-        res += prom;
+        else if(t_1=0){
+            x_1=sqrt(t_1);
+            std::cout<< " x= "<<x_1;
+        }
+        else{
+            std::cout<< "нет корней t_1";
+        }
+        
+        if(t_2>0){ 
+            x_3 = sqrt(t_2); 
+            x_4 = -sqrt(t_2);
+            std::cout<<" x= "<<x_3<<" x= "<<x_4;
+        }
+        else if(t_2=0){
+            x_3=sqrt(t_2);
+            std::cout<< " x= "<<x_3;
+        }
+        else{
+            std::cout<< "нет корней t_2";
+        }
     }
-
-    return res;
-}
-
-int main() {
-    double x=0,result_1=0,res;
-    int massiv[4]={8,32,69,23};
-
-    std::cout << "x: ";
-    std::cin >> x;
-  
-    result_1=sinn(x);
-    res = sin(x);
-    std::cout << "\nRes_1= "<< result_1<<"\nres="<<res;
+    else if(d==0){
+        double t_1=(-b)/2*a;
+        
+        if(t_1>0){ 
+            x_1 = sqrt(t_1);
+            x_2 = -sqrt(t_1);
+            std::cout<<"x= "<< x_1<<" x= "<<x_2;
+        }
+        else if(t_1=0){
+            x_1=sqrt(t_1);
+            std::cout<< " x= "<<x_1;
+        }
+        else{std::cout<< "нет корней";}
+    }
+    else{
+        std::cout<< "нет корней";
+    }
+        
     return 0;
 }
