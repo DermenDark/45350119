@@ -51,12 +51,32 @@ double sinn(double kor){
 
     return res;
 }
+double coss(double kor){
+    double e = 2 * M_PI; 
+    double x_2 = kor / e;
+    long long int x_3 = static_cast<long long int>(x_2); 
+
+    double ress = (x_2 - x_3) * e; 
+
+    double res = 0.0;
+
+
+    for (int n = 0; n < 15; n++) {
+        double term = pow(ress, 2 * n) / factorial(2 * n);
+        if (n % 2 == 1) {
+            term = -term; 
+        }
+        res += term;
+    }
+
+    return res;
+}
 
 int main() {
     double x=0,res;
     int massiv[4]={8,32,69,23};
-    double result_1 = sinn(3);
-    double y =sin(3);
+    double result_1 = coss(7);
+    double y =cos(7);
 
     std::cout << "\nRes_1= "<< result_1<<"\nres="<<y;
     return 0;
