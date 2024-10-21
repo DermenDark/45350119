@@ -33,7 +33,6 @@ double sinn(double kor){
     double x_2,e=6.28318530716,resul;
 
     x_2= (kor / e);
-    std::cout << "\nRes1: "<< x_2;
 
     long long int x_3 = (kor / e);
 
@@ -84,19 +83,14 @@ double exp_taylor(double x) {
     return sum;
 }
 double lnn(double x) {
-    if (x <= 0) {
-        std::cerr << "Ошибка: значение должно быть больше 0" << std::endl;
-        return 0; 
+    if (x <= 0) return 0; // логарифм не определен для x <= 0
+    double result = 0;
+    double term = (x - 1) / (x + 1);
+    double term_squared = term * term;
+    for (int n = 1; n < 1000; n += 2) {
+        result += (1.0 / n) * pooow(term, n);
     }
-
-    double estimate = x; 
-    double epsilon = 1e-10; 
-
-    while (true) {
-        double next_estimate = estimate - (exp_taylor(estimate) - x) / exp_taylor(estimate);
-        estimate = next_estimate;
-    }
-    return estimate;
+    return 2 * result;
 }
 
 int main() {
@@ -107,7 +101,7 @@ int main() {
     double a = sinn(x);
     std::cout << a;
     double b = coss(x);
-    std::cout << b;
+    std::cout << "\n"<<b;
     double c = lnn(x);
     std::cout << c;
 
