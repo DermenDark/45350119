@@ -15,7 +15,7 @@ double sqrt(double number) {
 int main()
 {   int a,b,c,x;
     double x_1=0,x_2=0,x_3=0,x_4=0;
-    
+    std::cout << "Введите коэффициенты a,b и c для уравнения ax^4 + bx^2 + a = 0: ";
     std::cin >> a>>b>>c;
     // std::cout<< a<< b<< c;
     
