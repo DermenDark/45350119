@@ -3,10 +3,10 @@
 int gcd(int a, int b) {
     while (b != 0) {
         int temp = b;
-        std::cout <<"\na="<<a<<" b="<<b;
+
         b = a % b;
         a = temp; 
-        std::cout <<"\na="<<a<<" b="<<b<<"\n";
+
     }
     return a;
 }

@@ -1,29 +1,23 @@
 #include <iostream>
-double prov(double c){
-    while (true) {
-        char c;
-        bool valid;
-        valid = true;
-        int num = 0;
-        while (std::cin.get(c) && c != '\n') {
-            if (c < '0' || c > '9') {
-                valid = false;
-                break;
-            }
-            num = num * 10 + (c - '0');
-        }
-        if (valid && num > 0) {
-            std::cout << "Ввод корректен" << std::endl;
-            break;
-        } else {
-            std::cout << "Ввод некорректен, попробуйте снова:" << std::endl;
-            std::cin.clear(); // Очистка состояния
-            std::cin.ignore(1000, '\n'); // Игнорирование остатка строки
-        }}
-    return 
+#include <sstream>
+#include <iomanip>
+#include <string>
+
+int digitsCount(float n) {
+    std::ostringstream oss;
+    oss << std::fixed << std::setprecision(1) << n;  // Устанавливаем нужную точность
+    std::string numberStr = oss.str();  // Преобразуем в строку
+
+    return numberStr.length();  // Возвращаем количество символов
 }
+
 int main() {
-    double sine_value = prov(22);
-    std::cout << "\nSine value: " << sine_value << std::endl;
+    float value;
+    std::cout << "value: ";
+    std::cin >> value;
+    
+    int count = digitsCount(value);
+    std::cout << "digits count: " << count << std::endl;
+
     return 0;
 }

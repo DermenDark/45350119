@@ -1,7 +1,6 @@
 {
   "version": "0.2.0",
   "configurations": [
-    
     {
       "name": "(gdb) Подключить",
       "type": "cppdbg",
@@ -108,8 +107,8 @@
       "args": [],
       "stopAtEntry": false,
       "externalConsole": false,
-      "cwd": "/home/karina/Документы/453505/453505/ОАиП/LR_1",
-      "program": "/home/karina/Документы/453505/453505/ОАиП/LR_1/build/Debug/outDebug",
+      "cwd": "/home/karina/Документы/453505/453505/ОАиП",
+      "program": "/home/karina/Документы/453505/453505/ОАиП/build/Debug/outDebug",
       "MIMode": "gdb",
       "miDebuggerPath": "gdb",
       "setupCommands": [
