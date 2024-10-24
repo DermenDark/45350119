@@ -183,7 +183,7 @@ int main() {
 
     prov = x;
 
-    double result_1 = coss(x);
+    double result_1 = sinn(x);
     double resssssssss=cos(prov);
 
 

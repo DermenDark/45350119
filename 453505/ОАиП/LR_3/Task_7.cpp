@@ -1,4 +1,11 @@
 #include <iostream>
+int prov(int m){
+    if(m<0){
+        std::cout << "ошибка ввода" ;
+        return m =false;
+    }
+    return m;
+}
 
 double poow(double osnov,int step){
     double res=1;
@@ -14,7 +21,6 @@ bool is_armstrong(int num) {
     int sum = 0;
     int digits = 0;
 
-    // Определяем количество цифр
     while (original > 0) {
         original /= 10;
         digits++;
@@ -22,7 +28,6 @@ bool is_armstrong(int num) {
 
     original = num;
 
-    // Вычисляем сумму цифр, возведенных в степень количества цифр
     while (original > 0) {
         int digit = original % 10;
         sum += poow(digit, digits);
@@ -35,7 +40,7 @@ bool is_armstrong(int num) {
 int main() {
     int limit;
 
-    std::cout << "Введите число: ";
+    std::cout << "Введите число(x>0): ";
     std::cin >> limit;
 
     std::cout << "Числа Армстронга меньше " << limit << ":\n";

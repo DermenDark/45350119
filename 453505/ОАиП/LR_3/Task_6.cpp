@@ -139,11 +139,10 @@ int main() {
     double c = lnn(x);
     std::cout <<" \n ln(x)="<<c;
 
-    // Находим минимальное значение
-    double min_value = a;
-    if (b < min_value) min_value = b;
-    if (c < min_value) min_value = c;
+    double min = a;
+    if (b < min) min = b;
+    if (c < min) min = c;
 
-    std::cout << "\nМинимальное значение: " << min_value << std::endl;
+    std::cout << "\nМинимальное значение: " << min << std::endl;
     return 0;
 }
