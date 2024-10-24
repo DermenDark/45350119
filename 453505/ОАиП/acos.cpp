@@ -1,10 +1,10 @@
 #include <iostream>
 #include <cmath>
 
-float sqrt(float number) {
-    float x = number;
-    float y = 1.0;
-    float e = 0.000001; // точность
+double sqrt(double number) {
+    double x = number;
+    double y = 1.0;
+    double e = 0.000001; // точность
 
     while (x - y > e) {
         x = (x + y) / 2;
@@ -13,62 +13,142 @@ float sqrt(float number) {
     return x;
 }
 
-float factorial(int n) {
-    float res = 1;
+double factorial(int n) {
+    double res = 1;
     for (int i = 1; i <= n; i++) {
         res *= i;
     }
     return res;
 }
 
-float pooow(float osnov,int step){
-    float res=1;
+double pooow(double osnov,int step){
+    double res=1;
     for(int n=0;n<step; n++){
         res *= osnov;
         
     }
     return res;
 }
-float fart(float step){
-        float res = 1;
+
+double Binary(double num) {
+    unsigned long long bits = *(reinterpret_cast<unsigned long long*>(&num));
+    int b;
+    double decimal = 0;
+    
+    b=((bits >> 52) & 0x7FF)-1023;
+    
+    std::cout << "Двоичное представление: ";
+    for (int i = 63; i >= 0; --i) {
+        std::cout << ((bits >> i) & 1);
+    }
+    std::cout << "\n";
+
+    std::cout << "Знак: " << ((bits >> 63) & 1) << "\n";
+    std::cout << "Экспонента: ";
+    for (int i = 62; i >= 52; --i) {
+        std::cout << ((bits >> i) & 1);
+    }
+
+    std::cout << "\nМантисса: ";
+    for (int i = 51; i >= 0; --i) {
+        std::cout << ((bits >> i) & 1);
+    }
+    std::cout << "\n";
+    
+    int binary[b];
+    int nomer_bit=1;
+    for (int i = 51; i >= 52-b; --i) {
+        
+        binary[nomer_bit]= ((bits >> i) & 1);
+        ++nomer_bit;
+    }
+    
+    int nomer_bitt=0;
+    binary[0]=1;
+    std::cout <<'\n';
+    for (int i = 52; i >= 52-b; --i) {
+
+        ++nomer_bitt;
+    }
+    
+    double base = 1; 
+    for (int i = b-3; i >=0; --i) {
+        if (binary[i] == 1) {
+            decimal += base;
+            std::cout <<'\n'<<base;
+        }
+        base = base*2; 
+    }
+    std::cout <<'\n'<<decimal;
+    std::cout <<'\n'<<b;
+    return decimal;
+}
+double sokr(double x){
+    double viks;
+    double pi = 3.141592653589793238462643383279502884197169399;
+        if(x<0){
+        x*=-1;
+    }
+
+    while (x>100)
+        {   
+            double increment = Binary(x)*2*pi; 
+            std::cout << "Increment: " << increment << std::endl;
+
+            while (x>0) {
+                x -= increment;
+                if(x<0){
+                    x=viks;
+                    break;
+                }
+                viks = x;
+                std::cout << "Измененное значение x: " << viks << std::endl;
+            }
+    }
+    return x;
+}
+
+double fart(double step){
+        double res = 1;
     for (int i = 1   ; i <= step; i=i+2) {
         res *= (i>0)?i:1;
     }
     return res;
 }
-float sinn(float kor){
-    float x_2,e=6.28318530716,resul;
-
+double sinn(double kor){
+    double x_2,e=6.28318530716,resul;
+    kor = sokr(kor);
     x_2= (kor / e);
-    std::cout << "\nRes1: "<< x_2;
+
 
     long long int x_3 = (kor / e);
 
-    float ress = (x_2-x_3)*e;
-    float res=0,prom;
+    double ress = (x_2-x_3)*e;
+    double res=0,prom;
 
     for(int n=1; n<15;n++){
         prom= pooow(ress,(2*n-1))/factorial(2*n-1);
         if (n % 2 != 1) {
             prom= -prom;
         }
-        std::cout << "\nRes: "<< n<<"-("<<prom;
         res += prom;
     }
 
     return res;
 }
-float coss(float kor){
-    float e = 2 * M_PI; 
-    float x_2 = kor / e;
+double coss(double kor){
+    double pi = 3.141592653589793238462643383279502884197169399;
+    double e = 2 * pi; 
+    kor = sokr(kor);
+    double x_2 = kor / e;
     long long int x_3 = static_cast<long long int>(x_2); 
 
-    float ress = (x_2 - x_3) * e; 
+    double ress = (x_2 - x_3) * e; 
 
-    float res = 0.0;
+    double res = 0.0;
 
-    for (int n = 0; n < 20; n++) {
-        float term = pow(ress, 2 * n) / factorial(2 * n);
+    for (int n = 0; n < 55; n++) {
+        double term = pooow(ress, 2 * n) / factorial(2 * n);
         if (n % 2 == 1) {
             term = -term; 
         }
@@ -77,9 +157,9 @@ float coss(float kor){
 
     return res;
 }
-float asinn(float kor){
+double asinn(double kor){
 
-    float res=0,prom;
+    double res=0,prom;
 
     for(int n=1; n<8;n++){
         prom= ((fart(n)/fart(n+1))*pooow(kor,(2*n-1))/(2*n-1));
@@ -88,41 +168,26 @@ float asinn(float kor){
 
     return res;
 }
-float acoss(float kor){
+double acoss(double kor){
 
-    float res=0,pi=3.1415/2;
+    double res=0,pi=3.1415/2;
     res = pi-asinn(kor);
 
     return res;
 }
 int main() {
-    double x = 0, res, rrr,r;
-    double pi = 3.1415956532384626;
+    double x = 0, res, prov;
+
     std::cout << "Введите x: ";
     std::cin >> x;
-    rrr = x;
-    while (x>60)
-    {   
-        double increment = (x / pooow(10,2)) * 2 * pi; 
-        std::cout << "Increment: " << increment << std::endl;
-        
-        while (x > 100) {
-            r = x;
-            x -= increment;
-            std::cout << "Измененное значение x: " << r << std::endl;
 
-        }
-        while (x < 0) {
-            r = x;
-            x += (increment/10);
-            std::cout << "Измененное значение x: " << r << std::endl;
-        }
-    }
-    std::cout << "Измененное значение x: " << x << std::endl;
-    
-    double result_1 = coss(r);
-    double y = cos(rrr);  // Используйте стандартную функцию cos для сравнения
+    prov = x;
 
-    std::cout << "\nRes_1= " << result_1 << "\nres=" << y << std::endl;
+    double result_1 = coss(x);
+    double resssssssss=cos(prov);
+
+
+    std::cout << "\nRes= " << result_1  << std::endl;
+    std::cout << "\nRes= " << resssssssss  << std::endl;
     return 0;
 }

@@ -71,13 +71,18 @@ double coss(double kor){
 
     return res;
 }
+int prov(int m){
 
+    std::cout << "переполнение/переполнение/переполнение" ;
+    return m;
+}
 int main() {
-    double x=0,res;
+    double x=0,res,m;
     int massiv[4]={8,32,69,23};
     double result_1 = coss(7);
     double y =cos(7);
-
+    std::cin>>m;
+    m = prov(m);
     std::cout << "\nRes_1= "<< result_1<<"\nres="<<y;
     return 0;
 }

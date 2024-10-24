@@ -88,13 +88,11 @@ double f(double x) {
 int main() {
     double start, end;
 
-    // Ввод данных от пользователя
     std::cout << "Введите начальную точку интервала: ";
     std::cin >> start;
     std::cout << "Введите конечную точку интервала: ";
     std::cin >> end;
 
-    // Вычисление шага
     double step = (end - start) / 100;
 
 
