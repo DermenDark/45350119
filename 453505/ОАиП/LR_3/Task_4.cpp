@@ -1,7 +1,6 @@
 #include <iostream>
 #include <cmath>
 
-
 double coss(double x, int n) {
     double result = 1.0; 
     double term = 1.0;   
@@ -34,12 +33,9 @@ int main() {
             continue;
         }
 
-
         double taylor = coss(x, n);
-
         double standard = std::cos(x);
 
-        // Вывод результатов
         std::cout << "cos(" << x << ") через ряд Тейлора: " << taylor<< std::endl;
         std::cout << "cos(" << x << ") через стандартную функцию: " << standard << std::endl;
     }

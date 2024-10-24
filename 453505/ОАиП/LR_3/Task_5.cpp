@@ -11,6 +11,7 @@ double sqrt(double number) {
     }
     return x;
 }
+
 double exp(double x) {
     double term = 1.0; 
     double sum = term;
@@ -23,6 +24,7 @@ double exp(double x) {
     }
     return sum;
 }
+
 double factorial(int n) {
     double res = 1;
     for (int i = 1; i <= n; i++) {
@@ -117,6 +119,7 @@ double sinn(double kor){
 
     return res;
 }
+
 double coss(double kor){
     double pi = 3.141592653589793238462643383279502884197169399;
     double e = 2 * pi; 
