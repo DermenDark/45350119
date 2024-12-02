@@ -1,42 +1,37 @@
-#include <sstream>  
-#include <vector>
-#include <iostream>
+ #include <iostream>
 
 void massiv() {
-    long double n, m;  
+
+    int n, m;  
     bool proverka = true;
+
     std::cout << "\nВведите размер матрицы чисел (mxn, разделяйте числа пробелами): ";
     std::cin>>m>>n;
     std::cout << "\nВведите матрицу чисел (разделяйте числа пробелами): ";
+
     long double count = m*n;
+    long double arr[m][n],arr_2[n][m];
 
-
-
-    long double* vec = (long double*)malloc(count * sizeof(long double));
-    if (vec == nullptr) {
-        std::cout << "Ошибка выделения памяти\n";
-        return;
-    }
-
-
-    for (size_t i = 0; i < count - 1; ++i) {
-        if (vec[i] < vec[i + 1]) {  
-            proverka = false;
-            break;
+    for (int i = 0; i < m; ++i) {
+        for (int j = 0; j < n; ++j){
+        std::cin>>arr[i][j];
         }
     }
-    
-    if (proverka) {
-        std::cout << "Массив отсортирован!!!\n";
-    } else {
-        std::cout << "Массив не отсортирован.\n";
+
+    for (int i = 0; i < m; ++i) {
+        for (int j = 0; j < n; ++j) {
+            arr_2[j][m - 1 - i] = arr[i][j];  
+        }
     }
 
     std::cout << "Массив: ";
-    for (size_t i = 0; i < count; ++i) {
-        std::cout << vec[i] << " ";
+    for (int i = 0; i < n; ++i) {
+        std::cout <<"\n";
+        for (int j = 0; j < m; ++j){
+        std::cout <<arr_2[i][j] << " ";
+        }
     }
-    free(vec); 
+
     std::cout << std::endl;
 }
 

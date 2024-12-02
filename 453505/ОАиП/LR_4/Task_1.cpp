@@ -1,62 +1,37 @@
-#include <sstream>  
-#include <vector>
 #include <iostream>
+#include <cmath>
 
 void massiv() {
-    std::string input;             
+    long long int k;            
     bool proverka = true;
-    
+
+    std::cout << "\nВведите количество элементов в массиве: ";
+    std::cin>>k;
+
+    long double arr[k]; 
     std::cout << "\nВведите массив чисел (разделяйте числа пробелами): ";
-    std::getline(std::cin, input);  
+ 
+    for (int i = 0; i < k; ++i) {std::cin>>arr[i];}
 
-    std::stringstream ss(input);  
-    long double num;
-    int count = 0; 
+    for (int i = 0; i < k; ++i) {
+        if (std::isnan(arr[i])) {
+            std::cout << "\nНеверно введённый массив.\n" <<i <<"-номер вводимого элемента, с которым возникли трудности.";
+            return;
 
-    while (ss >> num) {
-        count++;
-    }
-
-    long double* vec = (long double*)malloc(count * sizeof(long double));
-    if (vec == nullptr) {
-        std::cout << "Ошибка выделения памяти\n";
-        return;
-    }
-
-    ss.clear(); 
-    ss.seekg(0);  
-
-    int i = 0;
-    while (ss >> num) {
-        vec[i] = num; 
-        i++;
-    }
-
-    if (ss.fail() && !ss.eof()) {
-        std::cout << "Ошибка.Были введены элементы, не являющиеся числами.\n";
-        return;
-    }
-
-
-    for (size_t i = 0; i < count - 1; ++i) {
-        if (vec[i] < vec[i + 1]) {  
-            proverka = false;
-            break;
         }
     }
     
+    for (int i = 0; i < k-1; ++i) {if(arr[i]<arr[i+1]){proverka = false;}}
+    
     if (proverka) {
         std::cout << "Массив отсортирован!!!\n";
-    } else {
+    } 
+    else {
         std::cout << "Массив не отсортирован.\n";
     }
 
     std::cout << "Массив: ";
-    for (size_t i = 0; i < count; ++i) {
-        std::cout << vec[i] << " ";
-    }
-    free(vec); 
-    std::cout << std::endl;
+    for (int i = 0; i < k; ++i) {std::cout << arr[i] << " ";}
 }
 
 int main() {

@@ -1,5 +1,5 @@
-
-    // if (ss.fail() && !ss.eof()) {
-    //     std::cout << "Ошибка.Были введены элементы, не являющиеся числами.\n";
-    //     return;
-    // }
+    for (int i = 0; i < m; ++i) {
+        for (int j = 0; j < n; ++j){
+        std::cin>>arr[i][j];
+        }
+    }
