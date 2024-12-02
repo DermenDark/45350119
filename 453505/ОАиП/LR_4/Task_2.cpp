@@ -1,11 +1,12 @@
- #include <iostream>
+#include <iostream>
+#include <cmath>
 
 void massiv() {
 
-    int n, m;  
-    bool proverka = true;
+    long long int n, m;  
+    long double proisved=1;
 
-    std::cout << "\nВведите размер матрицы чисел (mxn, разделяйте числа пробелами): ";
+    std::cout << "\nВведите размер матрицы чисел (nxm, разделяйте числа пробелами): ";
     std::cin>>m>>n;
     std::cout << "\nВведите матрицу чисел (разделяйте числа пробелами): ";
 
@@ -17,30 +18,37 @@ void massiv() {
         std::cin>>arr[i][j];
         }
     }
-
     for (int i = 0; i < m; ++i) {
-        for (int j = 0; j < n; ++j) {
-            arr_2[j][m - 1 - i] = arr[i][j];  
-        }
-    }
+        for (int j = 0; j < n; ++j){
+        if (std::isnan(arr[i][j])) {
+            std::cout << "\nНеверно введённа матрица.\n[" <<i <<"] и ["<<j<<"]-номер вводимого элемента, с которым возникли трудности.";
+            return;
 
-    std::cout << "Массив: ";
+        }}}
+
+    for (int i = 0; i < n; ++i) {
+        for (int j = 0; j < i; ++j) {
+            if (arr[i][j] > 0) {
+            proisved*=arr[i][j];
+            }}}
+
+    std::cout << "Матрица: ";
     for (int i = 0; i < n; ++i) {
         std::cout <<"\n";
         for (int j = 0; j < m; ++j){
-        std::cout <<arr_2[i][j] << " ";
+        std::cout <<arr[i][j] << " ";
         }
     }
 
-    std::cout << std::endl;
+    std::cout << "\nРезультат произведения:"<<proisved<<'\n';
 }
 
 int main() {
     char otvet;
-    std::cout << "Определить произведение положительных элементов, расположенных ниже главной диагонали матрицы.\nВыполнил задание:Ширко Владимир.\nВариант-№4(19 в списке)\n";
+    std::cout << "Определить произведение положительных элементов, расположенных ниже главной диагонали матрицы.\nВыполнил задание №2:Ширко Владимир.\nВариант-№4(19 в списке)\n";
     do {
         massiv();
-        std::cout << "\nХотите ввести еще одну матрицу? (y-да/n-нет): ";
+        std::cout << "Хотите ввести еще одну матрицу? (y-да/n-нет): ";
         std::cin >> otvet;
         std::cin.ignore();
     } while (otvet == 'y' || otvet == 'Y');
