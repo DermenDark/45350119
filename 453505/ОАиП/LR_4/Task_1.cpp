@@ -3,9 +3,7 @@
 #include <iostream>
 
 void massiv() {
-    std::vector<long double> vec;  
     std::string input;             
-    bool no_num = true;
     bool proverka = true;
     
     std::cout << "\nВведите массив чисел (разделяйте числа пробелами): ";
@@ -13,10 +11,25 @@ void massiv() {
 
     std::stringstream ss(input);  
     long double num;
-    
+    int count = 0; 
 
     while (ss >> num) {
-        vec.push_back(num);
+        count++;
+    }
+
+    long double* vec = (long double*)malloc(count * sizeof(long double));
+    if (vec == nullptr) {
+        std::cout << "Ошибка выделения памяти\n";
+        return;
+    }
+
+    ss.clear(); 
+    ss.seekg(0);  
+
+    int i = 0;
+    while (ss >> num) {
+        vec[i] = num; 
+        i++;
     }
 
     if (ss.fail() && !ss.eof()) {
@@ -25,7 +38,7 @@ void massiv() {
     }
 
 
-    for (size_t i = 0; i < vec.size() - 1; ++i) {
+    for (size_t i = 0; i < count - 1; ++i) {
         if (vec[i] < vec[i + 1]) {  
             proverka = false;
             break;
@@ -33,15 +46,16 @@ void massiv() {
     }
     
     if (proverka) {
-        std::cout << "Массив отсортирован.\n";
+        std::cout << "Массив отсортирован!!!\n";
     } else {
         std::cout << "Массив не отсортирован.\n";
     }
 
     std::cout << "Массив: ";
-    for (size_t i = 0; i < vec.size(); ++i) {
+    for (size_t i = 0; i < count; ++i) {
         std::cout << vec[i] << " ";
     }
+    free(vec); 
     std::cout << std::endl;
 }
 
