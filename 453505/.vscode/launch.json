@@ -8,8 +8,8 @@
       "args": [],
       "stopAtEntry": false,
       "externalConsole": false,
-      "cwd": "/home/karina/453505/453505/ОАиП",
-      "program": "/home/karina/453505/453505/ОАиП/build/Debug/outDebug",
+      "cwd": "/home/karina/453505/453505/ОАиП/LR_3",
+      "program": "/home/karina/453505/453505/ОАиП/LR_3/build/Debug/outDebug",
       "MIMode": "gdb",
       "miDebuggerPath": "gdb",
       "setupCommands": [

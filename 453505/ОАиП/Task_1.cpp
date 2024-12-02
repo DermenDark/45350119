@@ -1,15 +1,4 @@
 #include <iostream>
-#include <cmath>
-
-bool prov(int m){
-
-    if(m<=0){
-        std::cout << "Ошибка. Для ln(x) || x должен быть >0\n" ;
-        return m =false;
-    }
-
-    return true;
-}
 
 double factorial(int n) {
     double res = 1;
@@ -161,38 +150,119 @@ double lnn(double x) {
     }
 }
 
-int main() {
-    double x;
-    bool m =true;
-    std::cout << "Введите значение x (x > 0): ";
-    std::cin >> x;
-    // m=prov(x);
+int main(){
+    double (*arr[])(double) = {&sinn};
+    std::cout<<"|| "<<arr[0](8)<<"|| ";
 
-    if (m!=false){
-        double a = sinn(x);
-        double b = coss(x);
-        double c = lnn(x);
-
-        double d =sin(x);
-        double e =cos(x);
-        double f =log(x);
+    double (*mass[](double)) = {&sinn};
+    std::cout<<"|| "<<mass[0](8)<<"|| ";
 
 
 
-        std::cout << " sin(x)="<<a;
-        std::cout << "\n cos(x)="<<b;
-        std::cout <<" \n ln(x)="<<c;
 
-        std::cout << "\n\n из <cmath>\n  sin(x)="<<d;
-        std::cout << "\n  cos(x)="<<e;
-        std::cout <<" \n  ln(x)="<<f;
 
-        double min = a;
-        if (b < min) min = b;
-        if (c < min) min = c;
 
-        std::cout << "\nМинимальное значение: " << min << std::endl;
-    }
-    else{return 0;}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    
+
     return 0;
 }

@@ -1,4 +1,5 @@
 #include <iostream>
+
 int prov(int m){
     if(m<0){
         std::cout << "ошибка ввода" ;

@@ -90,7 +90,7 @@ double sokr(double x){
         x*=-1;
     }
 
-    while (x>100)
+    while (x>2*pi)
         {   
             double increment = Binary(x)*2*pi; 
             std::cout << "Increment: " << increment << std::endl;
@@ -116,15 +116,9 @@ double fart(double step){
     return res;
 }
 double sinn(double kor){
-    double x_2,e=6.28318530716,resul;
-    kor = sokr(kor);
-    x_2= (kor / e);
+    double ress = sokr(kor);
 
-
-    long long int x_3 = (kor / e);
-
-    double ress = (x_2-x_3)*e;
-    double res=0,prom;
+    double res=0,prom=0;
 
     for(int n=1; n<15;n++){
         prom= pooow(ress,(2*n-1))/factorial(2*n-1);
@@ -137,13 +131,7 @@ double sinn(double kor){
     return res;
 }
 double coss(double kor){
-    double pi = 3.141592653589793238462643383279502884197169399;
-    double e = 2 * pi; 
-    kor = sokr(kor);
-    double x_2 = kor / e;
-    long long int x_3 = static_cast<long long int>(x_2); 
-
-    double ress = (x_2 - x_3) * e; 
+    double ress = sokr(kor);
 
     double res = 0.0;
 
@@ -176,15 +164,15 @@ double acoss(double kor){
     return res;
 }
 int main() {
-    double x = 0, res, prov;
+    double x = 0;
 
     std::cout << "Введите x: ";
     std::cin >> x;
 
-    prov = x;
+    double prov = x;
 
     double result_1 = sinn(x);
-    double resssssssss=cos(prov);
+    double resssssssss=sin(prov);
 
 
     std::cout << "\nRes= " << result_1  << std::endl;
