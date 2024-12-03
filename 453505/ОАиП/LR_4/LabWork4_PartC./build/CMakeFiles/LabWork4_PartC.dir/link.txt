@@ -1,0 +1,1 @@
+/usr/bin/cc -g CMakeFiles/LabWork4_PartC.dir/Task_4.c.o CMakeFiles/LabWork4_PartC.dir/Task_5.c.o CMakeFiles/LabWork4_PartC.dir/Task_6.c.o -o LabWork4_PartC 

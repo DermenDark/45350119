@@ -1,0 +1,17 @@
+[
+{
+  "directory": "/home/karina/453505/453505/ОАиП/LR_4/LabWork4_PartC./build",
+  "command": "/usr/bin/cc   -g -o CMakeFiles/LabWork4_PartC.dir/Task_4.c.o -c /home/karina/453505/453505/ОАиП/LR_4/LabWork4_PartC./Task_4.c",
+  "file": "/home/karina/453505/453505/ОАиП/LR_4/LabWork4_PartC./Task_4.c"
+},
+{
+  "directory": "/home/karina/453505/453505/ОАиП/LR_4/LabWork4_PartC./build",
+  "command": "/usr/bin/cc   -g -o CMakeFiles/LabWork4_PartC.dir/Task_5.c.o -c /home/karina/453505/453505/ОАиП/LR_4/LabWork4_PartC./Task_5.c",
+  "file": "/home/karina/453505/453505/ОАиП/LR_4/LabWork4_PartC./Task_5.c"
+},
+{
+  "directory": "/home/karina/453505/453505/ОАиП/LR_4/LabWork4_PartC./build",
+  "command": "/usr/bin/cc   -g -o CMakeFiles/LabWork4_PartC.dir/Task_6.c.o -c /home/karina/453505/453505/ОАиП/LR_4/LabWork4_PartC./Task_6.c",
+  "file": "/home/karina/453505/453505/ОАиП/LR_4/LabWork4_PartC./Task_6.c"
+}
+]

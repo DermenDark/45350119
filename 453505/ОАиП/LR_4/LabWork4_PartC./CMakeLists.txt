@@ -1,7 +1,7 @@
 cmake_minimum_required(VERSION 3.5.0)
-project(LABWORK$_PARTC VERSION 0.1.0 LANGUAGES C)
+project(LabWork4_PartC VERSION 0.1.0 LANGUAGES C)
 
-add_executable(LABWORK$_PARTC main.c)
+add_executable(LabWork4_PartC Task_4.c Task_5.c Task_6.c)
 
 include(CTest)
 enable_testing()
