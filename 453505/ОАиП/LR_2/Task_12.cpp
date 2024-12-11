@@ -47,7 +47,7 @@ void solve1(double a, double b, double c) {
 }
 
 void solve12(double a, double b, double c, double d, double e) {
-    for (double x = -100; x <= 100; x += 0.1) {
+    for (long int x = -100; x <= 100; x += 0.1) {
         double result = a * x * x * x * x + b * x * x * x + c * x * x + d * x + e;
         if (result < 0.001 && result > -0.001) {
             std::cout << "Найден корень x: " << x << std::endl;
@@ -56,7 +56,7 @@ void solve12(double a, double b, double c, double d, double e) {
 }
 
 void solve3(double p, double q) {
-    for (double x = -100; x <= 100; x += 0.1) {
+    for (long int x = -100; x <= 100; x += 0.1) {
         double result = x * x * x + p * x + q;
         if (result < 0.001 && result > -0.001) {
             std::cout << "Найден корень x: " << x << std::endl;

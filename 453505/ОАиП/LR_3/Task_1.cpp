@@ -2,8 +2,8 @@
 
 int main()
 {   int i=1,a,b;
-    float N;
-    while(i<=30){
+    float N=0;
+    while(i<=2){
         if(i % 2==1){
             a = i;
             b = i*i;

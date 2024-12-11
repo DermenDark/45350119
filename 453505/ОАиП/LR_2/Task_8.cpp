@@ -35,7 +35,7 @@ double fart(double step){
 }
 double asinn(double kor){
 
-    double res=0,prom;
+    double res=0, prom;
 
     for(int n=1; n<8;n++){
         prom= ((fart(n)/fart(n+1))*poow(kor,(2*n-1))/(2*n-1));
@@ -53,7 +53,7 @@ double acoss(double kor){
 }
 
 int main() {
-    float x1,y1,x2,y2,x3,y3,a,b,c,p,P,r,R,S0,S1,S2,S3,S4,sr,cr,sR,cR,pi=3.141592;
+    float x1,y1,x2,y2,x3,y3,a,b,c,p,P,r,R,S0,S1,S2,S3,sr,cr,sR,cR,pi=3.141592;
     float h1,h2,h3,m1,m2,m3,bis1,bis2,bis3, ugl1,ugl2,ugl3;
 
     std::cout << "Введите значение x1: ";
@@ -107,7 +107,6 @@ int main() {
     std::cout << "\nугол №1(в радианах): "<<ugl1;
     ugl1 = ( ugl1*(180/pi) );
     std::cout << " угол №1(в градусах): "<<ugl1;
-    ugl1 = ( acoss( (a*a+c*c-b*b)/(2*a*c) ));
     
     ugl2 = ( acoss( (b*b+c*c-a*a)/(2*b*c) ));
     std::cout << "\nугол №2(в радианах): "<<ugl2;

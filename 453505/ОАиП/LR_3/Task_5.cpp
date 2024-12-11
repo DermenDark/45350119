@@ -99,7 +99,8 @@ double sokr(double x){
 }
 
 double sinn(double kor){
-    double x_2,e=6.28318530716,resul;
+    double x_2, e=6.28318530716;
+
     kor = sokr(kor);
     x_2= (kor / e);
 

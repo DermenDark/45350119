@@ -1,12 +1,12 @@
 #include <iostream>
 
-int prov(int m){
-    if(m<0){
-        std::cout << "ошибка ввода" ;
-        return m =false;
-    }
-    return m;
-}
+// int prov(int m){
+//     if(m<0){
+//         std::cout << "ошибка ввода" ;
+//         return m =false;
+//     }
+//     return m;
+// }
 
 double poow(double osnov,int step){
     double res=1;

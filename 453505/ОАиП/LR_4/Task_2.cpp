@@ -10,8 +10,7 @@ void massiv() {
     std::cin>>m>>n;
     std::cout << "\nВведите матрицу чисел (разделяйте числа пробелами): ";
 
-    long double count = m*n;
-    long double arr[m][n],arr_2[n][m];
+    long double arr[m][n];
 
     for (int i = 0; i < m; ++i) {
         for (int j = 0; j < n; ++j){

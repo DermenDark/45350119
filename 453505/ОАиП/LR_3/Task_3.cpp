@@ -65,7 +65,7 @@ double Binary(double num) {
 }
 
 double sokr(double x){
-    double viks;
+    double viks=0;
     double pi = 3.141592653589793238462643383279502884197169399;
         if(x<0){x*=-1;}
 
@@ -87,7 +87,7 @@ double sokr(double x){
 }
 
 double sinn(double kor){
-    double x_2,e=6.28318530716,resul;
+    double x_2,e=6.28318530716;
     kor = sokr(kor);
     x_2= (kor / e);
 
@@ -129,8 +129,7 @@ double coss(double kor){
 }
 
 
-int main()
-{   int i=1;
+int main(){
     float a=0,h,x,y,m=20,pi=3.1415,b=pi/2;
     for(int i=1;i<=m;i++){
         h=(b-a)/m;

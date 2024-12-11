@@ -1,15 +1,15 @@
 #include <iostream>
 #include <cmath>
 
-bool prov(int m){
+// bool prov(int m){
 
-    if(m<=0){
-        std::cout << "Ошибка. Для ln(x) || x должен быть >0\n" ;
-        return m =false;
-    }
+//     if(m<=0){
+//         std::cout << "Ошибка. Для ln(x) || x должен быть >0\n" ;
+//         return false;
+//     }
 
-    return true;
-}
+//     return true;
+// }
 
 double factorial(int n) {
     double res = 1;
@@ -112,7 +112,7 @@ double sinn(double kor){
 double coss(double kor){
 
     double ress = sokr(kor);
-    double res = 0.0, term;
+    double res = 0.0, term=0;
 
     for (int n = 0; n < 50; n++) {
 
@@ -152,7 +152,9 @@ double lnn(double x) {
         return result;
     } else { 
         double y = x - 1; 
-        int d = Binary(x);
+        int d=0;
+        d = Binary(x);
+
         for (int n = 1; n < 1000; n += 2) {
             term = pooow(y, n) / n;
             result += term; 
@@ -163,12 +165,12 @@ double lnn(double x) {
 
 int main() {
     double x;
-    bool m =true;
+    // bool m =true;
     std::cout << "Введите значение x (x > 0): ";
     std::cin >> x;
     // m=prov(x);
-
-    if (m!=false){
+    
+    // if (m!=false){
         double a = sinn(x);
         double b = coss(x);
         double c = lnn(x);
@@ -192,7 +194,7 @@ int main() {
         if (c < min) min = c;
 
         std::cout << "\nМинимальное значение: " << min << std::endl;
-    }
-    else{return 0;}
+    // }
+    // else{return 0;}
     return 0;
 }

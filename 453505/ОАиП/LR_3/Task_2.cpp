@@ -8,9 +8,9 @@ double pooow(double osnov,int step){
     return res;
 }
 
-int main()
-{   int n=1;
-    float d_sum,E = 0.01,res;
+int main(){
+    int n=1;
+    float d_sum=0,E = 0.01,res=0;
     
     do{
         d_sum =(1/pooow(2,n)+1/pooow(3,n));
