@@ -103,6 +103,13 @@
     "sstream": "cpp",
     "stdexcept": "cpp",
     "streambuf": "cpp",
-    "typeinfo": "cpp"
-  }
+    "typeinfo": "cpp",
+    "any": "cpp",
+    "map": "cpp",
+    "set": "cpp",
+    "optional": "cpp",
+    "cinttypes": "cpp",
+    "variant": "cpp"
+  },
+  "sonarlint.pathToCompileCommands": "${workspaceFolder}/ОАиП/LR_4/LabWork4_PartC./build/compile_commands.json"
 }
