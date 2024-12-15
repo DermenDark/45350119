@@ -1,0 +1,1 @@
+/usr/bin/c++  -fsanitize=address -fsanitize=thread CMakeFiles/main.dir/main.cpp.o -o main  -Wl,-rpath,/home/karina/453505/453505/ОАиП/build libmylib.so 

@@ -1,7 +1,7 @@
 #include <iostream>
 
 void osnova() {
-    
+    std::cout<<5;
 }
 
 int main() {

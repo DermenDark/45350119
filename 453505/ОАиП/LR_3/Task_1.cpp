@@ -1,7 +1,9 @@
 #include <iostream>
 
 int main()
-{   int i=1,a,b;
+{   int i=1;
+    int a;
+    int b;
     float N=0;
     while(i<=2){
         if(i % 2==1){

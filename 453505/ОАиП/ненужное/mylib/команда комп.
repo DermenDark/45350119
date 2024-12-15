@@ -1,0 +1,88 @@
+Создайте структуру проекта:
+
+    Создайте новую папку для вашего проекта.
+    Внутри этой папки создайте подкаталог для вашей библиотеки, например, mylib.
+
+ваша папка_задания/
+├── mylib/
+│   ├── mylib.h
+│   └── mylib.cpp
+├── CMakeLists.txt
+└── main.cpp
+
+Напишите код библиотеки:
+
+    В файле mylib.h определите интерфейс вашей библиотеки:
+
+        // mylib.h
+        #ifndef MYLIB_H
+        #define MYLIB_H
+        class MyLib {
+        public:
+            void hello();
+        };
+
+        #endif // MYLIB_H
+
+
+В файле mylib.cpp реализуйте функции:
+
+        // mylib.cpp
+        #include <iostream>
+        #include "mylib.h"
+
+        void MyLib::hello() {
+            std::cout << "Hello from MyLib!" << std::endl;
+            }
+
+
+Создайте основной файл:
+
+    В файле main.cpp используйте вашу библиотеку:
+
+        // main.cpp
+        #include "mylib/mylib.h"
+
+        int main() {
+            MyLib lib;
+            lib.hello();
+            return 0;
+            }
+
+Создайте файл CMakeLists.txt:
+    В корневой папке вашего проекта создайте файл CMakeLists.txt:
+
+cmake:
+    cmake_minimum_required(VERSION 3.10)
+    project(MyDynamicLibrary)
+
+    set(CMAKE_CXX_STANDARD 11)
+
+    add_library(mylib SHARED mylib/mylib.cpp)
+    add_executable(main main.cpp)
+    target_link_libraries(main mylib)
+
+В этом файле add_library(mylib SHARED mylib/mylib.cpp) указывает, что мы создаем динамическую библиотеку.
+
+Сборка проекта с помощью CMake:
+    Откройте терминал в VS Code (Terminal > New Terminal).
+    Перейдите в корневую папку вашего проекта и создайте папку для сборки:
+
+    bash:
+    mkdir build
+
+    cd build
+
+Запустите CMake для генерации файлов сборки:
+    bash:
+    cmake ..
+
+После успешного выполнения команды CMake выполните сборку:
+
+    bash:
+    cmake --build .
+
+Запустите программу:
+
+    bash:
+    ./main

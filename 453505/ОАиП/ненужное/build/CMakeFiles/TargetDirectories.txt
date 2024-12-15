@@ -1,0 +1,4 @@
+/home/karina/453505/453505/ОАиП/build/CMakeFiles/mylib.dir
+/home/karina/453505/453505/ОАиП/build/CMakeFiles/main.dir
+/home/karina/453505/453505/ОАиП/build/CMakeFiles/edit_cache.dir
+/home/karina/453505/453505/ОАиП/build/CMakeFiles/rebuild_cache.dir

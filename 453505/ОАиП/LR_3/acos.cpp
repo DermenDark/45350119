@@ -12,7 +12,6 @@ double sqrt(double number) {
     }
     return x;
 }
-
 double factorial(int n) {
     double res = 1;
     for (int i = 1; i <= n; i++) {
@@ -20,7 +19,6 @@ double factorial(int n) {
     }
     return res;
 }
-
 double pooow(double osnov,int step){
     double res=1;
     for(int n=0;n<step; n++){
@@ -83,6 +81,7 @@ double Binary(double num) {
     std::cout <<'\n'<<b;
     return decimal;
 }
+
 double sokr(double x){
     double viks;
     double pi = 3.141592653589793238462643383279502884197169399;
@@ -107,7 +106,6 @@ double sokr(double x){
     }
     return x;
 }
-
 double fart(double step){
         double res = 1;
     for (int i = 1   ; i <= step; i=i+2) {
@@ -118,7 +116,8 @@ double fart(double step){
 double sinn(double kor){
     double ress = sokr(kor);
 
-    double res=0,prom=0;
+    double res=0;
+    double prom=0;
 
     for(int n=1; n<15;n++){
         prom= pooow(ress,(2*n-1))/factorial(2*n-1);
@@ -147,7 +146,8 @@ double coss(double kor){
 }
 double asinn(double kor){
 
-    double res=0,prom;
+    double res=0;
+    double prom=0;
 
     for(int n=1; n<8;n++){
         prom= ((fart(n)/fart(n+1))*pooow(kor,(2*n-1))/(2*n-1));
@@ -158,7 +158,8 @@ double asinn(double kor){
 }
 double acoss(double kor){
 
-    double res=0,pi=3.1415/2;
+    double res=0;
+    double pi=3.1415/2;
     res = pi-asinn(kor);
 
     return res;
