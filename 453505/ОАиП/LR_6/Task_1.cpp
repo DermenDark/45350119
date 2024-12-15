@@ -1,76 +1,78 @@
 #include <iostream>
-#include <vector>
-void writen(std::vector<char> &vec,int begin, int end) {
-    
-    for (int i=begin; i<end;++i) {
-        std::cout << vec[i];
+
+const int MAX_SIZE = 256; 
+
+void writen(char* arr, int begin, int end) {
+    for (int i = begin; i < end; ++i) {
+        std::cout << arr[i];
     }
 }
+void writen_1(const char* arr) {
+    std::cout<<"Вы ввели строку:";
+    while (*arr) {
+        std::cout << *arr;
+        arr++;
+    }
+    std::cout <<"\n";
+}
 
-std::vector<char> analis(std::vector<char> &vec) {
+int analis(char* arr) {
     char a;
-    bool vvod = false;
-    bool no_great=true;
+    int index = 0;
+    bool no_great = true;
 
-    while (no_great)
-    {
-        vvod = false;
-        no_great=true;
+    while (no_great) {
+        no_great = true;
         std::cout << "Введите строку (нажмите ENTER, когда захотите закончить ввод символов):\n";
 
         while ((a = getchar()) != '\n') {
             if (a == '0' || a == '1') {
-                vec.push_back(a);
-                no_great=false;
-            } 
-            else {
-                vvod = true;
+                if (index < MAX_SIZE) {
+                    arr[index++] = a;
+                }
+                no_great = false;
+            } else {
+                // std::cout << "Неверный символ: " << a << "\n";
             }
         }
-        if(no_great){
-            std::cout << "\nВы ввели полностью неправильные символы!!!\nВы ввели полностью неправильные символы!!!\nВы ввели полностью неправильные символы!!!\n";
-            no_great=true;
-            }
+
+        if (no_great) {
+            std::cout << "\nВы ввели полностью неправильные символы!!!\n";
+        }
+        else{
+            writen_1(arr);
+        }
     }
 
-    if (vvod) {
-        std::cout << "\nВы ввели строку неверно! (мы убрали ненужные символы): ";
-
-        for (char ch : vec) {
-            std::cout << ch;
-        }
-    } 
-
-    return vec;
+    return index;
 }
 
 void osnova() {
-    std::vector<char> c;
-    c = analis(c);
+    char c[MAX_SIZE];
+    int size = analis(c);
 
-    int count = 0; 
-    char currentChar = '\0'; 
-    bool foundEvenGroup = false; 
+    int count = 0;
+    char currentChar = '\0';
+    bool foundEvenGroup = false;
 
     std::cout << "Группы с четным количеством символов:\n";
 
-    for (int i = 0; i <= c.size(); ++i) {
-        char simvol_find = c[i];
+    for (int i = 0; i <= size; ++i) {
+        char simvol_find = (i < size) ? c[i] : '\0';
 
         if (simvol_find == currentChar) {
             count++;
-        } 
-        else {
+        } else {
             if (count % 2 == 0 && count > 0) {
                 std::cout << "\nГруппа: ";
-                writen(c,(i-count),i);
+                writen(c, i - count, i);
 
-                std::cout << "\n\tСимвол " <<currentChar << " встречается " << count << " раз(a).\n\tНачало группы-["<<i-count+1<<"].  Конец группы-["<<i<<"].\n\n";
+                std::cout << "\n\tСимвол " << currentChar << " встречается " << count << " раз(a).\n\tНачало группы-[" << (i - count + 1) << "].  Конец группы-[" << i << "].\n\n";
                 foundEvenGroup = true;
             }
 
             currentChar = simvol_find;
-            count = 1; 
+            count = 1;
         }
     }
 

@@ -1,63 +1,58 @@
 #include <iostream>
-#include <vector>
-void writen(std::vector<char> &vec) {
-    
-    for (char ch: vec) {
-        std::cout << ch;
-    }
+#include <string>
+
+void writen(const std::string& str) {
+    std::cout << str << std::endl;
 }
-std::vector<char> analis(std::vector<char> &vec) {
-    char a;
-    bool vvod = false;
-    bool no_great=true;
 
-        vvod = false;
-        no_great=false;
-        std::cout << "Введите строку (нажмите ENTER, когда захотите закончить ввод символов):\n";
+std::string analis(int fakt) {
+    std::string input;
 
-        while ((a = getchar()) != '\n') {
-            vec.push_back(a);
-        }
-
-    std::cout << "Вы ввели строку: ";
-    for (char ch : vec) {
-        std::cout << ch;
+    switch (fakt) {
+        case 1:
+            std::cout << "\n\tВведите текст, который будет обрабатывать код.\n\t(нажмите ENTER, когда захотите закончить ввод символов): ";
+            break;
+        case 2:
+            std::cout << "\n\tВведите подстроку, которую собираетесь использовать для вставки \n\t(нажмите ENTER, когда захотите закончить ввод символов): ";
+            break;
+        default:
+            std::cout << "\nВведите строку, которую собираетесь использовать:\n";
+            break;
     }
 
-    return vec;
+    std::getline(std::cin, input);
+
+    std::cout << "\nВы ввели строку: ";
+    writen(input);
+
+    return input;
 }
 
 void osnova() {
-    std::vector<char> c;
-    std::vector<char> stroca;
+    std::string c;
+    std::string stroca;
+
     char simvol;
-    c = analis(c);
-    stroca = analis(stroca);
 
-    int count = 0; 
-    char currentChar = '\0'; 
-    bool foundEvenGroup = false; 
+    c = analis(1);
+    stroca = analis(2);
+    std::cout << "\nВведите символ для замены: ";
+    std::cin >> simvol;
+    std::cin.ignore(); 
 
-    for (int i = 0; i <= c.size(); ++i) {
-        char simvol_find =simvol;
-
-        if (simvol_find != currentChar && simvol_find == c[i]) {
-            for (char ch :stroca)
-            {
-                c.push_back(ch);
-            }
-            foundEvenGroup = true;
-        }
+    size_t pos = 0;
+    while ((pos = c.find(simvol, pos)) != std::string::npos) {
+        c.replace(pos+1, 1, stroca); 
+        pos += stroca.length(); 
     }
 
-    if (!foundEvenGroup) {
-        std::cout << "Не найдено нужных элементов!\n";
-    }
+    std::cout << "Результат после замены: ";
+    writen(c);
 }
 
 int main() {
     char otvet;
-    std::cout << "\nВ тексте после указанного символа вставить подстроку.\n\nВыполнил задание №2: Ширко Владимир.\nВариант-№4(19 в списке)\n\n";
+    std::cout << "\nВ тексте заменить все вхождения символа на подстроку.\nВыполнил задание №2: Ширко Владимир.\nВариант-№4(19 в списке)\n\n";
     do {
         osnova();
         std::cout << "\nЕсли хотите продолжить, то введите 'y' или 'Y', иначе введите любой другой символ: ";

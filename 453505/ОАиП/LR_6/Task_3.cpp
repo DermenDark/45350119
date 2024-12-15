@@ -1,30 +1,59 @@
-#include<iostream>
+#include <iostream>
 
-void osnova(){
-    std::vector<char> c;
-    char a;
+void writen(const char* str) {
+    std::cout << str << std::endl;
+}
 
-    std::cout << "Введите строку:\n ";
+void osnova() {
+    const int MAX_SIZE = 1000;
+    char c[MAX_SIZE]; 
+    char line[100]; 
+    int index = 0; 
 
-    while ((a = getchar()) != '\n') {
-        c.push_back(a);
+    std::cout << "Введите строки (для завершения ввода введите пустую строку):\n";
+
+    while (true) {
+        std::cin.getline(line, 100); 
+
+        if (line[0] == '\0') break; 
+        for (int i = 0; line[i] != '\0'; ++i) {
+            c[index++] = line[i];
+        }
+        c[index++] = ' ';
     }
 
-    std::cout << "Вы ввели строку: ";
+    c[index - 1] = '\0'; 
 
-    for (char ch : c) {
-        std::cout << ch;
+    std::cout << "Вы ввели строки: ";
+    writen(c);
+
+    std::cout << "Слова в обратном порядке: ";
+    int end = index - 1;
+    for (int i = index - 1; i >= 0; ) {
+        while (i >= 0 && c[i] == ' ') {
+            --i;
+        }
+        end = i + 1;
+        while (i >= 0 && c[i] != ' ') {
+            --i; 
+        }
+        // Печатаем слово
+        for (int j = i + 1; j < end; ++j) {
+            std::cout << c[j];
+        }
+        if (i >= 0) {
+            std::cout << ' '; 
+        }
     }
-
     std::cout << std::endl;
 }
 
 int main() {
     char otvet;
-    std::cout << "\nВ строке, состоящей из групп нулей и единиц, найти и вывести на экран группы с четным количеством символов.\n\nВыполнил задание:Ширко Владимир.\nВариант-№4(19 в списке)\n\n";
+    std::cout << "\nИмеется массив строк. На том же месте не заводя других массивов, \nзаписать слова в обратном порядке, рассматривая все строки, т.е. \nпервое слово первой строки станет последним словом последней строки\n(если объединить строки, будет гораздо проще).\n\nВыполнил задание №3: Ширко Владимир.\nВариант-№4(19 в списке)\n\n";
     do {
         osnova();
-        std::cout << "\nХотите ввести еще один массив чисел? \n(Если хотите продолжить то введите 'y' или 'да', иначе ввести любой символ): ";
+        std::cout << "\nЕсли хотите продолжить, то введите 'y' или 'да', иначе введите любой символ: ";
         std::cin >> otvet;
         std::cin.ignore();
     } while (otvet == 'y' || otvet == 'Y');
