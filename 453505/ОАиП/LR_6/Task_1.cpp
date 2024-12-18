@@ -32,7 +32,7 @@ int analis(char* arr) {
                 }
                 no_great = false;
             } else {
-                // std::cout << "Неверный символ: " << a << "\n";
+                std::cout << "Кривые руки ввели неверно символ: " << a << "\n";
             }
         }
 

@@ -1,8 +1,5 @@
 #include <iostream>
-
-void osnova() {
-    std::cout<<5;
-}
+#include "Task_1.h"
 
 int main() {
     char otvet;

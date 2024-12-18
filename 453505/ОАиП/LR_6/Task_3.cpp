@@ -37,7 +37,6 @@ void osnova() {
         while (i >= 0 && c[i] != ' ') {
             --i; 
         }
-        // Печатаем слово
         for (int j = i + 1; j < end; ++j) {
             std::cout << c[j];
         }
