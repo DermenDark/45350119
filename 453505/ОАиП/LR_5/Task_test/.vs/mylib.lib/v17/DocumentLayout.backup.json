@@ -1,0 +1,104 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\Users\\ASUS\\OneDrive\\\u0414\u043E\u043A\u0443\u043C\u0435\u043D\u0442\u044B\\proga\\LR_5\\Task_test\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{FEC4D476-1DA0-4CF1-B782-35F4FB66D9E7}|Test2\\Test2.vcxproj|C:\\Users\\ASUS\\OneDrive\\\u0414\u043E\u043A\u0443\u043C\u0435\u043D\u0442\u044B\\proga\\LR_5\\Task_test\\Test2\\mainn.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{FEC4D476-1DA0-4CF1-B782-35F4FB66D9E7}|Test2\\Test2.vcxproj|solutionrelative:Test2\\mainn.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E72639C6-7673-4758-B8F5-7E2C52022D0D}|Dinamic\\Dinamic.vcxproj|C:\\Users\\ASUS\\OneDrive\\\u0414\u043E\u043A\u0443\u043C\u0435\u043D\u0442\u044B\\proga\\LR_5\\Task_test\\Dinamic\\main.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{E72639C6-7673-4758-B8F5-7E2C52022D0D}|Dinamic\\Dinamic.vcxproj|solutionrelative:Dinamic\\main.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{9C400B67-467F-49F3-A5CD-E9BED48BA37B}|Test\\Test.vcxproj|C:\\Users\\ASUS\\OneDrive\\\u0414\u043E\u043A\u0443\u043C\u0435\u043D\u0442\u044B\\proga\\LR_5\\Task_test\\Main.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{9C400B67-467F-49F3-A5CD-E9BED48BA37B}|Test\\Test.vcxproj|solutionrelative:Main.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F2CE906D-EFF7-4AEA-A36E-8F7F99E782A4}|mylib\\mylib.vcxproj|C:\\Users\\ASUS\\OneDrive\\\u0414\u043E\u043A\u0443\u043C\u0435\u043D\u0442\u044B\\proga\\LR_5\\Task_test\\mylib\\S1.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{F2CE906D-EFF7-4AEA-A36E-8F7F99E782A4}|mylib\\mylib.vcxproj|solutionrelative:mylib\\S1.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 4,
+          "Children": [
+            {
+              "$type": "Bookmark",
+              "Name": "ST:128:0:{1fc202d4-d401-403c-9834-5b218574bb67}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{1c4feeaa-4718-4aa9-859d-94ce25d182ba}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:129:0:{75188d03-9892-4ae2-abf1-207126247ce5}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:128:0:{75188d03-9892-4ae2-abf1-207126247ce5}"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "mainn.cpp",
+              "DocumentMoniker": "C:\\Users\\ASUS\\OneDrive\\\u0414\u043E\u043A\u0443\u043C\u0435\u043D\u0442\u044B\\proga\\LR_5\\Task_test\\Test2\\mainn.cpp",
+              "RelativeDocumentMoniker": "Test2\\mainn.cpp",
+              "ToolTip": "C:\\Users\\ASUS\\OneDrive\\\u0414\u043E\u043A\u0443\u043C\u0435\u043D\u0442\u044B\\proga\\LR_5\\Task_test\\Test2\\mainn.cpp",
+              "RelativeToolTip": "Test2\\mainn.cpp",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAEAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
+              "WhenOpened": "2024-12-09T11:45:21.954Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "Main.cpp",
+              "DocumentMoniker": "C:\\Users\\ASUS\\OneDrive\\\u0414\u043E\u043A\u0443\u043C\u0435\u043D\u0442\u044B\\proga\\LR_5\\Task_test\\Main.cpp",
+              "RelativeDocumentMoniker": "Main.cpp",
+              "ToolTip": "C:\\Users\\ASUS\\OneDrive\\\u0414\u043E\u043A\u0443\u043C\u0435\u043D\u0442\u044B\\proga\\LR_5\\Task_test\\Main.cpp",
+              "RelativeToolTip": "Main.cpp",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
+              "WhenOpened": "2024-12-09T11:21:19.046Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "S1.cpp",
+              "DocumentMoniker": "C:\\Users\\ASUS\\OneDrive\\\u0414\u043E\u043A\u0443\u043C\u0435\u043D\u0442\u044B\\proga\\LR_5\\Task_test\\mylib\\S1.cpp",
+              "RelativeDocumentMoniker": "mylib\\S1.cpp",
+              "ToolTip": "C:\\Users\\ASUS\\OneDrive\\\u0414\u043E\u043A\u0443\u043C\u0435\u043D\u0442\u044B\\proga\\LR_5\\Task_test\\mylib\\S1.cpp",
+              "RelativeToolTip": "mylib\\S1.cpp",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
+              "WhenOpened": "2024-12-09T11:21:16.623Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "main.cpp",
+              "DocumentMoniker": "C:\\Users\\ASUS\\OneDrive\\\u0414\u043E\u043A\u0443\u043C\u0435\u043D\u0442\u044B\\proga\\LR_5\\Task_test\\Dinamic\\main.cpp",
+              "RelativeDocumentMoniker": "Dinamic\\main.cpp",
+              "ToolTip": "C:\\Users\\ASUS\\OneDrive\\\u0414\u043E\u043A\u0443\u043C\u0435\u043D\u0442\u044B\\proga\\LR_5\\Task_test\\Dinamic\\main.cpp",
+              "RelativeToolTip": "Dinamic\\main.cpp",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
+              "WhenOpened": "2024-12-09T11:21:14.55Z",
+              "EditorCaption": ""
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

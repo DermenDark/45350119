@@ -1,0 +1,121 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\Users\\ASUS\\OneDrive\\\u0414\u043E\u043A\u0443\u043C\u0435\u043D\u0442\u044B\\proga\\LR_5\\Library\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{9C01919D-D5DF-43FF-A702-8E2F9E35BD11}|Task_5\\Task_5.vcxproj|C:\\Users\\ASUS\\OneDrive\\\u0414\u043E\u043A\u0443\u043C\u0435\u043D\u0442\u044B\\proga\\LR_5\\Library\\Task_5\\Task_5.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{9C01919D-D5DF-43FF-A702-8E2F9E35BD11}|Task_5\\Task_5.vcxproj|solutionrelative:Task_5\\Task_5.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{4D0F9163-EEF7-4F85-AFEE-8E8E8E5DF971}|Dinamic\\Dinamic.vcxproj|C:\\Users\\ASUS\\OneDrive\\\u0414\u043E\u043A\u0443\u043C\u0435\u043D\u0442\u044B\\proga\\LR_5\\Library\\Dinamic\\dla_task_2.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{4D0F9163-EEF7-4F85-AFEE-8E8E8E5DF971}|Dinamic\\Dinamic.vcxproj|solutionrelative:Dinamic\\dla_task_2.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{18F55D85-0138-4109-867A-D8BA1052878D}|Task_3\\Task_3.vcxproj|C:\\Users\\ASUS\\OneDrive\\\u0414\u043E\u043A\u0443\u043C\u0435\u043D\u0442\u044B\\proga\\LR_5\\Library\\Task_3\\Task_3.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{18F55D85-0138-4109-867A-D8BA1052878D}|Task_3\\Task_3.vcxproj|solutionrelative:Task_3\\Task_3.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{D2F098C4-51B9-4A0A-A114-3B9F40C4ECAC}|Task_4\\Task_4.vcxproj|C:\\Users\\ASUS\\OneDrive\\\u0414\u043E\u043A\u0443\u043C\u0435\u043D\u0442\u044B\\proga\\LR_5\\Library\\Task_4\\Task_4.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{D2F098C4-51B9-4A0A-A114-3B9F40C4ECAC}|Task_4\\Task_4.vcxproj|solutionrelative:Task_4\\Task_4.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{44C237FD-F60B-4E14-A1ED-59F03B9CF803}|Task_2\\Task_2.vcxproj|C:\\Users\\ASUS\\OneDrive\\\u0414\u043E\u043A\u0443\u043C\u0435\u043D\u0442\u044B\\proga\\LR_5\\Library\\Task_2\\Task_2.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{44C237FD-F60B-4E14-A1ED-59F03B9CF803}|Task_2\\Task_2.vcxproj|solutionrelative:Task_2\\Task_2.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 5,
+          "Children": [
+            {
+              "$type": "Bookmark",
+              "Name": "ST:128:0:{1fc202d4-d401-403c-9834-5b218574bb67}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{1c4feeaa-4718-4aa9-859d-94ce25d182ba}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:129:0:{75188d03-9892-4ae2-abf1-207126247ce5}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:128:0:{75188d03-9892-4ae2-abf1-207126247ce5}"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "dla_task_2.cpp",
+              "DocumentMoniker": "C:\\Users\\ASUS\\OneDrive\\\u0414\u043E\u043A\u0443\u043C\u0435\u043D\u0442\u044B\\proga\\LR_5\\Library\\Dinamic\\dla_task_2.cpp",
+              "RelativeDocumentMoniker": "Dinamic\\dla_task_2.cpp",
+              "ToolTip": "C:\\Users\\ASUS\\OneDrive\\\u0414\u043E\u043A\u0443\u043C\u0435\u043D\u0442\u044B\\proga\\LR_5\\Library\\Dinamic\\dla_task_2.cpp",
+              "RelativeToolTip": "Dinamic\\dla_task_2.cpp",
+              "ViewState": "AgIAAAMAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
+              "WhenOpened": "2024-12-10T14:28:31.385Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "Task_5.cpp",
+              "DocumentMoniker": "C:\\Users\\ASUS\\OneDrive\\\u0414\u043E\u043A\u0443\u043C\u0435\u043D\u0442\u044B\\proga\\LR_5\\Library\\Task_5\\Task_5.cpp",
+              "RelativeDocumentMoniker": "Task_5\\Task_5.cpp",
+              "ToolTip": "C:\\Users\\ASUS\\OneDrive\\\u0414\u043E\u043A\u0443\u043C\u0435\u043D\u0442\u044B\\proga\\LR_5\\Library\\Task_5\\Task_5.cpp",
+              "RelativeToolTip": "Task_5\\Task_5.cpp",
+              "ViewState": "AgIAABUAAAAAAAAAAAAAAC4AAAAbAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
+              "WhenOpened": "2024-12-10T14:16:25.619Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "Task_4.cpp",
+              "DocumentMoniker": "C:\\Users\\ASUS\\OneDrive\\\u0414\u043E\u043A\u0443\u043C\u0435\u043D\u0442\u044B\\proga\\LR_5\\Library\\Task_4\\Task_4.cpp",
+              "RelativeDocumentMoniker": "Task_4\\Task_4.cpp",
+              "ToolTip": "C:\\Users\\ASUS\\OneDrive\\\u0414\u043E\u043A\u0443\u043C\u0435\u043D\u0442\u044B\\proga\\LR_5\\Library\\Task_4\\Task_4.cpp",
+              "RelativeToolTip": "Task_4\\Task_4.cpp",
+              "ViewState": "AgIAAAMAAAAAAAAAAAAAADAAAAAFAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
+              "WhenOpened": "2024-12-10T14:14:19.82Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "Task_2.cpp",
+              "DocumentMoniker": "C:\\Users\\ASUS\\OneDrive\\\u0414\u043E\u043A\u0443\u043C\u0435\u043D\u0442\u044B\\proga\\LR_5\\Library\\Task_2\\Task_2.cpp",
+              "RelativeDocumentMoniker": "Task_2\\Task_2.cpp",
+              "ToolTip": "C:\\Users\\ASUS\\OneDrive\\\u0414\u043E\u043A\u0443\u043C\u0435\u043D\u0442\u044B\\proga\\LR_5\\Library\\Task_2\\Task_2.cpp",
+              "RelativeToolTip": "Task_2\\Task_2.cpp",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
+              "WhenOpened": "2024-12-10T14:14:16.628Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "Task_3.cpp",
+              "DocumentMoniker": "C:\\Users\\ASUS\\OneDrive\\\u0414\u043E\u043A\u0443\u043C\u0435\u043D\u0442\u044B\\proga\\LR_5\\Library\\Task_3\\Task_3.cpp",
+              "RelativeDocumentMoniker": "Task_3\\Task_3.cpp",
+              "ToolTip": "C:\\Users\\ASUS\\OneDrive\\\u0414\u043E\u043A\u0443\u043C\u0435\u043D\u0442\u044B\\proga\\LR_5\\Library\\Task_3\\Task_3.cpp",
+              "RelativeToolTip": "Task_3\\Task_3.cpp",
+              "ViewState": "AgIAAAkAAAAAAAAAAAAAABsAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
+              "WhenOpened": "2024-12-10T14:13:48.213Z",
+              "EditorCaption": ""
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
