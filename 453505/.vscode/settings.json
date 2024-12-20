@@ -109,7 +109,9 @@
     "set": "cpp",
     "optional": "cpp",
     "cinttypes": "cpp",
-    "variant": "cpp"
+    "variant": "cpp",
+    "unordered_set": "cpp",
+    "bitset": "cpp"
   },
   "sonarlint.pathToCompileCommands": "${workspaceFolder}/ОАиП/LR_4/LabWork4_PartC./build/compile_commands.json",
   "editor.tokenColorCustomizations": {
