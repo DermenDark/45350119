@@ -115,7 +115,8 @@
     "chrono": "cpp",
     "complex": "cpp",
     "cstring": "cpp",
-    "ratio": "cpp"
+    "ratio": "cpp",
+    "fstream": "cpp"
   },
   "sonarlint.pathToCompileCommands": "${workspaceFolder}/ОАиП/LR_4/LabWork4_PartC./build/compile_commands.json",
   "editor.tokenColorCustomizations": {

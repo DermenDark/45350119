@@ -3,7 +3,9 @@
 void funk_menu(){
     std::string num_funk="0";
     bool problem=false;
-
+    vec_bus bus_sapis;
+    
+    
     do{ if(problem){std::cout << "\nНет такой функции. ";}
         std::cout << "Ведите нужную вам функцию:";
         std::getline(std::cin, num_funk);
@@ -12,6 +14,7 @@ void funk_menu(){
             problem = true;
             continue;
         }
+
 
         switch (num_funk[0]) {
             case '1':
@@ -31,6 +34,8 @@ void funk_menu(){
                 break;
             case '4':
                 std::cout << "Вы выбрали функцию 4.\n";
+
+                bus_sapis =new_bus_route();
 
                 problem = false;
                 break;
@@ -64,5 +69,4 @@ void funk_menu(){
                 break;
         }
     }while (problem);
-
 }
