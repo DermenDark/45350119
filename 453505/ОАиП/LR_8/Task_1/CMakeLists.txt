@@ -4,7 +4,8 @@ project(task_1)
 set(CMAKE_CXX_STANDARD 11)
 set(CMAKE_CXX_STANDARD_REQUIRED True)
 
-set(SOURCE_EXE Task_1.cpp 
+set(SOURCE_EXE 
+Task_1.cpp 
 funk1/osnova.cpp 
 funk1/menu.cpp 
 funk1/funk_menu.cpp 

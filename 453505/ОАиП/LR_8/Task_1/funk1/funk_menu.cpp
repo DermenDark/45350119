@@ -5,7 +5,7 @@ void funk_menu(){
     bool problem=false;
     vec_bus bus_sapis;
     
-    
+
     do{ if(problem){std::cout << "\nНет такой функции. ";}
         std::cout << "Ведите нужную вам функцию:";
         std::getline(std::cin, num_funk);
@@ -19,49 +19,40 @@ void funk_menu(){
         switch (num_funk[0]) {
             case '1':
                 std::cout << "Вы выбрали функцию 1.\n";
-
-                problem = false;
+                demonstriten_all();
                 break;
             case '2':
                 std::cout << "Вы выбрали функцию 2.\n";
-
-                problem = false;
+                filtr_time();
                 break;
             case '3':
                 std::cout << "Вы выбрали функцию 3.\n";
 
-                problem = false;
                 break;
             case '4':
                 std::cout << "Вы выбрали функцию 4.\n";
+                new_bus_route();
 
-                bus_sapis =new_bus_route();
-
-                problem = false;
                 break;
             case '5':
                 std::cout << "Вы выбрали функцию 5.\n";
 
-                problem = false;
                 break;
             case '6':
                 std::cout << "Вы выбрали функцию 6.\n";
 
-                problem = false;
                 break;
             case '7':
                 std::cout << "Вы выбрали функцию 7.\n";                
 
-                problem = false;
                 break;
             case '8':
                 std::cout << "Вы выбрали функцию 8.\n";
-
-                problem = false;
+                remove(fl.c_str());
+                std::cout << "Данные о рейсах успешно удалены.";
                 break;
             case '0':
-                std::cout << "Выход из меню.\n";
-
+                std::cout << "Выход из программы.\n";
                 problem = false;  
                 break;
             default:

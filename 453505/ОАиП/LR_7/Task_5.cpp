@@ -50,7 +50,6 @@ void print(
 
             std::cout << spisok[slaveIndex].second << " "; 
         }
-        // std::cout << '\n';
     }
 }
 //рапределяем рабов на групы день первый
@@ -270,7 +269,7 @@ void osnova() {
         std::cout<<"\nOставшееся количество бочек под подозрением:"<<ism_bochki.size();
         std::cout << "\nДень второй:";
 
-        int c;
+        int c=0;
         switch (5-dead.size()) {
         case 1:
             c = fin(2,1,num_bochki%2,rab_spis,findDivisionCount(ism_bochki[0],2)*2)+findDivisionCount(ism_bochki[0],2)*2;

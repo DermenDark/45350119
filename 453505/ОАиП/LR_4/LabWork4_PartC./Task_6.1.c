@@ -1,8 +1,7 @@
 #include <stdio.h>
 #include <stdlib.h>
-#define ll long long
 
-void printMatrix(ll** matrix, ll size) {
+void printMatrix(long long** matrix, long long size) {
     for (int row = 0; row < size; row++) {
         for (int col = 0; col < size; col++) {
             printf("%lld ", matrix[row][col]);
@@ -11,11 +10,13 @@ void printMatrix(ll** matrix, ll size) {
     }
 }
 
-void fillOddMagicSquare(ll** matrix, ll size, ll startVal, ll maxVal) {
-    ll row = 0, col = size / 2;
+void fillOddMagicSquare(long long** matrix, long long size, long long startVal, long long maxVal) {
+    long long row = 0;
+    long long col = size / 2;
     while (startVal <= maxVal) {
         matrix[row][col] = startVal++;
-        ll prevRow = row, prevCol = col;
+        long long prevRow = row;
+        long long prevCol = col;
         col++;
         row--;
         if (row < 0 && col < size) row = size - 1;
@@ -32,16 +33,16 @@ void fillOddMagicSquare(ll** matrix, ll size, ll startVal, ll maxVal) {
     }
 }
 
-void fillDoublyEvenMagicSquare(ll size) {
-    ll** matrix = (ll**)malloc(size * sizeof(ll*));
-    for (ll i = 0; i < size; ++i) {
-        matrix[i] = (ll*)malloc(size * sizeof(ll));
-        for (ll j = 0; j < size; j++) {
+void fillDoublyEvenMagicSquare(long long size) {
+    long long** matrix = (long long**)malloc(size * sizeof(long long*));
+    for (long long i = 0; i < size; ++i) {
+        matrix[i] = (long long*)malloc(size * sizeof(long long));
+        for (long long j = 0; j < size; j++) {
             matrix[i][j] = size * i + j + 1;
         }
     }
 
-    for (ll i = 0; i < size / 4; i++) {
+    for (long long i = 0; i < size / 4; i++) {
         for (int j = 0; j < size / 4; j++) {
             matrix[i][j] = size * size - (size * i + j);
             matrix[i + size / 4 * 3][j] = size * size - ((i + size / 4 * 3) * size + j);
@@ -57,24 +58,24 @@ void fillDoublyEvenMagicSquare(ll size) {
     }
 
     printMatrix(matrix, size);
-    for (ll i = 0; i < size; ++i) free(matrix[i]);
+    for (long long i = 0; i < size; ++i) free(matrix[i]);
     free(matrix);
 }
 
-void fillSinglyEvenMagicSquare(ll size) {
-    ll halfSize = size / 2;
-    ll subSquareSize = size * size / 4;
+void fillSinglyEvenMagicSquare(long long size) {
+    long long halfSize = size / 2;
+    long long subSquareSize = size * size / 4;
 
-    ll** A = (ll**)malloc(halfSize * sizeof(ll*));
-    ll** B = (ll**)malloc(halfSize * sizeof(ll*));
-    ll** C = (ll**)malloc(halfSize * sizeof(ll*));
-    ll** D = (ll**)malloc(halfSize * sizeof(ll*));
+    long long** A = (long long**)malloc(halfSize * sizeof(long long*));
+    long long** B = (long long**)malloc(halfSize * sizeof(long long*));
+    long long** C = (long long**)malloc(halfSize * sizeof(long long*));
+    long long** D = (long long**)malloc(halfSize * sizeof(long long*));
 
-    for (ll i = 0; i < halfSize; ++i) {
-        A[i] = (ll*)malloc(halfSize * sizeof(ll));
-        B[i] = (ll*)malloc(halfSize * sizeof(ll));
-        C[i] = (ll*)malloc(halfSize * sizeof(ll));
-        D[i] = (ll*)malloc(halfSize * sizeof(ll));
+    for (long long i = 0; i < halfSize; ++i) {
+        A[i] = (long long*)malloc(halfSize * sizeof(long long));
+        B[i] = (long long*)malloc(halfSize * sizeof(long long));
+        C[i] = (long long*)malloc(halfSize * sizeof(long long));
+        D[i] = (long long*)malloc(halfSize * sizeof(long long));
     }
 
     fillOddMagicSquare(A, halfSize, 1, subSquareSize);
@@ -85,17 +86,17 @@ void fillSinglyEvenMagicSquare(ll size) {
     for (int row = 0; row < halfSize; row++) {
         for (int col = 0; col < size / 4; col++) {
             if (col < size / 4 - 1) {
-                ll temp = B[row][halfSize - col - 1];
+                long long temp = B[row][halfSize - col - 1];
                 B[row][halfSize - col - 1] = D[row][halfSize - col - 1];
                 D[row][halfSize - col - 1] = temp;
             }
             if (row == size / 4 && col == 0) {
-                ll temp = A[row][size / 4];
+                long long temp = A[row][size / 4];
                 A[row][size / 4] = C[row][size / 4];
                 C[row][size / 4] = temp;
                 continue;
             }
-            ll temp = A[row][col];
+            long long temp = A[row][col];
             A[row][col] = C[row][col];
             C[row][col] = temp;
         }
@@ -120,7 +121,7 @@ void fillSinglyEvenMagicSquare(ll size) {
         printf("\n");
     }
 
-    for (ll i = 0; i < halfSize; ++i) {
+    for (long long i = 0; i < halfSize; ++i) {
         free(A[i]);
         free(B[i]);
         free(C[i]);
@@ -132,16 +133,16 @@ void fillSinglyEvenMagicSquare(ll size) {
     free(D);
 }
 
-void generateMagicSquare(ll size) {
+void generateMagicSquare(long long size) {
     if (size % 2 == 1) {
-        ll** matrix = (ll**)malloc(size * sizeof(ll*));
-        for (ll i = 0; i < size; ++i) {
-            matrix[i] = (ll*)malloc(size * sizeof(ll));
+        long long** matrix = (long long**)malloc(size * sizeof(long long*));
+        for (long long i = 0; i < size; ++i) {
+            matrix[i] = (long long*)malloc(size * sizeof(long long));
             for (int j = 0; j < size; j++) matrix[i][j] = 0;
         }
         fillOddMagicSquare(matrix, size, 1, size * size);
         printMatrix(matrix, size);
-        for (ll i = 0; i < size; ++i) free(matrix[i]);
+        for (long long i = 0; i < size; ++i) free(matrix[i]);
         free(matrix);
     } else if (size % 4 == 0) {
         fillDoublyEvenMagicSquare(size);
@@ -152,7 +153,7 @@ void generateMagicSquare(ll size) {
 
 void square() {
     printf("Введите длину стороны квадрата:\n");
-    ll size;
+    long long size;
     scanf("%lld", &size);
     if (size == 1) {
         printf("1\n");

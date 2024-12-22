@@ -1,0 +1,23 @@
+Создайте файл CMakeLists.txt:
+    В корневой папке вашего проекта создайте файл CMakeLists.txt:
+
+cmake:
+    cmake_minimum_required(VERSION 3.10)
+    project(MyDynamicLibrary)
+
+    set(CMAKE_CXX_STANDARD 11)
+
+    add_library(mylib SHARED mylib/mylib.cpp)
+    add_executable(main main.cpp)
+    target_link_libraries(main mylib)
+
+В этом файле add_library(mylib SHARED mylib/mylib.cpp) указывает, что мы создаем динамическую библиотеку.
+
+Сборка проекта с помощью CMake:
+    Откройте терминал в VS Code (Terminal > New Terminal).
+    Перейдите в корневую папку вашего проекта и создайте папку для сборки: mkdir build
+    cd build
+Запустите CMake для генерации файлов сборки: cmake ..
+После успешного выполнения команды CMake выполните сборку: cmake --build.
+make
+Запустите программу: ./main

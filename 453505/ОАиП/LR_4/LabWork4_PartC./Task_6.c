@@ -6,7 +6,10 @@ typedef int ll;
 int TEST_OUT = 0;
 
 int TestMagicSquare(int size, int *square) {
-    int sumi = 0, sumj = 0, sumDik = 0, sumlak = 0;
+    int sumi = 0;
+    int sumj = 0;
+    int sumDik = 0;
+    int sumlak = 0;
     int magsum = size * (size * size + 1) / 2;
 
     for (int i = 0; i < size; ++i) {
@@ -182,7 +185,7 @@ void create_magic_square() {
 
     print_square(matrix, size);
 
-    int* flat_matrix = (int*)malloc(size * size * sizeof(int));
+    int* flat_matrix = (int*)malloc( size * sizeof(int));
     for (int i = 0; i < size; ++i) {
         for (int j = 0; j < size; ++j) {
             flat_matrix[i * size + j] = matrix[i][j];

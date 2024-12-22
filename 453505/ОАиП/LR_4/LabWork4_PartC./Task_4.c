@@ -22,7 +22,8 @@ void freeee(long long int ***array, long long int x, long long int y) {
     }
     free(array);
 }
-void poisk(){long long int x, y, z;
+void poisk(){
+    long long int x, y, z;
     printf("Введите размеры массива (x, y, z): ");
     scanf("%lld %lld %lld", &x, &y, &z);
 
