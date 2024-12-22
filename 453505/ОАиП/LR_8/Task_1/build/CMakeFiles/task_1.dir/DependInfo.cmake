@@ -16,7 +16,6 @@ set(CMAKE_DEPENDS_DEPENDENCY_FILES
   "/home/karina/453505/453505/ОАиП/LR_8/Task_1/funk1/funk_5.cpp" "CMakeFiles/task_1.dir/funk1/funk_5.cpp.o" "gcc" "CMakeFiles/task_1.dir/funk1/funk_5.cpp.o.d"
   "/home/karina/453505/453505/ОАиП/LR_8/Task_1/funk1/funk_6.cpp" "CMakeFiles/task_1.dir/funk1/funk_6.cpp.o" "gcc" "CMakeFiles/task_1.dir/funk1/funk_6.cpp.o.d"
   "/home/karina/453505/453505/ОАиП/LR_8/Task_1/funk1/funk_7.cpp" "CMakeFiles/task_1.dir/funk1/funk_7.cpp.o" "gcc" "CMakeFiles/task_1.dir/funk1/funk_7.cpp.o.d"
-  "/home/karina/453505/453505/ОАиП/LR_8/Task_1/funk1/funk_8.cpp" "CMakeFiles/task_1.dir/funk1/funk_8.cpp.o" "gcc" "CMakeFiles/task_1.dir/funk1/funk_8.cpp.o.d"
   "/home/karina/453505/453505/ОАиП/LR_8/Task_1/funk1/funk_menu.cpp" "CMakeFiles/task_1.dir/funk1/funk_menu.cpp.o" "gcc" "CMakeFiles/task_1.dir/funk1/funk_menu.cpp.o.d"
   "/home/karina/453505/453505/ОАиП/LR_8/Task_1/funk1/menu.cpp" "CMakeFiles/task_1.dir/funk1/menu.cpp.o" "gcc" "CMakeFiles/task_1.dir/funk1/menu.cpp.o.d"
   "/home/karina/453505/453505/ОАиП/LR_8/Task_1/funk1/osnova.cpp" "CMakeFiles/task_1.dir/funk1/osnova.cpp.o" "gcc" "CMakeFiles/task_1.dir/funk1/osnova.cpp.o.d"

@@ -1,5 +1,5 @@
 #include "funk1/begin.h"
-std::string fl="file.dat";
+std::string fl="file.bin";
 int main() {
     
     char otvet; 

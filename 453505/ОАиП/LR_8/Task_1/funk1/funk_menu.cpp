@@ -27,7 +27,7 @@ void funk_menu(){
                 break;
             case '3':
                 std::cout << "Вы выбрали функцию 3.\n";
-
+                filtr_opr();
                 break;
             case '4':
                 std::cout << "Вы выбрали функцию 4.\n";

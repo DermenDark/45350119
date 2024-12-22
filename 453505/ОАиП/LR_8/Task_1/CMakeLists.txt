@@ -15,8 +15,7 @@ funk1/funk_3.cpp
 funk1/funk_4.cpp
 funk1/funk_5.cpp
 funk1/funk_6.cpp
-funk1/funk_7.cpp
-funk1/funk_8.cpp)
+funk1/funk_7.cpp)
 
 include_directories(funk1)
 

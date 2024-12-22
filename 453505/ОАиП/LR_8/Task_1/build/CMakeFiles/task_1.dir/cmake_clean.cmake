@@ -15,8 +15,6 @@ file(REMOVE_RECURSE
   "CMakeFiles/task_1.dir/funk1/funk_6.cpp.o.d"
   "CMakeFiles/task_1.dir/funk1/funk_7.cpp.o"
   "CMakeFiles/task_1.dir/funk1/funk_7.cpp.o.d"
-  "CMakeFiles/task_1.dir/funk1/funk_8.cpp.o"
-  "CMakeFiles/task_1.dir/funk1/funk_8.cpp.o.d"
   "CMakeFiles/task_1.dir/funk1/funk_menu.cpp.o"
   "CMakeFiles/task_1.dir/funk1/funk_menu.cpp.o.d"
   "CMakeFiles/task_1.dir/funk1/menu.cpp.o"

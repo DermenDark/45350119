@@ -321,30 +321,6 @@ funk1/funk_7.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/task_1.dir/build.make CMakeFiles/task_1.dir/funk1/funk_7.cpp.s
 .PHONY : funk1/funk_7.cpp.s
 
-funk1/funk_8.o: funk1/funk_8.cpp.o
-.PHONY : funk1/funk_8.o
-
-# target to build an object file
-funk1/funk_8.cpp.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/task_1.dir/build.make CMakeFiles/task_1.dir/funk1/funk_8.cpp.o
-.PHONY : funk1/funk_8.cpp.o
-
-funk1/funk_8.i: funk1/funk_8.cpp.i
-.PHONY : funk1/funk_8.i
-
-# target to preprocess a source file
-funk1/funk_8.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/task_1.dir/build.make CMakeFiles/task_1.dir/funk1/funk_8.cpp.i
-.PHONY : funk1/funk_8.cpp.i
-
-funk1/funk_8.s: funk1/funk_8.cpp.s
-.PHONY : funk1/funk_8.s
-
-# target to generate assembly for a file
-funk1/funk_8.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/task_1.dir/build.make CMakeFiles/task_1.dir/funk1/funk_8.cpp.s
-.PHONY : funk1/funk_8.cpp.s
-
 funk1/funk_menu.o: funk1/funk_menu.cpp.o
 .PHONY : funk1/funk_menu.o
 
@@ -450,9 +426,6 @@ help:
 	@echo "... funk1/funk_7.o"
 	@echo "... funk1/funk_7.i"
 	@echo "... funk1/funk_7.s"
-	@echo "... funk1/funk_8.o"
-	@echo "... funk1/funk_8.i"
-	@echo "... funk1/funk_8.s"
 	@echo "... funk1/funk_menu.o"
 	@echo "... funk1/funk_menu.i"
 	@echo "... funk1/funk_menu.s"

@@ -11,19 +11,6 @@ vec_bus filtr_prisnak(const vec_bus& rout,const std::string& hour) {
     return filtr_vec; 
 }
 
-// Нахождение определённого рейса
-vec_bus filtr_eks(const vec_bus& rout, std::function<bool(const bus_route&)> predicate) {
-    vec_bus filtr_vec;
-
-    for (const auto& route : rout) {
-        // Используем переданное условие для фильтрации
-        if (predicate(route)) {
-            filtr_vec.push_back(route);
-        }
-    }
-    return filtr_vec; 
-}
-
 //сортировка по убыванию
 vec_bus sortirovka(const vec_bus& rout) {
     vec_bus filtr_vec = rout; 
@@ -58,6 +45,9 @@ void filtr_time(){
         std::cout << "Нет рейсов со временем раньше " << hour<<":"<<minuts<< "." << std::endl;
 
     }
+    else{    
     std::cout<<"Вот все подходящие вам рейсы:";
     writen(filtr);
+    }
+
 }
