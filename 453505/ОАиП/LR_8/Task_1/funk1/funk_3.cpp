@@ -19,7 +19,7 @@ void filtr_opr(){
     std::function<bool(const bus_route&)> prisnak;
 
     do{ if(problem){std::cout << "\nНет такого свойства. ";}
-
+        poisk();
         std::cout<<"Введите по какому свойству будете искать необходимый автобус?";
         std::getline(std::cin, find_bus);
 

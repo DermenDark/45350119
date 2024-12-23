@@ -20,35 +20,37 @@ void funk_menu(){
             case '1':
                 std::cout << "Вы выбрали функцию 1.\n";
                 demonstriten_all();
+                problem=false;
                 break;
             case '2':
                 std::cout << "Вы выбрали функцию 2.\n";
                 filtr_time();
+                problem=false;
                 break;
             case '3':
                 std::cout << "Вы выбрали функцию 3.\n";
                 filtr_opr();
+                problem=false;
                 break;
             case '4':
                 std::cout << "Вы выбрали функцию 4.\n";
                 new_bus_route();
+                problem=false;
 
                 break;
             case '5':
                 std::cout << "Вы выбрали функцию 5.\n";
-
+                update_file();
+                problem=false;
                 break;
             case '6':
-                std::cout << "Вы выбрали функцию 6.\n";
+                std::cout << "Вы выбрали функцию 6.\n";                
 
                 break;
             case '7':
-                std::cout << "Вы выбрали функцию 7.\n";                
-
-                break;
-            case '8':
-                std::cout << "Вы выбрали функцию 8.\n";
+                std::cout << "Вы выбрали функцию 7.\n";
                 remove(fl.c_str());
+                problem=false;
                 std::cout << "Данные о рейсах успешно удалены.";
                 break;
             case '0':

@@ -1,7 +1,7 @@
 #include <begin.h>
 
-// запись в файл
-void wri( std::string& filename,  vec_bus & bus) {
+//для текста
+void wri_11( std::string& filename,  vec_bus & bus) {
     std::ofstream in(filename, std::ios::app | std::ios::binary); // Открываем файл для дозаписи в бинарном режиме
     
     if (!in) {
@@ -19,6 +19,57 @@ void wri( std::string& filename,  vec_bus & bus) {
     std::cout << "\nФайл '" << filename << "' успешно записан." << std::endl;
 }
 
+// запись в файл
+void wri(const std::string& filename, const vec_bus& bus) {
+    std::ofstream out(filename, std::ios::app | std::ios::binary); // Открываем файл для записи в бинарном режиме
+
+    if (!out) {
+        std::cerr << "Ошибка при открытии файла для записи!\n";
+        return;
+    }
+
+    for (const auto& route : bus) {
+
+         size_t length;
+
+
+    length = route.nomer.size();
+
+    out.write(reinterpret_cast<const char*>(&length), sizeof(length));
+
+    out.write(route.nomer.c_str(), length);
+
+
+    length = route.typ_bus.size();
+
+    out.write(reinterpret_cast<const char*>(&length), sizeof(length));
+
+    out.write(route.typ_bus.c_str(), length);
+
+
+    length = route.punkt_drive.size();
+
+    out.write(reinterpret_cast<const char*>(&length), sizeof(length));
+
+    out.write(route.punkt_drive.c_str(), length);
+
+
+    length = route.time_start.size();
+
+    out.write(reinterpret_cast<const char*>(&length), sizeof(length));
+
+    out.write(route.time_start.c_str(), length);
+
+
+    length = route.time_end.size();
+
+    out.write(reinterpret_cast<const char*>(&length), sizeof(length));
+
+    out.write(route.time_end.c_str(), length);}
+    out.close(); // Закрываем файл
+    std::cout << "\nФайл '" << filename << "' успешно записан." << std::endl;
+
+}
 
 //сoздаём структуры
 bus_route create( std::string& nomer,  std::string& typ_bus,
@@ -34,7 +85,6 @@ void new_bus_route(){
 
     bool problem=false;
     int n=0;
-
 
     do{ 
         if(problem){std::cout << "\nВозникла ошибка с входными данными.\n";}

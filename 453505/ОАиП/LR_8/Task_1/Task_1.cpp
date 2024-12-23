@@ -1,10 +1,12 @@
 #include "funk1/begin.h"
+
+size_t max__size=64;
 std::string fl="file.bin";
+
 int main() {
     
     char otvet; 
     std::cout << "\nCправочная автовокзала и расписание движения автобусов.\n\nВыполнил задание №1:  Ширко Владимир.";
-
 
     do {
         osnova();

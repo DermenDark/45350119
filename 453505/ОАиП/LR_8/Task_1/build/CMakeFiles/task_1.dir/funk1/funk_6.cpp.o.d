@@ -158,4 +158,4 @@ CMakeFiles/task_1.dir/funk1/funk_6.cpp.o: \
  /usr/include/c++/11/bits/stl_relops.h /usr/include/c++/11/array \
  /usr/include/c++/11/bits/uses_allocator.h \
  /usr/include/c++/11/bits/invoke.h /usr/include/c++/11/bits/refwrap.h \
- /usr/include/c++/11/bits/std_function.h
+ /usr/include/c++/11/bits/std_function.h /usr/include/c++/11/limits
