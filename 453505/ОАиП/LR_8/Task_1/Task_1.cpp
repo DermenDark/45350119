@@ -1,7 +1,9 @@
 #include "funk1/begin.h"
 
-size_t max__size=64;
+
+size_t max__size=256;
 std::string fl="file.bin";
+
 
 int main() {
     

@@ -30,45 +30,57 @@ void wri(const std::string& filename, const vec_bus& bus) {
 
     for (const auto& route : bus) {
 
-         size_t length;
+        out.write(reinterpret_cast<const char*>(&max__size), sizeof(max__size));
+
+        out.write(route.nomer.c_str(), max__size);
 
 
-    length = route.nomer.size();
+        max__size = route.typ_bus.size();
 
-    out.write(reinterpret_cast<const char*>(&length), sizeof(length));
+        out.write(reinterpret_cast<const char*>(&max__size), sizeof(max__size));
 
-    out.write(route.nomer.c_str(), length);
-
-
-    length = route.typ_bus.size();
-
-    out.write(reinterpret_cast<const char*>(&length), sizeof(length));
-
-    out.write(route.typ_bus.c_str(), length);
+        out.write(route.typ_bus.c_str(), max__size);
 
 
-    length = route.punkt_drive.size();
+        max__size = route.punkt_drive.size();
 
-    out.write(reinterpret_cast<const char*>(&length), sizeof(length));
+        out.write(reinterpret_cast<const char*>(&max__size), sizeof(max__size));
 
-    out.write(route.punkt_drive.c_str(), length);
-
-
-    length = route.time_start.size();
-
-    out.write(reinterpret_cast<const char*>(&length), sizeof(length));
-
-    out.write(route.time_start.c_str(), length);
+        out.write(route.punkt_drive.c_str(), max__size);
 
 
-    length = route.time_end.size();
+        max__size = route.time_start.size();
 
-    out.write(reinterpret_cast<const char*>(&length), sizeof(length));
+        out.write(reinterpret_cast<const char*>(&max__size), sizeof(max__size));
 
-    out.write(route.time_end.c_str(), length);}
+        out.write(route.time_start.c_str(), max__size);
+
+
+        max__size = route.time_end.size();
+
+        out.write(reinterpret_cast<const char*>(&max__size), sizeof(max__size));
+
+    out.write(route.time_end.c_str(), max__size);}
     out.close(); // Закрываем файл
     std::cout << "\nФайл '" << filename << "' успешно записан." << std::endl;
 
+}
+
+void writ(const vec_bus& bus) {
+    std::ofstream out(fl, std::ios::binary | std::ios::app); // Открываем файл для записи в бинарном режиме
+
+    if (!out) {
+        std::cerr << "Ошибка при открытии файла для записи!\n";
+        return;
+    }
+
+    for (const auto& route : bus) {
+        // Записываем запись
+        out.write(reinterpret_cast<const char*>(&route), sizeof(route));
+    }
+
+    out.close(); // Закрываем файл
+    std::cout << "\nФайл '" << fl << "' успешно записан." << std::endl;
 }
 
 //сoздаём структуры
@@ -134,7 +146,6 @@ void new_bus_route(){
 
             spisok.push_back(create(nomer_, typ_bus_, punkt_drive_, time_start_, time_end_));
 
-
             if(i<n-1){
                 std::cout << "\nВы хотите продолжить ввод?\nЕсли хотите продолжить, то введите 'y' или 'Y'. ";
                 std::cin>>vopros;
@@ -145,6 +156,7 @@ void new_bus_route(){
     }}while (problem);
 
     wri(fl,spisok);
+    // writ(spisok);
     vec_bus read = readd(fl);
     writen(read);
 }

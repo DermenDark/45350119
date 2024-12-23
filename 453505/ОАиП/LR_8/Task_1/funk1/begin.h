@@ -24,7 +24,8 @@ typedef std::vector<bus_route> vec_bus;
 
 // Переменная, хранящая название файла
 extern std::string fl;
-extern  size_t max__size;
+extern size_t max__size;
+extern  const size_t MAX_SIZE;
 
 
 // Объявления функций
