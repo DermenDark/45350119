@@ -3,7 +3,7 @@
 
 size_t max__size=256;
 std::string fl="file.bin";
-
+const size_t MAX_SIZE=256;
 
 int main() {
     
@@ -11,7 +11,8 @@ int main() {
     std::cout << "\nCправочная автовокзала и расписание движения автобусов.\n\nВыполнил задание №1:  Ширко Владимир.";
 
     do {
-        osnova();
+        menu();
+        funk_menu();
         std::cout << "\n\nЕсли хотите продолжить, то введите 'y' или 'Y', иначе введите любой другой символ: ";
         std::cin >> otvet;
         std::cin.ignore();

@@ -1,14 +1,6 @@
 #include <begin.h>
 
-size_t get_record_size(const bus_route& route) {
-
-    return sizeof(size_t) * 5 + route.nomer.size() + route.typ_bus.size() + 
-
-           route.punkt_drive.size() + route.time_start.size() + route.time_end.size();
-
-}
-
-vec_bus readdii( int max_index,bus_route new_route) {
+vec_bus readdii( int max_index) {
     std::ifstream fin(fl, std::ios::binary);
     vec_bus routes;
 
@@ -184,53 +176,6 @@ void update_record(const bus_route& updated_route, size_t index) {
     fout.close();
 }
 
-void write_record(const std::string& filename, const bus_route& new_route, size_t index) {
-    // Сначала читаем все существующие записи
-    vec_bus routes = readd(fl);
-
-    // Проверяем, что индекс в пределах допустимого диапазона
-    if (index > routes.size()) { // Позволяем вставку в конец
-        std::cerr << "Индекс вне диапазона!" << std::endl;
-        return;
-    }
-
-    // Вставляем новую запись в вектор
-    routes.insert(routes.begin() + index, new_route);
-
-    // Открываем файл для записи
-    std::ofstream out(filename, std::ios::binary);
-    if (!out) {
-        std::cerr << "Ошибка при открытии файла для записи!" << std::endl;
-        return;
-    }
-
-    // Записываем все записи обратно в файл
-    for (const auto& route : routes) {
-        size_t length;
-
-        length = route.nomer.size();
-        out.write(reinterpret_cast<const char*>(&length), sizeof(length));
-        out.write(route.nomer.data(), length);
-
-        length = route.typ_bus.size();
-        out.write(reinterpret_cast<const char*>(&length), sizeof(length));
-        out.write(route.typ_bus.data(), length);
-
-        length = route.punkt_drive.size();
-        out.write(reinterpret_cast<const char*>(&length), sizeof(length));
-        out.write(route.punkt_drive.data(), length);
-
-        length = route.time_start.size();
-        out.write(reinterpret_cast<const char*>(&length), sizeof(length));
-        out.write(route.time_start.data(), length);
-
-        length = route.time_end.size();
-        out.write(reinterpret_cast<const char*>(&length), sizeof(length));
-        out.write(route.time_end.data(), length);
-    }
-
-    out.close();
-}
 // Функция для получения данных о маршруте от пользователя
 bus_route get_route_from_user() {
     bus_route route;
@@ -260,17 +205,19 @@ void update_file() {
     std::cout << "Введите индекс маршрута для обновления (начиная с 0): ";
     std::cin >> index;
     std::cin.ignore();
+    vec_bus routes = readd(fl);
 
-    // Проверяем, существует ли запись с данным индексом
-    // if (index >= routes.size()) {
-    //     std::cerr << "Ошибка: номер вне диапазона!" << std::endl;
-    //     return;
-    // }
 
-    // Получаем новые данные от пользователя
+    if (index >= routes.size()) {
+        std::cerr << "Ошибка: номер вне диапазона!" << std::endl;
+        return;
+    }
+
+
     bus_route new_route = get_route_from_user();
+    
     update_record(new_route,index);
 
-    vec_bus routes = readd(fl);
+    routes = readd(fl);
     writen(routes);
 }

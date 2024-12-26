@@ -55,8 +55,8 @@ vec_bus readd_1(const std::string& filename) {
     return routes;
 }
 
-vec_bus read() {
-    std::ifstream fin(fl, std::ios::binary);
+vec_bus readd(std::string& filename) {
+    std::ifstream fin(filename, std::ios::binary);
     vec_bus routes;
 
     if (!fin) {
@@ -64,48 +64,71 @@ vec_bus read() {
         return routes;
     }
 
+
     while (true) {
         bus_route route;
-        
-        // Читаем запись
-        if (!fin.read(reinterpret_cast<char*>(&route), sizeof(route))) break;
 
-        // Отсекаем нули
-        route.nomer[MAX_SIZE - 1] = '\0'; // Убедимся, что строка завершается нулем
-        route.typ_bus[MAX_SIZE - 1] = '\0';
-        route.punkt_drive[MAX_SIZE - 1] = '\0';
-        route.time_start[MAX_SIZE - 1] = '\0';
-        route.time_end[MAX_SIZE - 1] = '\0';
+        // Читаем длину строки для номера рейса
+        size_t length;
 
-        // Добавляем в вектор, отсекая нули
+
+        // Читаем длину номера рейса
+
+        if (!fin.read(reinterpret_cast<char*>(&length), sizeof(length))) break;
+
+        route.nomer.resize(length);
+
+        fin.read(&route.nomer[0], length);
+
+
+        // Читаем длину типа автобуса
+
+        if (!fin.read(reinterpret_cast<char*>(&length), sizeof(length))) break;
+
+        route.typ_bus.resize(length);
+
+        fin.read(&route.typ_bus[0], length);
+
+
+        // Читаем длину пункта назначения
+
+        if (!fin.read(reinterpret_cast<char*>(&length), sizeof(length))) break;
+
+        route.punkt_drive.resize(length);
+
+        fin.read(&route.punkt_drive[0], length);
+
+
+        // Читаем длину времени отправления
+
+        if (!fin.read(reinterpret_cast<char*>(&length), sizeof(length))) break;
+
+        route.time_start.resize(length);
+
+        fin.read(&route.time_start[0], length);
+
+
+        // Читаем длину времени прибытия
+
+        if (!fin.read(reinterpret_cast<char*>(&length), sizeof(length))) break;
+
+        route.time_end.resize(length);
+
+        fin.read(&route.time_end[0], length);
+
+
         routes.push_back(route);
     }
 
     fin.close();
-    return routes;
-}
+    return routes;}
 
-void writ(const vec_bus& bus) {
-    std::ofstream out(fl, std::ios::binary | std::ios::app); // Открываем файл для записи в бинарном режиме
-
-    if (!out) {
-        std::cerr << "Ошибка при открытии файла для записи!\n";
-        return;
-    }
-
-    for (const auto& route : bus) {
-        // Записываем запись
-        out.write(reinterpret_cast<const char*>(&route), sizeof(route));
-    }
-
-    out.close(); // Закрываем файл
-    std::cout << "\nФайл '" << filename << "' успешно записан." << std::endl;
-}
 
 
 //выводит все данные файлов
 void demonstriten_all(){
     vec_bus all_data = readd(fl);
-    // std::cout<<"Все хранящиеся данные в файле:";
+    // vec_bus all=readdii( 7); 
+    if(!all_data.empty())std::cout<<"Все хранящиеся данные в файле:";
     writen(all_data);
 }

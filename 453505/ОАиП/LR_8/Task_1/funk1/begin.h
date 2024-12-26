@@ -4,7 +4,7 @@
 #include <string>
 #include <fstream>
 #include <functional>
-#include <limits>
+#include <cstring>
 
 // Основная структура
 struct bus_route {
@@ -40,7 +40,7 @@ void update_file();
 void writen(vec_bus &);
 void wri(const std::string &, const vec_bus&);
 
-
+vec_bus readdii( int max_index);
 vec_bus filtr_eks(const vec_bus& , std::function<bool(const bus_route&)> );
 vec_bus filtr_prisnak(const vec_bus& ,const std::string & );
 vec_bus readd(std::string & );
