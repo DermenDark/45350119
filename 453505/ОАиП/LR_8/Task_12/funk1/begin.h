@@ -2,12 +2,16 @@
 #include <iostream>
 #include <string>
 #include <fstream>
-#include<limits>
+#include <sstream>
+#include <vector>
+#include <limits>
 #include <functional>
 #include <string.h>
+#include <cstdlib> 
 
+#include <struct.h>
 // Сокращенное название структуры для записи рейсов
-typedef bus_route* vec_bus;
+typedef std::vector<bus_route> vec_bus;
 
 // Переменная, хранящая название файла
 extern std::string fl;
@@ -21,6 +25,7 @@ void funk_menu();
 void filtr_opr();
 void demonstriten_all();
 void filtr_time();
+void pay();
 void update_file();
 void update_record(const bus_route& updated_route, size_t index, const std::string& filename);
 void writen(vec_bus str, size_t count);
@@ -33,7 +38,6 @@ vec_bus sortirovka(const vec_bus& );
 
 
 void new_bus_route();
-void free_dynamic_array(vec_bus routes);
 
 bus_route create(const char* nomer, const char* typ_bus,
                  const char* punkt_drive, const char* time_start,

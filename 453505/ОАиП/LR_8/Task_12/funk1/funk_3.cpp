@@ -1,25 +1,16 @@
 #include <begin.h>
-
 // Нахождение определённого рейса
-vec_bus filtr_eks(const vec_bus &rout, size_t count, std::function<bool(const bus_route &)> predicate, size_t &new_count)
-{
-    vec_bus filtr_vec = (vec_bus)malloc(count * sizeof(bus_route)); // Выделяем память для фильтрованного массива
+vec_bus filtr_eks(const vec_bus &rout, size_t count, std::function<bool(const bus_route &)> predicate, size_t &new_count) {
+    vec_bus filtr_vec(count); // Use vec_bus instead of malloc
     new_count = 0;
-
-    for (size_t i = 0; i < count; ++i)
-    {
-        // Используем переданное условие для фильтрации
-        if (predicate(rout[i]))
-        {
-            filtr_vec[new_count++] = rout[i]; // Добавляем в фильтрованный массив
+    for (size_t i = 0; i < count; ++i) {
+        if (predicate(rout[i])) {
+            filtr_vec[new_count++] = rout[i];
         }
     }
-
-    // Изменяем размер фильтрованного массива
-    filtr_vec = (vec_bus)realloc(filtr_vec, new_count * sizeof(bus_route));
+    filtr_vec.resize(new_count); // Resize to new_count
     return filtr_vec;
 }
-
 void filtr_opr()
 {
     std::string find_bus;
@@ -46,78 +37,60 @@ void filtr_opr()
 
         switch (find_bus[0])
         {
-        case '1':
+        case '1': // Поиск по номеру автобуса
             std::cout << "Введите номер автобуса для поиска: ";
             std::getline(std::cin, input);
-
-            // Преобразуем строку в double
-            double search_number;
-            try
-            {
-                search_number = std::stod(input); // Преобразуем строку в double
-            }
-            catch (const std::invalid_argument &)
-            {
+            try {
+                double search_number = std::stod(input); // Преобразуем строку в double
+                prisnak = [search_number](const bus_route &route) {
+                    return route.nomer.double_nomer == search_number || route.nomer.float_nomer == search_number; // Сравниваем с double и float
+                };
+            } catch (const std::invalid_argument &) {
                 std::cout << "Некорректный ввод. Пожалуйста, введите число." << std::endl;
                 problem = true;
                 continue;
-            }
-            catch (const std::out_of_range &)
-            {
+            } catch (const std::out_of_range &) {
                 std::cout << "Число вне допустимого диапазона." << std::endl;
                 problem = true;
                 continue;
             }
-
-            prisnak = [search_number](const bus_route &route)
-            {
-                return route.nomer.double_nomer == search_number; // Сравниваем с double
-            };
-            problem = false;
             break;
-        case '2':
+        case '2': // Поиск по типу автобуса
             std::cout << "Введите тип автобуса для поиска: ";
             std::getline(std::cin, input);
-            prisnak = [input](const bus_route &route)
-            {
-                return route.typ_bus == input;
+            prisnak = [input](const bus_route &route) {
+                return std::string(route.typ_bus) == input;
             };
-            problem = false;
             break;
-        case '3':
+        case '3': // Поиск по пункту назначения
             std::cout << "Введите пункт назначения для поиска: ";
             std::getline(std::cin, input);
-            prisnak = [input](const bus_route &route)
-            {
-                return route.punkt_drive == input;
+            prisnak = [input](const bus_route &route) {
+                return std::string(route.punkt_drive) == input;
             };
-            problem = false;
             break;
-        case '4':
+        case '4': // Поиск по времени отправления
             std::cout << "Введите время отправления для поиска: ";
             std::getline(std::cin, input);
-            prisnak = [input](const bus_route &route)
-            {
-                return route.time_start == input;
+            prisnak = [input](const bus_route &route) {
+                return std::string(route.time_start) == input;
             };
-            problem = false;
             break;
-        case '5':
+        case '5': // Поиск по времени прибытия
             std::cout << "Введите время прибытия для поиска: ";
             std::getline(std::cin, input);
-            prisnak = [input](const bus_route &route)
-            {
-                return route.time_end == input;
+            prisnak = [input](const bus_route &route) {
+                return std::string(route.time_end) == input;
             };
-            problem = false;
             break;
-        case '0':
+        case '0': // Выход из программы
             std::cout << "Выход из программы.\n";
             return;
-        default:
+        default: // Некорректный ввод
             problem = true;
             continue;
         }
+        problem = false; // Сброс флага проблемы, если все прошло успешно
     } while (problem);
 
     size_t count;
@@ -125,12 +98,12 @@ void filtr_opr()
     vec_bus found_routes;
 
     size_t new_count;
-    if (routes != NULL)
+    if (!routes.empty())
     {
         found_routes = filtr_eks(routes, count, prisnak, new_count);
     }
 
-    if (found_routes != NULL && routes != NULL)
+    if (!found_routes.empty() && !routes.empty())
     {
         if (new_count == 0)
         {
@@ -140,7 +113,5 @@ void filtr_opr()
         {
             writen(found_routes, new_count); // Выводим найденные рейсы
         }
-        free_dynamic_array(routes);
-        free_dynamic_array(found_routes);
     }
 }
