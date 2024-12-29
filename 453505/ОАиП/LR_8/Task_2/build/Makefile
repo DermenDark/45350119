@@ -57,10 +57,10 @@ RM = /usr/bin/cmake -E rm -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/karina/453505/453505/ОАиП/LR_8/Task_1
+CMAKE_SOURCE_DIR = /home/karina/453505/453505/ОАиП/LR_8/Task_2
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/karina/453505/453505/ОАиП/LR_8/Task_1/build
+CMAKE_BINARY_DIR = /home/karina/453505/453505/ОАиП/LR_8/Task_2/build
 
 #=============================================================================
 # Targets provided globally by CMake.
@@ -87,9 +87,9 @@ rebuild_cache/fast: rebuild_cache
 
 # The main all target
 all: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/karina/453505/453505/ОАиП/LR_8/Task_1/build/CMakeFiles /home/karina/453505/453505/ОАиП/LR_8/Task_1/build//CMakeFiles/progress.marks
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/karina/453505/453505/ОАиП/LR_8/Task_2/build/CMakeFiles /home/karina/453505/453505/ОАиП/LR_8/Task_2/build//CMakeFiles/progress.marks
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/karina/453505/453505/ОАиП/LR_8/Task_1/build/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/karina/453505/453505/ОАиП/LR_8/Task_2/build/CMakeFiles 0
 .PHONY : all
 
 # The main clean target
@@ -117,233 +117,257 @@ depend:
 .PHONY : depend
 
 #=============================================================================
-# Target rules for targets named task_1
+# Target rules for targets named task_2
 
 # Build rule for target.
-task_1: cmake_check_build_system
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 task_1
-.PHONY : task_1
+task_2: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 task_2
+.PHONY : task_2
 
 # fast build rule for target.
-task_1/fast:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/task_1.dir/build.make CMakeFiles/task_1.dir/build
-.PHONY : task_1/fast
+task_2/fast:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/task_2.dir/build.make CMakeFiles/task_2.dir/build
+.PHONY : task_2/fast
 
-Task_1.o: Task_1.cpp.o
-.PHONY : Task_1.o
-
-# target to build an object file
-Task_1.cpp.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/task_1.dir/build.make CMakeFiles/task_1.dir/Task_1.cpp.o
-.PHONY : Task_1.cpp.o
-
-Task_1.i: Task_1.cpp.i
-.PHONY : Task_1.i
-
-# target to preprocess a source file
-Task_1.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/task_1.dir/build.make CMakeFiles/task_1.dir/Task_1.cpp.i
-.PHONY : Task_1.cpp.i
-
-Task_1.s: Task_1.cpp.s
-.PHONY : Task_1.s
-
-# target to generate assembly for a file
-Task_1.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/task_1.dir/build.make CMakeFiles/task_1.dir/Task_1.cpp.s
-.PHONY : Task_1.cpp.s
-
-funk1/funk_1.o: funk1/funk_1.cpp.o
-.PHONY : funk1/funk_1.o
+Task_2.o: Task_2.cpp.o
+.PHONY : Task_2.o
 
 # target to build an object file
-funk1/funk_1.cpp.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/task_1.dir/build.make CMakeFiles/task_1.dir/funk1/funk_1.cpp.o
-.PHONY : funk1/funk_1.cpp.o
+Task_2.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/task_2.dir/build.make CMakeFiles/task_2.dir/Task_2.cpp.o
+.PHONY : Task_2.cpp.o
 
-funk1/funk_1.i: funk1/funk_1.cpp.i
-.PHONY : funk1/funk_1.i
+Task_2.i: Task_2.cpp.i
+.PHONY : Task_2.i
 
 # target to preprocess a source file
-funk1/funk_1.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/task_1.dir/build.make CMakeFiles/task_1.dir/funk1/funk_1.cpp.i
-.PHONY : funk1/funk_1.cpp.i
+Task_2.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/task_2.dir/build.make CMakeFiles/task_2.dir/Task_2.cpp.i
+.PHONY : Task_2.cpp.i
 
-funk1/funk_1.s: funk1/funk_1.cpp.s
-.PHONY : funk1/funk_1.s
+Task_2.s: Task_2.cpp.s
+.PHONY : Task_2.s
 
 # target to generate assembly for a file
-funk1/funk_1.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/task_1.dir/build.make CMakeFiles/task_1.dir/funk1/funk_1.cpp.s
-.PHONY : funk1/funk_1.cpp.s
+Task_2.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/task_2.dir/build.make CMakeFiles/task_2.dir/Task_2.cpp.s
+.PHONY : Task_2.cpp.s
 
-funk1/funk_2.o: funk1/funk_2.cpp.o
-.PHONY : funk1/funk_2.o
+funk2/funk_1.o: funk2/funk_1.cpp.o
+.PHONY : funk2/funk_1.o
 
 # target to build an object file
-funk1/funk_2.cpp.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/task_1.dir/build.make CMakeFiles/task_1.dir/funk1/funk_2.cpp.o
-.PHONY : funk1/funk_2.cpp.o
+funk2/funk_1.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/task_2.dir/build.make CMakeFiles/task_2.dir/funk2/funk_1.cpp.o
+.PHONY : funk2/funk_1.cpp.o
 
-funk1/funk_2.i: funk1/funk_2.cpp.i
-.PHONY : funk1/funk_2.i
+funk2/funk_1.i: funk2/funk_1.cpp.i
+.PHONY : funk2/funk_1.i
 
 # target to preprocess a source file
-funk1/funk_2.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/task_1.dir/build.make CMakeFiles/task_1.dir/funk1/funk_2.cpp.i
-.PHONY : funk1/funk_2.cpp.i
+funk2/funk_1.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/task_2.dir/build.make CMakeFiles/task_2.dir/funk2/funk_1.cpp.i
+.PHONY : funk2/funk_1.cpp.i
 
-funk1/funk_2.s: funk1/funk_2.cpp.s
-.PHONY : funk1/funk_2.s
+funk2/funk_1.s: funk2/funk_1.cpp.s
+.PHONY : funk2/funk_1.s
 
 # target to generate assembly for a file
-funk1/funk_2.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/task_1.dir/build.make CMakeFiles/task_1.dir/funk1/funk_2.cpp.s
-.PHONY : funk1/funk_2.cpp.s
+funk2/funk_1.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/task_2.dir/build.make CMakeFiles/task_2.dir/funk2/funk_1.cpp.s
+.PHONY : funk2/funk_1.cpp.s
 
-funk1/funk_3.o: funk1/funk_3.cpp.o
-.PHONY : funk1/funk_3.o
+funk2/funk_2.o: funk2/funk_2.cpp.o
+.PHONY : funk2/funk_2.o
 
 # target to build an object file
-funk1/funk_3.cpp.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/task_1.dir/build.make CMakeFiles/task_1.dir/funk1/funk_3.cpp.o
-.PHONY : funk1/funk_3.cpp.o
+funk2/funk_2.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/task_2.dir/build.make CMakeFiles/task_2.dir/funk2/funk_2.cpp.o
+.PHONY : funk2/funk_2.cpp.o
 
-funk1/funk_3.i: funk1/funk_3.cpp.i
-.PHONY : funk1/funk_3.i
+funk2/funk_2.i: funk2/funk_2.cpp.i
+.PHONY : funk2/funk_2.i
 
 # target to preprocess a source file
-funk1/funk_3.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/task_1.dir/build.make CMakeFiles/task_1.dir/funk1/funk_3.cpp.i
-.PHONY : funk1/funk_3.cpp.i
+funk2/funk_2.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/task_2.dir/build.make CMakeFiles/task_2.dir/funk2/funk_2.cpp.i
+.PHONY : funk2/funk_2.cpp.i
 
-funk1/funk_3.s: funk1/funk_3.cpp.s
-.PHONY : funk1/funk_3.s
+funk2/funk_2.s: funk2/funk_2.cpp.s
+.PHONY : funk2/funk_2.s
 
 # target to generate assembly for a file
-funk1/funk_3.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/task_1.dir/build.make CMakeFiles/task_1.dir/funk1/funk_3.cpp.s
-.PHONY : funk1/funk_3.cpp.s
+funk2/funk_2.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/task_2.dir/build.make CMakeFiles/task_2.dir/funk2/funk_2.cpp.s
+.PHONY : funk2/funk_2.cpp.s
 
-funk1/funk_4.o: funk1/funk_4.cpp.o
-.PHONY : funk1/funk_4.o
+funk2/funk_3.o: funk2/funk_3.cpp.o
+.PHONY : funk2/funk_3.o
 
 # target to build an object file
-funk1/funk_4.cpp.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/task_1.dir/build.make CMakeFiles/task_1.dir/funk1/funk_4.cpp.o
-.PHONY : funk1/funk_4.cpp.o
+funk2/funk_3.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/task_2.dir/build.make CMakeFiles/task_2.dir/funk2/funk_3.cpp.o
+.PHONY : funk2/funk_3.cpp.o
 
-funk1/funk_4.i: funk1/funk_4.cpp.i
-.PHONY : funk1/funk_4.i
+funk2/funk_3.i: funk2/funk_3.cpp.i
+.PHONY : funk2/funk_3.i
 
 # target to preprocess a source file
-funk1/funk_4.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/task_1.dir/build.make CMakeFiles/task_1.dir/funk1/funk_4.cpp.i
-.PHONY : funk1/funk_4.cpp.i
+funk2/funk_3.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/task_2.dir/build.make CMakeFiles/task_2.dir/funk2/funk_3.cpp.i
+.PHONY : funk2/funk_3.cpp.i
 
-funk1/funk_4.s: funk1/funk_4.cpp.s
-.PHONY : funk1/funk_4.s
+funk2/funk_3.s: funk2/funk_3.cpp.s
+.PHONY : funk2/funk_3.s
 
 # target to generate assembly for a file
-funk1/funk_4.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/task_1.dir/build.make CMakeFiles/task_1.dir/funk1/funk_4.cpp.s
-.PHONY : funk1/funk_4.cpp.s
+funk2/funk_3.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/task_2.dir/build.make CMakeFiles/task_2.dir/funk2/funk_3.cpp.s
+.PHONY : funk2/funk_3.cpp.s
 
-funk1/funk_5.o: funk1/funk_5.cpp.o
-.PHONY : funk1/funk_5.o
+funk2/funk_4.o: funk2/funk_4.cpp.o
+.PHONY : funk2/funk_4.o
 
 # target to build an object file
-funk1/funk_5.cpp.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/task_1.dir/build.make CMakeFiles/task_1.dir/funk1/funk_5.cpp.o
-.PHONY : funk1/funk_5.cpp.o
+funk2/funk_4.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/task_2.dir/build.make CMakeFiles/task_2.dir/funk2/funk_4.cpp.o
+.PHONY : funk2/funk_4.cpp.o
 
-funk1/funk_5.i: funk1/funk_5.cpp.i
-.PHONY : funk1/funk_5.i
+funk2/funk_4.i: funk2/funk_4.cpp.i
+.PHONY : funk2/funk_4.i
 
 # target to preprocess a source file
-funk1/funk_5.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/task_1.dir/build.make CMakeFiles/task_1.dir/funk1/funk_5.cpp.i
-.PHONY : funk1/funk_5.cpp.i
+funk2/funk_4.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/task_2.dir/build.make CMakeFiles/task_2.dir/funk2/funk_4.cpp.i
+.PHONY : funk2/funk_4.cpp.i
 
-funk1/funk_5.s: funk1/funk_5.cpp.s
-.PHONY : funk1/funk_5.s
+funk2/funk_4.s: funk2/funk_4.cpp.s
+.PHONY : funk2/funk_4.s
 
 # target to generate assembly for a file
-funk1/funk_5.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/task_1.dir/build.make CMakeFiles/task_1.dir/funk1/funk_5.cpp.s
-.PHONY : funk1/funk_5.cpp.s
+funk2/funk_4.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/task_2.dir/build.make CMakeFiles/task_2.dir/funk2/funk_4.cpp.s
+.PHONY : funk2/funk_4.cpp.s
 
-funk1/funk_6.o: funk1/funk_6.cpp.o
-.PHONY : funk1/funk_6.o
+funk2/funk_5.o: funk2/funk_5.cpp.o
+.PHONY : funk2/funk_5.o
 
 # target to build an object file
-funk1/funk_6.cpp.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/task_1.dir/build.make CMakeFiles/task_1.dir/funk1/funk_6.cpp.o
-.PHONY : funk1/funk_6.cpp.o
+funk2/funk_5.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/task_2.dir/build.make CMakeFiles/task_2.dir/funk2/funk_5.cpp.o
+.PHONY : funk2/funk_5.cpp.o
 
-funk1/funk_6.i: funk1/funk_6.cpp.i
-.PHONY : funk1/funk_6.i
+funk2/funk_5.i: funk2/funk_5.cpp.i
+.PHONY : funk2/funk_5.i
 
 # target to preprocess a source file
-funk1/funk_6.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/task_1.dir/build.make CMakeFiles/task_1.dir/funk1/funk_6.cpp.i
-.PHONY : funk1/funk_6.cpp.i
+funk2/funk_5.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/task_2.dir/build.make CMakeFiles/task_2.dir/funk2/funk_5.cpp.i
+.PHONY : funk2/funk_5.cpp.i
 
-funk1/funk_6.s: funk1/funk_6.cpp.s
-.PHONY : funk1/funk_6.s
+funk2/funk_5.s: funk2/funk_5.cpp.s
+.PHONY : funk2/funk_5.s
 
 # target to generate assembly for a file
-funk1/funk_6.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/task_1.dir/build.make CMakeFiles/task_1.dir/funk1/funk_6.cpp.s
-.PHONY : funk1/funk_6.cpp.s
+funk2/funk_5.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/task_2.dir/build.make CMakeFiles/task_2.dir/funk2/funk_5.cpp.s
+.PHONY : funk2/funk_5.cpp.s
 
-funk1/funk_menu.o: funk1/funk_menu.cpp.o
-.PHONY : funk1/funk_menu.o
+funk2/funk_6.o: funk2/funk_6.cpp.o
+.PHONY : funk2/funk_6.o
 
 # target to build an object file
-funk1/funk_menu.cpp.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/task_1.dir/build.make CMakeFiles/task_1.dir/funk1/funk_menu.cpp.o
-.PHONY : funk1/funk_menu.cpp.o
+funk2/funk_6.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/task_2.dir/build.make CMakeFiles/task_2.dir/funk2/funk_6.cpp.o
+.PHONY : funk2/funk_6.cpp.o
 
-funk1/funk_menu.i: funk1/funk_menu.cpp.i
-.PHONY : funk1/funk_menu.i
+funk2/funk_6.i: funk2/funk_6.cpp.i
+.PHONY : funk2/funk_6.i
 
 # target to preprocess a source file
-funk1/funk_menu.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/task_1.dir/build.make CMakeFiles/task_1.dir/funk1/funk_menu.cpp.i
-.PHONY : funk1/funk_menu.cpp.i
+funk2/funk_6.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/task_2.dir/build.make CMakeFiles/task_2.dir/funk2/funk_6.cpp.i
+.PHONY : funk2/funk_6.cpp.i
 
-funk1/funk_menu.s: funk1/funk_menu.cpp.s
-.PHONY : funk1/funk_menu.s
+funk2/funk_6.s: funk2/funk_6.cpp.s
+.PHONY : funk2/funk_6.s
 
 # target to generate assembly for a file
-funk1/funk_menu.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/task_1.dir/build.make CMakeFiles/task_1.dir/funk1/funk_menu.cpp.s
-.PHONY : funk1/funk_menu.cpp.s
+funk2/funk_6.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/task_2.dir/build.make CMakeFiles/task_2.dir/funk2/funk_6.cpp.s
+.PHONY : funk2/funk_6.cpp.s
 
-funk1/menu.o: funk1/menu.cpp.o
-.PHONY : funk1/menu.o
+funk2/funk_8.o: funk2/funk_8.cpp.o
+.PHONY : funk2/funk_8.o
 
 # target to build an object file
-funk1/menu.cpp.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/task_1.dir/build.make CMakeFiles/task_1.dir/funk1/menu.cpp.o
-.PHONY : funk1/menu.cpp.o
+funk2/funk_8.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/task_2.dir/build.make CMakeFiles/task_2.dir/funk2/funk_8.cpp.o
+.PHONY : funk2/funk_8.cpp.o
 
-funk1/menu.i: funk1/menu.cpp.i
-.PHONY : funk1/menu.i
+funk2/funk_8.i: funk2/funk_8.cpp.i
+.PHONY : funk2/funk_8.i
 
 # target to preprocess a source file
-funk1/menu.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/task_1.dir/build.make CMakeFiles/task_1.dir/funk1/menu.cpp.i
-.PHONY : funk1/menu.cpp.i
+funk2/funk_8.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/task_2.dir/build.make CMakeFiles/task_2.dir/funk2/funk_8.cpp.i
+.PHONY : funk2/funk_8.cpp.i
 
-funk1/menu.s: funk1/menu.cpp.s
-.PHONY : funk1/menu.s
+funk2/funk_8.s: funk2/funk_8.cpp.s
+.PHONY : funk2/funk_8.s
 
 # target to generate assembly for a file
-funk1/menu.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/task_1.dir/build.make CMakeFiles/task_1.dir/funk1/menu.cpp.s
-.PHONY : funk1/menu.cpp.s
+funk2/funk_8.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/task_2.dir/build.make CMakeFiles/task_2.dir/funk2/funk_8.cpp.s
+.PHONY : funk2/funk_8.cpp.s
+
+funk2/funk_menu.o: funk2/funk_menu.cpp.o
+.PHONY : funk2/funk_menu.o
+
+# target to build an object file
+funk2/funk_menu.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/task_2.dir/build.make CMakeFiles/task_2.dir/funk2/funk_menu.cpp.o
+.PHONY : funk2/funk_menu.cpp.o
+
+funk2/funk_menu.i: funk2/funk_menu.cpp.i
+.PHONY : funk2/funk_menu.i
+
+# target to preprocess a source file
+funk2/funk_menu.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/task_2.dir/build.make CMakeFiles/task_2.dir/funk2/funk_menu.cpp.i
+.PHONY : funk2/funk_menu.cpp.i
+
+funk2/funk_menu.s: funk2/funk_menu.cpp.s
+.PHONY : funk2/funk_menu.s
+
+# target to generate assembly for a file
+funk2/funk_menu.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/task_2.dir/build.make CMakeFiles/task_2.dir/funk2/funk_menu.cpp.s
+.PHONY : funk2/funk_menu.cpp.s
+
+funk2/menu.o: funk2/menu.cpp.o
+.PHONY : funk2/menu.o
+
+# target to build an object file
+funk2/menu.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/task_2.dir/build.make CMakeFiles/task_2.dir/funk2/menu.cpp.o
+.PHONY : funk2/menu.cpp.o
+
+funk2/menu.i: funk2/menu.cpp.i
+.PHONY : funk2/menu.i
+
+# target to preprocess a source file
+funk2/menu.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/task_2.dir/build.make CMakeFiles/task_2.dir/funk2/menu.cpp.i
+.PHONY : funk2/menu.cpp.i
+
+funk2/menu.s: funk2/menu.cpp.s
+.PHONY : funk2/menu.s
+
+# target to generate assembly for a file
+funk2/menu.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/task_2.dir/build.make CMakeFiles/task_2.dir/funk2/menu.cpp.s
+.PHONY : funk2/menu.cpp.s
 
 # Help Target
 help:
@@ -353,34 +377,37 @@ help:
 	@echo "... depend"
 	@echo "... edit_cache"
 	@echo "... rebuild_cache"
-	@echo "... task_1"
-	@echo "... Task_1.o"
-	@echo "... Task_1.i"
-	@echo "... Task_1.s"
-	@echo "... funk1/funk_1.o"
-	@echo "... funk1/funk_1.i"
-	@echo "... funk1/funk_1.s"
-	@echo "... funk1/funk_2.o"
-	@echo "... funk1/funk_2.i"
-	@echo "... funk1/funk_2.s"
-	@echo "... funk1/funk_3.o"
-	@echo "... funk1/funk_3.i"
-	@echo "... funk1/funk_3.s"
-	@echo "... funk1/funk_4.o"
-	@echo "... funk1/funk_4.i"
-	@echo "... funk1/funk_4.s"
-	@echo "... funk1/funk_5.o"
-	@echo "... funk1/funk_5.i"
-	@echo "... funk1/funk_5.s"
-	@echo "... funk1/funk_6.o"
-	@echo "... funk1/funk_6.i"
-	@echo "... funk1/funk_6.s"
-	@echo "... funk1/funk_menu.o"
-	@echo "... funk1/funk_menu.i"
-	@echo "... funk1/funk_menu.s"
-	@echo "... funk1/menu.o"
-	@echo "... funk1/menu.i"
-	@echo "... funk1/menu.s"
+	@echo "... task_2"
+	@echo "... Task_2.o"
+	@echo "... Task_2.i"
+	@echo "... Task_2.s"
+	@echo "... funk2/funk_1.o"
+	@echo "... funk2/funk_1.i"
+	@echo "... funk2/funk_1.s"
+	@echo "... funk2/funk_2.o"
+	@echo "... funk2/funk_2.i"
+	@echo "... funk2/funk_2.s"
+	@echo "... funk2/funk_3.o"
+	@echo "... funk2/funk_3.i"
+	@echo "... funk2/funk_3.s"
+	@echo "... funk2/funk_4.o"
+	@echo "... funk2/funk_4.i"
+	@echo "... funk2/funk_4.s"
+	@echo "... funk2/funk_5.o"
+	@echo "... funk2/funk_5.i"
+	@echo "... funk2/funk_5.s"
+	@echo "... funk2/funk_6.o"
+	@echo "... funk2/funk_6.i"
+	@echo "... funk2/funk_6.s"
+	@echo "... funk2/funk_8.o"
+	@echo "... funk2/funk_8.i"
+	@echo "... funk2/funk_8.s"
+	@echo "... funk2/funk_menu.o"
+	@echo "... funk2/funk_menu.i"
+	@echo "... funk2/funk_menu.s"
+	@echo "... funk2/menu.o"
+	@echo "... funk2/menu.i"
+	@echo "... funk2/menu.s"
 .PHONY : help
 
 

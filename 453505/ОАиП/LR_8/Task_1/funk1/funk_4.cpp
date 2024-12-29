@@ -29,9 +29,9 @@ void wri(const std::string& filename, const vec_bus bus, size_t count) {
     }
 
     for (size_t i = 0; i < count; ++i) {
-        char nomer[256], typ_bus[256], punkt_drive[256], time_start[256], time_end[256];
+        char typ_bus[256], punkt_drive[256], time_start[256], time_end[256];
 
-        strncpy(nomer, strlen(bus[i].nomer) > 0 ? bus[i].nomer : "no_data", sizeof(nomer) - 1);
+       
         strncpy(typ_bus, strlen(bus[i].typ_bus) > 0 ? bus[i].typ_bus : "no_data", sizeof(typ_bus) - 1);
         strncpy(punkt_drive, strlen(bus[i].punkt_drive) > 0 ? bus[i].punkt_drive : "no_data", sizeof(punkt_drive) - 1);
         strncpy(time_start, strlen(bus[i].time_start) > 0 ? bus[i].time_start : "no_data", sizeof(time_start) - 1);
@@ -39,14 +39,19 @@ void wri(const std::string& filename, const vec_bus bus, size_t count) {
 
 
         // Обеспечиваем, что строки заканчиваются нулевым символом
-        nomer[sizeof(nomer) - 1] = '\0';
+
         typ_bus[sizeof(typ_bus) - 1] = '\0';
         punkt_drive[sizeof(punkt_drive) - 1] = '\0';
         time_start[sizeof(time_start) - 1] = '\0';
         time_end[sizeof(time_end) - 1] = '\0';
 
         // Записываем данные в файл
-        out.write(nomer, sizeof(nomer));
+        if (bus[i].nomer.double_nomer == 0.0) { 
+            double no_data_value = std::numeric_limits<double>::quiet_NaN(); // Используем NaN для обозначения отсутствия значения
+            out.write(reinterpret_cast<const char*>(&no_data_value), sizeof(double));
+        } else {
+            out.write(reinterpret_cast<const char*>(&bus[i].nomer.double_nomer), sizeof(double));
+        }
         out.write(typ_bus, sizeof(typ_bus));
         out.write(punkt_drive, sizeof(punkt_drive));
         out.write(time_start, sizeof(time_start));
@@ -55,28 +60,6 @@ void wri(const std::string& filename, const vec_bus bus, size_t count) {
 
     out.close();
 }
-
-//сoздаём структуры
-bus_route create(const char* nomer, const char* typ_bus,
-                 const char* punkt_drive, const char* time_start,
-                 const char* time_end) {
-    bus_route route;
-
-    strncpy(route.nomer, nomer, sizeof(route.nomer) - 1);
-    route.nomer[sizeof(route.nomer) - 1] = '\0';
-
-    strncpy(route.typ_bus, typ_bus, sizeof(route.typ_bus) - 1);
-    route.typ_bus[sizeof(route.typ_bus) - 1] = '\0'; 
-
-    strncpy(route.punkt_drive, punkt_drive, sizeof(route.punkt_drive) - 1);
-    route.punkt_drive[sizeof(route.punkt_drive) - 1] = '\0'; 
-
-    strncpy(route.time_start, time_start, sizeof(route.time_start) - 1);
-    route.time_start[sizeof(route.time_start) - 1] = '\0'; 
-    strncpy(route.time_end, time_end, sizeof(route.time_end) - 1);
-    route.time_end[sizeof(route.time_end) - 1] = '\0'; 
-
-    return route;}
 
 //добавление новых рейсов в справочник
 void new_bus_route() {
@@ -121,10 +104,31 @@ void new_bus_route() {
         }
 
         std::cout << "\nВведите данные для рейса " << (i + 1) << ":\n";
+        bool probl=true;
 
-        std::cout << "Номер автобуса: ";
-        std::cin.getline(spisok[i]->nomer, sizeof(spisok[i]->nomer));
+        do{
+            std::cout << "Выберите тип номера автобуса (1 - float, 2 - double): ";
+            int type_choice;
+            std::cin >> type_choice;        
+            std::cin.ignore();
 
+            if (type_choice == 1) {
+                float temp_float;
+                std::cout << "Введите номер автобуса (float): ";
+                std::cin >> temp_float;
+                spisok[i]->nomer.double_nomer = static_cast<double>(temp_float);
+                probl=false;
+            } else if(type_choice == 2){
+                std::cout << "Введите номер автобуса (double): ";
+                std::cin >> spisok[i]->nomer.double_nomer;
+                probl=false;
+            } else {
+                probl=true;
+            }
+            std::cin.ignore();
+        }while (probl);
+        
+        
         std::cout << "Тип автобуса: ";
         std::cin.getline(spisok[i]->typ_bus, sizeof(spisok[i]->typ_bus));
 
@@ -140,7 +144,10 @@ void new_bus_route() {
             std::cout << "\nВы хотите продолжить ввод? Если хотите продолжить, то введите 'y' или 'Y': ";
             std::cin >> vopros;
             std::cin.ignore();
-            if (vopros != 'y' && vopros != 'Y') {break;}
+            if (vopros != 'y' && vopros != 'Y') {
+                n=i+1;
+                break;
+                }
             }
     }
 

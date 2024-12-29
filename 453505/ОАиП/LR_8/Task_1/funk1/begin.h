@@ -1,13 +1,16 @@
 #pragma once
 #include <iostream>
-#include <vector>
 #include <string>
 #include <fstream>
+#include<limits>
 #include <functional>
-#include <cstring>
-
+#include <string.h>
+union BusNumber {
+    double double_nomer;
+    float float_nomer;
+};
 struct bus_route {
-    char nomer[256];
+    BusNumber nomer;
     char typ_bus[256];
     char punkt_drive[256];
     char time_start[256];
@@ -15,7 +18,6 @@ struct bus_route {
 };
 
 // Сокращенное название структуры для записи рейсов
-// typedef std::vector<bus_route> vec_bus;
 typedef bus_route* vec_bus;
 
 // Переменная, хранящая название файла
@@ -43,8 +45,6 @@ vec_bus sortirovka(const vec_bus& );
 
 void new_bus_route();
 void free_dynamic_array(vec_bus routes);
-size_t get_count(const std::string& filename);
-size_t get_count(const std::string& filename, size_t max_count);
 
 bus_route create(const char* nomer, const char* typ_bus,
                  const char* punkt_drive, const char* time_start,

@@ -1,4 +1,4 @@
-# Install script for directory: /home/karina/453505/453505/ОАиП/LR_8/Task_1
+# Install script for directory: /home/karina/453505/453505/ОАиП/LR_8/Task_2
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)
@@ -50,5 +50,5 @@ endif()
 
 string(REPLACE ";" "\n" CMAKE_INSTALL_MANIFEST_CONTENT
        "${CMAKE_INSTALL_MANIFEST_FILES}")
-file(WRITE "/home/karina/453505/453505/ОАиП/LR_8/Task_1/build/${CMAKE_INSTALL_MANIFEST}"
+file(WRITE "/home/karina/453505/453505/ОАиП/LR_8/Task_2/build/${CMAKE_INSTALL_MANIFEST}"
      "${CMAKE_INSTALL_MANIFEST_CONTENT}")
