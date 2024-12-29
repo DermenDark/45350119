@@ -297,54 +297,6 @@ funk1/funk_6.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/task_1.dir/build.make CMakeFiles/task_1.dir/funk1/funk_6.cpp.s
 .PHONY : funk1/funk_6.cpp.s
 
-funk1/funk_7.o: funk1/funk_7.cpp.o
-.PHONY : funk1/funk_7.o
-
-# target to build an object file
-funk1/funk_7.cpp.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/task_1.dir/build.make CMakeFiles/task_1.dir/funk1/funk_7.cpp.o
-.PHONY : funk1/funk_7.cpp.o
-
-funk1/funk_7.i: funk1/funk_7.cpp.i
-.PHONY : funk1/funk_7.i
-
-# target to preprocess a source file
-funk1/funk_7.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/task_1.dir/build.make CMakeFiles/task_1.dir/funk1/funk_7.cpp.i
-.PHONY : funk1/funk_7.cpp.i
-
-funk1/funk_7.s: funk1/funk_7.cpp.s
-.PHONY : funk1/funk_7.s
-
-# target to generate assembly for a file
-funk1/funk_7.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/task_1.dir/build.make CMakeFiles/task_1.dir/funk1/funk_7.cpp.s
-.PHONY : funk1/funk_7.cpp.s
-
-funk1/funk_8.o: funk1/funk_8.cpp.o
-.PHONY : funk1/funk_8.o
-
-# target to build an object file
-funk1/funk_8.cpp.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/task_1.dir/build.make CMakeFiles/task_1.dir/funk1/funk_8.cpp.o
-.PHONY : funk1/funk_8.cpp.o
-
-funk1/funk_8.i: funk1/funk_8.cpp.i
-.PHONY : funk1/funk_8.i
-
-# target to preprocess a source file
-funk1/funk_8.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/task_1.dir/build.make CMakeFiles/task_1.dir/funk1/funk_8.cpp.i
-.PHONY : funk1/funk_8.cpp.i
-
-funk1/funk_8.s: funk1/funk_8.cpp.s
-.PHONY : funk1/funk_8.s
-
-# target to generate assembly for a file
-funk1/funk_8.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/task_1.dir/build.make CMakeFiles/task_1.dir/funk1/funk_8.cpp.s
-.PHONY : funk1/funk_8.cpp.s
-
 funk1/funk_menu.o: funk1/funk_menu.cpp.o
 .PHONY : funk1/funk_menu.o
 
@@ -393,30 +345,6 @@ funk1/menu.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/task_1.dir/build.make CMakeFiles/task_1.dir/funk1/menu.cpp.s
 .PHONY : funk1/menu.cpp.s
 
-funk1/osnova.o: funk1/osnova.cpp.o
-.PHONY : funk1/osnova.o
-
-# target to build an object file
-funk1/osnova.cpp.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/task_1.dir/build.make CMakeFiles/task_1.dir/funk1/osnova.cpp.o
-.PHONY : funk1/osnova.cpp.o
-
-funk1/osnova.i: funk1/osnova.cpp.i
-.PHONY : funk1/osnova.i
-
-# target to preprocess a source file
-funk1/osnova.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/task_1.dir/build.make CMakeFiles/task_1.dir/funk1/osnova.cpp.i
-.PHONY : funk1/osnova.cpp.i
-
-funk1/osnova.s: funk1/osnova.cpp.s
-.PHONY : funk1/osnova.s
-
-# target to generate assembly for a file
-funk1/osnova.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/task_1.dir/build.make CMakeFiles/task_1.dir/funk1/osnova.cpp.s
-.PHONY : funk1/osnova.cpp.s
-
 # Help Target
 help:
 	@echo "The following are some of the valid targets for this Makefile:"
@@ -447,21 +375,12 @@ help:
 	@echo "... funk1/funk_6.o"
 	@echo "... funk1/funk_6.i"
 	@echo "... funk1/funk_6.s"
-	@echo "... funk1/funk_7.o"
-	@echo "... funk1/funk_7.i"
-	@echo "... funk1/funk_7.s"
-	@echo "... funk1/funk_8.o"
-	@echo "... funk1/funk_8.i"
-	@echo "... funk1/funk_8.s"
 	@echo "... funk1/funk_menu.o"
 	@echo "... funk1/funk_menu.i"
 	@echo "... funk1/funk_menu.s"
 	@echo "... funk1/menu.o"
 	@echo "... funk1/menu.i"
 	@echo "... funk1/menu.s"
-	@echo "... funk1/osnova.o"
-	@echo "... funk1/osnova.i"
-	@echo "... funk1/osnova.s"
 .PHONY : help
 
 

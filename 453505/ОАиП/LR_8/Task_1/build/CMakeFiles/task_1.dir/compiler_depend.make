@@ -198,7 +198,9 @@ CMakeFiles/task_1.dir/Task_1.cpp.o: ../Task_1.cpp \
   /usr/include/c++/11/bits/invoke.h \
   /usr/include/c++/11/bits/refwrap.h \
   /usr/include/c++/11/bits/std_function.h \
-  /usr/include/c++/11/limits
+  /usr/include/c++/11/cstring \
+  /usr/include/string.h \
+  /usr/include/strings.h
 
 CMakeFiles/task_1.dir/funk1/funk_1.cpp.o: ../funk1/funk_1.cpp \
   /usr/include/stdc-predef.h \
@@ -397,7 +399,9 @@ CMakeFiles/task_1.dir/funk1/funk_1.cpp.o: ../funk1/funk_1.cpp \
   /usr/include/c++/11/bits/invoke.h \
   /usr/include/c++/11/bits/refwrap.h \
   /usr/include/c++/11/bits/std_function.h \
-  /usr/include/c++/11/limits
+  /usr/include/c++/11/cstring \
+  /usr/include/string.h \
+  /usr/include/strings.h
 
 CMakeFiles/task_1.dir/funk1/funk_2.cpp.o: ../funk1/funk_2.cpp \
   /usr/include/stdc-predef.h \
@@ -596,7 +600,9 @@ CMakeFiles/task_1.dir/funk1/funk_2.cpp.o: ../funk1/funk_2.cpp \
   /usr/include/c++/11/bits/invoke.h \
   /usr/include/c++/11/bits/refwrap.h \
   /usr/include/c++/11/bits/std_function.h \
-  /usr/include/c++/11/limits
+  /usr/include/c++/11/cstring \
+  /usr/include/string.h \
+  /usr/include/strings.h
 
 CMakeFiles/task_1.dir/funk1/funk_3.cpp.o: ../funk1/funk_3.cpp \
   /usr/include/stdc-predef.h \
@@ -795,7 +801,9 @@ CMakeFiles/task_1.dir/funk1/funk_3.cpp.o: ../funk1/funk_3.cpp \
   /usr/include/c++/11/bits/invoke.h \
   /usr/include/c++/11/bits/refwrap.h \
   /usr/include/c++/11/bits/std_function.h \
-  /usr/include/c++/11/limits
+  /usr/include/c++/11/cstring \
+  /usr/include/string.h \
+  /usr/include/strings.h
 
 CMakeFiles/task_1.dir/funk1/funk_4.cpp.o: ../funk1/funk_4.cpp \
   /usr/include/stdc-predef.h \
@@ -994,7 +1002,9 @@ CMakeFiles/task_1.dir/funk1/funk_4.cpp.o: ../funk1/funk_4.cpp \
   /usr/include/c++/11/bits/invoke.h \
   /usr/include/c++/11/bits/refwrap.h \
   /usr/include/c++/11/bits/std_function.h \
-  /usr/include/c++/11/limits
+  /usr/include/c++/11/cstring \
+  /usr/include/string.h \
+  /usr/include/strings.h
 
 CMakeFiles/task_1.dir/funk1/funk_5.cpp.o: ../funk1/funk_5.cpp \
   /usr/include/stdc-predef.h \
@@ -1193,7 +1203,9 @@ CMakeFiles/task_1.dir/funk1/funk_5.cpp.o: ../funk1/funk_5.cpp \
   /usr/include/c++/11/bits/invoke.h \
   /usr/include/c++/11/bits/refwrap.h \
   /usr/include/c++/11/bits/std_function.h \
-  /usr/include/c++/11/limits
+  /usr/include/c++/11/cstring \
+  /usr/include/string.h \
+  /usr/include/strings.h
 
 CMakeFiles/task_1.dir/funk1/funk_6.cpp.o: ../funk1/funk_6.cpp \
   /usr/include/stdc-predef.h \
@@ -1392,7 +1404,9 @@ CMakeFiles/task_1.dir/funk1/funk_6.cpp.o: ../funk1/funk_6.cpp \
   /usr/include/c++/11/bits/invoke.h \
   /usr/include/c++/11/bits/refwrap.h \
   /usr/include/c++/11/bits/std_function.h \
-  /usr/include/c++/11/limits
+  /usr/include/c++/11/cstring \
+  /usr/include/string.h \
+  /usr/include/strings.h
 
 CMakeFiles/task_1.dir/funk1/funk_menu.cpp.o: ../funk1/funk_menu.cpp \
   /usr/include/stdc-predef.h \
@@ -1591,7 +1605,9 @@ CMakeFiles/task_1.dir/funk1/funk_menu.cpp.o: ../funk1/funk_menu.cpp \
   /usr/include/c++/11/bits/invoke.h \
   /usr/include/c++/11/bits/refwrap.h \
   /usr/include/c++/11/bits/std_function.h \
-  /usr/include/c++/11/limits
+  /usr/include/c++/11/cstring \
+  /usr/include/string.h \
+  /usr/include/strings.h
 
 CMakeFiles/task_1.dir/funk1/menu.cpp.o: ../funk1/menu.cpp \
   /usr/include/stdc-predef.h \
@@ -1771,11 +1787,6 @@ CMakeFiles/task_1.dir/funk1/menu.cpp.o: ../funk1/menu.cpp \
   /usr/include/c++/11/istream \
   /usr/include/c++/11/bits/istream.tcc
 
-CMakeFiles/task_1.dir/funk1/osnova.cpp.o: ../funk1/osnova.cpp \
-  /usr/include/stdc-predef.h
-
-
-../funk1/osnova.cpp:
 
 ../funk1/menu.cpp:
 
@@ -1786,6 +1797,10 @@ CMakeFiles/task_1.dir/funk1/osnova.cpp.o: ../funk1/osnova.cpp \
 ../funk1/funk_5.cpp:
 
 ../funk1/funk_2.cpp:
+
+/usr/include/string.h:
+
+/usr/include/c++/11/cstring:
 
 /usr/include/c++/11/bits/refwrap.h:
 
@@ -2005,8 +2020,6 @@ CMakeFiles/task_1.dir/funk1/osnova.cpp.o: ../funk1/osnova.cpp \
 
 /usr/include/x86_64-linux-gnu/bits/types/struct_timeval.h:
 
-/usr/include/c++/11/limits:
-
 ../funk1/begin.h:
 
 /usr/include/stdc-predef.h:
@@ -2154,6 +2167,8 @@ CMakeFiles/task_1.dir/funk1/osnova.cpp.o: ../funk1/osnova.cpp \
 /usr/include/x86_64-linux-gnu/bits/thread-shared-types.h:
 
 /usr/include/x86_64-linux-gnu/bits/struct_mutex.h:
+
+/usr/include/strings.h:
 
 /usr/lib/gcc/x86_64-linux-gnu/11/include/stddef.h:
 

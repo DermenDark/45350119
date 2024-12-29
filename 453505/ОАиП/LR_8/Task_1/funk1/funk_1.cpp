@@ -1,134 +1,103 @@
 #include <begin.h>
 
-//вывод информации о рейсах
-void writen(vec_bus & str) {
-    // std::cout << "\n\nХранящиеся данные:\n";
-    for ( auto& inner : str) {
-        std::cout << "\nНомер автобуса: " << inner.nomer <<
-        "\t\tТип автобуса: " << inner.typ_bus <<
-        "\t\tПункт назначения: " <<inner.punkt_drive <<
-        "\t\tВремя отправления:"<<inner.time_start<<
-        "\t\tВремя прибытия:"<<inner.time_end;
+// Вывод информации о рейсах в терминал
+void writen(vec_bus str, size_t count) {
+    int i = 1;
+    for (size_t j = 0; j < count; ++j) {
+        // Не показываем пользователю удалённые строки
+        if (std::string(str[j].punkt_drive) == "*delite*") {
+            continue;
         }
+
+        std::cout << "\n" << i << ": Номер автобуса: " << str[j].nomer <<
+            "\t\tТип автобуса: " << str[j].typ_bus <<
+            "\t\t\tПункт назначения: " << str[j].punkt_drive <<
+            "\t\tВремя отправления: " << str[j].time_start <<
+            "\t\tВремя прибытия: " << str[j].time_end;
+        ++i;
+    }
 }
 
-
-// чтение файла(текст)
-vec_bus readd_1(const std::string& filename) {
-    std::ifstream fin(filename); // Открываем файл 
-    vec_bus routes;
+//чтение данных из файла
+vec_bus readd(const std::string& filename, size_t& count) {
+    std::ifstream fin(filename, std::ios::binary);
+    vec_bus routes = nullptr;
+    count = 0;
 
     if (!fin) {
-        std::cerr << "Ошибка при открытии файла для чтения!";
-        return routes;}
+        std::cerr << "\nОшибка при открытии файла для чтения!" << std::endl;
+        return routes;
+    }
 
+    // Сначала определяем количество записей
+    fin.seekg(0, std::ios::end);
+    size_t file_size = fin.tellg();
+    count = file_size / sizeof(bus_route); // Предполагаем, что файл содержит только bus_route
+    fin.seekg(0, std::ios::beg);
 
-    std::string line;
-    while (std::getline(fin, line)) {
-        bus_route route;
-        size_t pos = 0;
+    // Выделяем память для массива bus_route
+    routes = (vec_bus)malloc(count * sizeof(bus_route));
+    if (routes == NULL) {
+        std::cerr << "Ошибка выделения памяти\n";
+        exit(1); // Завершаем программу в случае ошибки
+    }
 
-
-        pos = line.find(',');
-        route.nomer = line.substr(0, pos);
-        line.erase(0, pos + 1);
-
-        pos = line.find(',');
-        route.typ_bus = line.substr(0, pos);
-        line.erase(0, pos + 1);
-
-        pos = line.find(',');
-        route.punkt_drive = line.substr(0, pos);
-        line.erase(0, pos + 1);
-
-        pos = line.find(',');
-        route.time_start = line.substr(0, pos);
-        line.erase(0, pos + 1);
-
-        route.time_end = line; 
-
-
-        routes.push_back(route); // Добавляем в вектор
-        }
+    // Читаем данные в массив
+    for (size_t i = 0; i < count; ++i) {
+        if (!fin.read(routes[i].nomer, sizeof(routes[i].nomer))) break;
+        if (!fin.read(routes[i].typ_bus, sizeof(routes[i].typ_bus))) break;
+        if (!fin.read(routes[i].punkt_drive, sizeof(routes[i].punkt_drive))) break;
+        if (!fin.read(routes[i].time_start, sizeof(routes[i].time_start))) break;
+        if (!fin.read(routes[i].time_end, sizeof(routes[i].time_end))) break;
+    }
 
     fin.close();
     return routes;
 }
 
-vec_bus readd(std::string& filename) {
+size_t get_count(const std::string& filename) {
     std::ifstream fin(filename, std::ios::binary);
-    vec_bus routes;
-
+    
     if (!fin) {
         std::cerr << "Ошибка при открытии файла для чтения!" << std::endl;
-        return routes;
+        return 0; 
     }
 
+    fin.seekg(0, std::ios::end);
+    size_t file_size = fin.tellg();
+    fin.seekg(0, std::ios::beg);
 
-    while (true) {
-        bus_route route;
-
-        // Читаем длину строки для номера рейса
-        size_t length;
-
-
-        // Читаем длину номера рейса
-
-        if (!fin.read(reinterpret_cast<char*>(&length), sizeof(length))) break;
-
-        route.nomer.resize(length);
-
-        fin.read(&route.nomer[0], length);
-
-
-        // Читаем длину типа автобуса
-
-        if (!fin.read(reinterpret_cast<char*>(&length), sizeof(length))) break;
-
-        route.typ_bus.resize(length);
-
-        fin.read(&route.typ_bus[0], length);
-
-
-        // Читаем длину пункта назначения
-
-        if (!fin.read(reinterpret_cast<char*>(&length), sizeof(length))) break;
-
-        route.punkt_drive.resize(length);
-
-        fin.read(&route.punkt_drive[0], length);
-
-
-        // Читаем длину времени отправления
-
-        if (!fin.read(reinterpret_cast<char*>(&length), sizeof(length))) break;
-
-        route.time_start.resize(length);
-
-        fin.read(&route.time_start[0], length);
-
-
-        // Читаем длину времени прибытия
-
-        if (!fin.read(reinterpret_cast<char*>(&length), sizeof(length))) break;
-
-        route.time_end.resize(length);
-
-        fin.read(&route.time_end[0], length);
-
-
-        routes.push_back(route);
+    size_t count = file_size / sizeof(bus_route);
+    fin.close(); 
+    return count; 
+}
+size_t get_count(const std::string& filename, size_t max_count) {
+    std::ifstream fin(filename, std::ios::binary);
+    
+    if (!fin) {
+        std::cerr << "Ошибка при открытии файла для чтения!" << std::endl;
+        return 0;
     }
 
+    fin.seekg(0, std::ios::end);
+    size_t file_size = fin.tellg(); 
+    fin.seekg(0, std::ios::beg);
+
+    size_t count = file_size / sizeof(bus_route);
     fin.close();
-    return routes;}
-
-
+    
+    return (count < max_count) ? count : max_count;
+}
+void free_dynamic_array(vec_bus routes) {
+    free(routes); 
+}
 
 //выводит все данные файлов
 void demonstriten_all(){
-    vec_bus all_data = readd(fl);
-    // vec_bus all=readdii( 7); 
-    if(!all_data.empty())std::cout<<"Все хранящиеся данные в файле:";
-    writen(all_data);
+    size_t count;
+    count = get_count(fl);
+    vec_bus all_data = readd(fl,count);
+    if (count > 0) std::cout << "Все хранящиеся данные в файле:";
+    writen(all_data,count);
+    free_dynamic_array(all_data);
 }

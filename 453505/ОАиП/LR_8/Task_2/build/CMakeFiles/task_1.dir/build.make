@@ -83,24 +83,10 @@ CMakeFiles/task_1.dir/Task_1.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/task_1.dir/Task_1.cpp.s"
 	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/karina/453505/453505/ОАиП/LR_8/Task_1/Task_1.cpp -o CMakeFiles/task_1.dir/Task_1.cpp.s
 
-CMakeFiles/task_1.dir/funk1/osnova.cpp.o: CMakeFiles/task_1.dir/flags.make
-CMakeFiles/task_1.dir/funk1/osnova.cpp.o: ../funk1/osnova.cpp
-CMakeFiles/task_1.dir/funk1/osnova.cpp.o: CMakeFiles/task_1.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/karina/453505/453505/ОАиП/LR_8/Task_1/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object CMakeFiles/task_1.dir/funk1/osnova.cpp.o"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/task_1.dir/funk1/osnova.cpp.o -MF CMakeFiles/task_1.dir/funk1/osnova.cpp.o.d -o CMakeFiles/task_1.dir/funk1/osnova.cpp.o -c /home/karina/453505/453505/ОАиП/LR_8/Task_1/funk1/osnova.cpp
-
-CMakeFiles/task_1.dir/funk1/osnova.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/task_1.dir/funk1/osnova.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/karina/453505/453505/ОАиП/LR_8/Task_1/funk1/osnova.cpp > CMakeFiles/task_1.dir/funk1/osnova.cpp.i
-
-CMakeFiles/task_1.dir/funk1/osnova.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/task_1.dir/funk1/osnova.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/karina/453505/453505/ОАиП/LR_8/Task_1/funk1/osnova.cpp -o CMakeFiles/task_1.dir/funk1/osnova.cpp.s
-
 CMakeFiles/task_1.dir/funk1/menu.cpp.o: CMakeFiles/task_1.dir/flags.make
 CMakeFiles/task_1.dir/funk1/menu.cpp.o: ../funk1/menu.cpp
 CMakeFiles/task_1.dir/funk1/menu.cpp.o: CMakeFiles/task_1.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/karina/453505/453505/ОАиП/LR_8/Task_1/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building CXX object CMakeFiles/task_1.dir/funk1/menu.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/karina/453505/453505/ОАиП/LR_8/Task_1/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object CMakeFiles/task_1.dir/funk1/menu.cpp.o"
 	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/task_1.dir/funk1/menu.cpp.o -MF CMakeFiles/task_1.dir/funk1/menu.cpp.o.d -o CMakeFiles/task_1.dir/funk1/menu.cpp.o -c /home/karina/453505/453505/ОАиП/LR_8/Task_1/funk1/menu.cpp
 
 CMakeFiles/task_1.dir/funk1/menu.cpp.i: cmake_force
@@ -114,7 +100,7 @@ CMakeFiles/task_1.dir/funk1/menu.cpp.s: cmake_force
 CMakeFiles/task_1.dir/funk1/funk_menu.cpp.o: CMakeFiles/task_1.dir/flags.make
 CMakeFiles/task_1.dir/funk1/funk_menu.cpp.o: ../funk1/funk_menu.cpp
 CMakeFiles/task_1.dir/funk1/funk_menu.cpp.o: CMakeFiles/task_1.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/karina/453505/453505/ОАиП/LR_8/Task_1/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Building CXX object CMakeFiles/task_1.dir/funk1/funk_menu.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/karina/453505/453505/ОАиП/LR_8/Task_1/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building CXX object CMakeFiles/task_1.dir/funk1/funk_menu.cpp.o"
 	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/task_1.dir/funk1/funk_menu.cpp.o -MF CMakeFiles/task_1.dir/funk1/funk_menu.cpp.o.d -o CMakeFiles/task_1.dir/funk1/funk_menu.cpp.o -c /home/karina/453505/453505/ОАиП/LR_8/Task_1/funk1/funk_menu.cpp
 
 CMakeFiles/task_1.dir/funk1/funk_menu.cpp.i: cmake_force
@@ -128,7 +114,7 @@ CMakeFiles/task_1.dir/funk1/funk_menu.cpp.s: cmake_force
 CMakeFiles/task_1.dir/funk1/funk_1.cpp.o: CMakeFiles/task_1.dir/flags.make
 CMakeFiles/task_1.dir/funk1/funk_1.cpp.o: ../funk1/funk_1.cpp
 CMakeFiles/task_1.dir/funk1/funk_1.cpp.o: CMakeFiles/task_1.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/karina/453505/453505/ОАиП/LR_8/Task_1/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Building CXX object CMakeFiles/task_1.dir/funk1/funk_1.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/karina/453505/453505/ОАиП/LR_8/Task_1/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Building CXX object CMakeFiles/task_1.dir/funk1/funk_1.cpp.o"
 	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/task_1.dir/funk1/funk_1.cpp.o -MF CMakeFiles/task_1.dir/funk1/funk_1.cpp.o.d -o CMakeFiles/task_1.dir/funk1/funk_1.cpp.o -c /home/karina/453505/453505/ОАиП/LR_8/Task_1/funk1/funk_1.cpp
 
 CMakeFiles/task_1.dir/funk1/funk_1.cpp.i: cmake_force
@@ -142,7 +128,7 @@ CMakeFiles/task_1.dir/funk1/funk_1.cpp.s: cmake_force
 CMakeFiles/task_1.dir/funk1/funk_2.cpp.o: CMakeFiles/task_1.dir/flags.make
 CMakeFiles/task_1.dir/funk1/funk_2.cpp.o: ../funk1/funk_2.cpp
 CMakeFiles/task_1.dir/funk1/funk_2.cpp.o: CMakeFiles/task_1.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/karina/453505/453505/ОАиП/LR_8/Task_1/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_6) "Building CXX object CMakeFiles/task_1.dir/funk1/funk_2.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/karina/453505/453505/ОАиП/LR_8/Task_1/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Building CXX object CMakeFiles/task_1.dir/funk1/funk_2.cpp.o"
 	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/task_1.dir/funk1/funk_2.cpp.o -MF CMakeFiles/task_1.dir/funk1/funk_2.cpp.o.d -o CMakeFiles/task_1.dir/funk1/funk_2.cpp.o -c /home/karina/453505/453505/ОАиП/LR_8/Task_1/funk1/funk_2.cpp
 
 CMakeFiles/task_1.dir/funk1/funk_2.cpp.i: cmake_force
@@ -156,7 +142,7 @@ CMakeFiles/task_1.dir/funk1/funk_2.cpp.s: cmake_force
 CMakeFiles/task_1.dir/funk1/funk_3.cpp.o: CMakeFiles/task_1.dir/flags.make
 CMakeFiles/task_1.dir/funk1/funk_3.cpp.o: ../funk1/funk_3.cpp
 CMakeFiles/task_1.dir/funk1/funk_3.cpp.o: CMakeFiles/task_1.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/karina/453505/453505/ОАиП/LR_8/Task_1/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_7) "Building CXX object CMakeFiles/task_1.dir/funk1/funk_3.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/karina/453505/453505/ОАиП/LR_8/Task_1/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_6) "Building CXX object CMakeFiles/task_1.dir/funk1/funk_3.cpp.o"
 	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/task_1.dir/funk1/funk_3.cpp.o -MF CMakeFiles/task_1.dir/funk1/funk_3.cpp.o.d -o CMakeFiles/task_1.dir/funk1/funk_3.cpp.o -c /home/karina/453505/453505/ОАиП/LR_8/Task_1/funk1/funk_3.cpp
 
 CMakeFiles/task_1.dir/funk1/funk_3.cpp.i: cmake_force
@@ -170,7 +156,7 @@ CMakeFiles/task_1.dir/funk1/funk_3.cpp.s: cmake_force
 CMakeFiles/task_1.dir/funk1/funk_4.cpp.o: CMakeFiles/task_1.dir/flags.make
 CMakeFiles/task_1.dir/funk1/funk_4.cpp.o: ../funk1/funk_4.cpp
 CMakeFiles/task_1.dir/funk1/funk_4.cpp.o: CMakeFiles/task_1.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/karina/453505/453505/ОАиП/LR_8/Task_1/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_8) "Building CXX object CMakeFiles/task_1.dir/funk1/funk_4.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/karina/453505/453505/ОАиП/LR_8/Task_1/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_7) "Building CXX object CMakeFiles/task_1.dir/funk1/funk_4.cpp.o"
 	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/task_1.dir/funk1/funk_4.cpp.o -MF CMakeFiles/task_1.dir/funk1/funk_4.cpp.o.d -o CMakeFiles/task_1.dir/funk1/funk_4.cpp.o -c /home/karina/453505/453505/ОАиП/LR_8/Task_1/funk1/funk_4.cpp
 
 CMakeFiles/task_1.dir/funk1/funk_4.cpp.i: cmake_force
@@ -184,7 +170,7 @@ CMakeFiles/task_1.dir/funk1/funk_4.cpp.s: cmake_force
 CMakeFiles/task_1.dir/funk1/funk_5.cpp.o: CMakeFiles/task_1.dir/flags.make
 CMakeFiles/task_1.dir/funk1/funk_5.cpp.o: ../funk1/funk_5.cpp
 CMakeFiles/task_1.dir/funk1/funk_5.cpp.o: CMakeFiles/task_1.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/karina/453505/453505/ОАиП/LR_8/Task_1/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_9) "Building CXX object CMakeFiles/task_1.dir/funk1/funk_5.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/karina/453505/453505/ОАиП/LR_8/Task_1/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_8) "Building CXX object CMakeFiles/task_1.dir/funk1/funk_5.cpp.o"
 	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/task_1.dir/funk1/funk_5.cpp.o -MF CMakeFiles/task_1.dir/funk1/funk_5.cpp.o.d -o CMakeFiles/task_1.dir/funk1/funk_5.cpp.o -c /home/karina/453505/453505/ОАиП/LR_8/Task_1/funk1/funk_5.cpp
 
 CMakeFiles/task_1.dir/funk1/funk_5.cpp.i: cmake_force
@@ -198,7 +184,7 @@ CMakeFiles/task_1.dir/funk1/funk_5.cpp.s: cmake_force
 CMakeFiles/task_1.dir/funk1/funk_6.cpp.o: CMakeFiles/task_1.dir/flags.make
 CMakeFiles/task_1.dir/funk1/funk_6.cpp.o: ../funk1/funk_6.cpp
 CMakeFiles/task_1.dir/funk1/funk_6.cpp.o: CMakeFiles/task_1.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/karina/453505/453505/ОАиП/LR_8/Task_1/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_10) "Building CXX object CMakeFiles/task_1.dir/funk1/funk_6.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/karina/453505/453505/ОАиП/LR_8/Task_1/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_9) "Building CXX object CMakeFiles/task_1.dir/funk1/funk_6.cpp.o"
 	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/task_1.dir/funk1/funk_6.cpp.o -MF CMakeFiles/task_1.dir/funk1/funk_6.cpp.o.d -o CMakeFiles/task_1.dir/funk1/funk_6.cpp.o -c /home/karina/453505/453505/ОАиП/LR_8/Task_1/funk1/funk_6.cpp
 
 CMakeFiles/task_1.dir/funk1/funk_6.cpp.i: cmake_force
@@ -209,38 +195,9 @@ CMakeFiles/task_1.dir/funk1/funk_6.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/task_1.dir/funk1/funk_6.cpp.s"
 	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/karina/453505/453505/ОАиП/LR_8/Task_1/funk1/funk_6.cpp -o CMakeFiles/task_1.dir/funk1/funk_6.cpp.s
 
-CMakeFiles/task_1.dir/funk1/funk_7.cpp.o: CMakeFiles/task_1.dir/flags.make
-CMakeFiles/task_1.dir/funk1/funk_7.cpp.o: ../funk1/funk_7.cpp
-CMakeFiles/task_1.dir/funk1/funk_7.cpp.o: CMakeFiles/task_1.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/karina/453505/453505/ОАиП/LR_8/Task_1/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_11) "Building CXX object CMakeFiles/task_1.dir/funk1/funk_7.cpp.o"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/task_1.dir/funk1/funk_7.cpp.o -MF CMakeFiles/task_1.dir/funk1/funk_7.cpp.o.d -o CMakeFiles/task_1.dir/funk1/funk_7.cpp.o -c /home/karina/453505/453505/ОАиП/LR_8/Task_1/funk1/funk_7.cpp
-
-CMakeFiles/task_1.dir/funk1/funk_7.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/task_1.dir/funk1/funk_7.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/karina/453505/453505/ОАиП/LR_8/Task_1/funk1/funk_7.cpp > CMakeFiles/task_1.dir/funk1/funk_7.cpp.i
-
-CMakeFiles/task_1.dir/funk1/funk_7.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/task_1.dir/funk1/funk_7.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/karina/453505/453505/ОАиП/LR_8/Task_1/funk1/funk_7.cpp -o CMakeFiles/task_1.dir/funk1/funk_7.cpp.s
-
-CMakeFiles/task_1.dir/funk1/funk_8.cpp.o: CMakeFiles/task_1.dir/flags.make
-CMakeFiles/task_1.dir/funk1/funk_8.cpp.o: ../funk1/funk_8.cpp
-CMakeFiles/task_1.dir/funk1/funk_8.cpp.o: CMakeFiles/task_1.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/karina/453505/453505/ОАиП/LR_8/Task_1/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_12) "Building CXX object CMakeFiles/task_1.dir/funk1/funk_8.cpp.o"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/task_1.dir/funk1/funk_8.cpp.o -MF CMakeFiles/task_1.dir/funk1/funk_8.cpp.o.d -o CMakeFiles/task_1.dir/funk1/funk_8.cpp.o -c /home/karina/453505/453505/ОАиП/LR_8/Task_1/funk1/funk_8.cpp
-
-CMakeFiles/task_1.dir/funk1/funk_8.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/task_1.dir/funk1/funk_8.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/karina/453505/453505/ОАиП/LR_8/Task_1/funk1/funk_8.cpp > CMakeFiles/task_1.dir/funk1/funk_8.cpp.i
-
-CMakeFiles/task_1.dir/funk1/funk_8.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/task_1.dir/funk1/funk_8.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/karina/453505/453505/ОАиП/LR_8/Task_1/funk1/funk_8.cpp -o CMakeFiles/task_1.dir/funk1/funk_8.cpp.s
-
 # Object files for target task_1
 task_1_OBJECTS = \
 "CMakeFiles/task_1.dir/Task_1.cpp.o" \
-"CMakeFiles/task_1.dir/funk1/osnova.cpp.o" \
 "CMakeFiles/task_1.dir/funk1/menu.cpp.o" \
 "CMakeFiles/task_1.dir/funk1/funk_menu.cpp.o" \
 "CMakeFiles/task_1.dir/funk1/funk_1.cpp.o" \
@@ -248,15 +205,12 @@ task_1_OBJECTS = \
 "CMakeFiles/task_1.dir/funk1/funk_3.cpp.o" \
 "CMakeFiles/task_1.dir/funk1/funk_4.cpp.o" \
 "CMakeFiles/task_1.dir/funk1/funk_5.cpp.o" \
-"CMakeFiles/task_1.dir/funk1/funk_6.cpp.o" \
-"CMakeFiles/task_1.dir/funk1/funk_7.cpp.o" \
-"CMakeFiles/task_1.dir/funk1/funk_8.cpp.o"
+"CMakeFiles/task_1.dir/funk1/funk_6.cpp.o"
 
 # External object files for target task_1
 task_1_EXTERNAL_OBJECTS =
 
 task_1: CMakeFiles/task_1.dir/Task_1.cpp.o
-task_1: CMakeFiles/task_1.dir/funk1/osnova.cpp.o
 task_1: CMakeFiles/task_1.dir/funk1/menu.cpp.o
 task_1: CMakeFiles/task_1.dir/funk1/funk_menu.cpp.o
 task_1: CMakeFiles/task_1.dir/funk1/funk_1.cpp.o
@@ -265,11 +219,9 @@ task_1: CMakeFiles/task_1.dir/funk1/funk_3.cpp.o
 task_1: CMakeFiles/task_1.dir/funk1/funk_4.cpp.o
 task_1: CMakeFiles/task_1.dir/funk1/funk_5.cpp.o
 task_1: CMakeFiles/task_1.dir/funk1/funk_6.cpp.o
-task_1: CMakeFiles/task_1.dir/funk1/funk_7.cpp.o
-task_1: CMakeFiles/task_1.dir/funk1/funk_8.cpp.o
 task_1: CMakeFiles/task_1.dir/build.make
 task_1: CMakeFiles/task_1.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/karina/453505/453505/ОАиП/LR_8/Task_1/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_13) "Linking CXX executable task_1"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/karina/453505/453505/ОАиП/LR_8/Task_1/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_10) "Linking CXX executable task_1"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/task_1.dir/link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.

@@ -17,8 +17,6 @@ file(REMOVE_RECURSE
   "CMakeFiles/task_1.dir/funk1/funk_menu.cpp.o.d"
   "CMakeFiles/task_1.dir/funk1/menu.cpp.o"
   "CMakeFiles/task_1.dir/funk1/menu.cpp.o.d"
-  "CMakeFiles/task_1.dir/funk1/osnova.cpp.o"
-  "CMakeFiles/task_1.dir/funk1/osnova.cpp.o.d"
   "task_1"
   "task_1.pdb"
 )

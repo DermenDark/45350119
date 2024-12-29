@@ -1,3 +1,0 @@
-/home/karina/453505/453505/ОАиП/LR_8/цц/Task_1/build/CMakeFiles/task_1.dir
-/home/karina/453505/453505/ОАиП/LR_8/цц/Task_1/build/CMakeFiles/edit_cache.dir
-/home/karina/453505/453505/ОАиП/LR_8/цц/Task_1/build/CMakeFiles/rebuild_cache.dir

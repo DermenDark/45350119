@@ -6,46 +6,47 @@
 #include <functional>
 #include <cstring>
 
-// Основная структура
 struct bus_route {
-    std::string nomer;
-    std::string typ_bus;
-    std::string punkt_drive;
-    std::string time_start;
-    std::string time_end;
-};
-union Floats {
-    float f; 
-    double d; 
+    char nomer[256];
+    char typ_bus[256];
+    char punkt_drive[256];
+    char time_start[256];
+    char time_end[256];
 };
 
 // Сокращенное название структуры для записи рейсов
-typedef std::vector<bus_route> vec_bus;
+// typedef std::vector<bus_route> vec_bus;
+typedef bus_route* vec_bus;
 
 // Переменная, хранящая название файла
 extern std::string fl;
-extern size_t max__size;
-extern  const size_t MAX_SIZE;
-
 
 // Объявления функций
-void osnova();
+int find_route_index(const vec_bus& routes, size_t count, const std::function<bool(const bus_route&)>& predicate);
 void menu();
 void poisk();
+void del();
 void funk_menu();
 void filtr_opr();
 void demonstriten_all();
 void filtr_time();
 void update_file();
-void writen(vec_bus &);
-void wri(const std::string &, const vec_bus&);
+void update_record(const bus_route& updated_route, size_t index, const std::string& filename);
+void writen(vec_bus str, size_t count);
+void wri(const std::string& filename, const vec_bus& bus);
 
-vec_bus readdii( int max_index);
 vec_bus filtr_eks(const vec_bus& , std::function<bool(const bus_route&)> );
 vec_bus filtr_prisnak(const vec_bus& ,const std::string & );
-vec_bus readd(std::string & );
+vec_bus readd(const std::string& filename, size_t& count);
 vec_bus sortirovka(const vec_bus& );
 
 
 void new_bus_route();
-bus_route create(const std::string &, const std::string &, const std::string &, const std::string &, const std::string &);
+void free_dynamic_array(vec_bus routes);
+size_t get_count(const std::string& filename);
+size_t get_count(const std::string& filename, size_t max_count);
+
+bus_route create(const char* nomer, const char* typ_bus,
+                 const char* punkt_drive, const char* time_start,
+                 const char* time_end);
+bus_route get_route_from_user();

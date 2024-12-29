@@ -3,7 +3,6 @@
 void funk_menu(){
     std::string num_funk="0";
     bool problem=false;
-    vec_bus bus_sapis;
     
 
     do{ if(problem){std::cout << "\nНет такой функции. ";}
@@ -45,7 +44,8 @@ void funk_menu(){
                 break;
             case '6':
                 std::cout << "Вы выбрали функцию 6.\n";                
-
+                del();
+                problem=false;
                 break;
             case '7':
                 std::cout << "Вы выбрали функцию 7.\n";
