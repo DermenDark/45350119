@@ -195,7 +195,8 @@ CMakeFiles/task_1.dir/Task_1.cpp.o: ../Task_1.cpp \
   /usr/include/c++/11/bits/refwrap.h \
   /usr/include/c++/11/bits/std_function.h \
   /usr/include/string.h \
-  /usr/include/strings.h
+  /usr/include/strings.h \
+  ../funk1/struct.h
 
 CMakeFiles/task_1.dir/funk1/funk_1.cpp.o: ../funk1/funk_1.cpp \
   /usr/include/stdc-predef.h \
@@ -391,7 +392,8 @@ CMakeFiles/task_1.dir/funk1/funk_1.cpp.o: ../funk1/funk_1.cpp \
   /usr/include/c++/11/bits/refwrap.h \
   /usr/include/c++/11/bits/std_function.h \
   /usr/include/string.h \
-  /usr/include/strings.h
+  /usr/include/strings.h \
+  ../funk1/struct.h
 
 CMakeFiles/task_1.dir/funk1/funk_2.cpp.o: ../funk1/funk_2.cpp \
   /usr/include/stdc-predef.h \
@@ -587,7 +589,8 @@ CMakeFiles/task_1.dir/funk1/funk_2.cpp.o: ../funk1/funk_2.cpp \
   /usr/include/c++/11/bits/refwrap.h \
   /usr/include/c++/11/bits/std_function.h \
   /usr/include/string.h \
-  /usr/include/strings.h
+  /usr/include/strings.h \
+  ../funk1/struct.h
 
 CMakeFiles/task_1.dir/funk1/funk_3.cpp.o: ../funk1/funk_3.cpp \
   /usr/include/stdc-predef.h \
@@ -783,7 +786,8 @@ CMakeFiles/task_1.dir/funk1/funk_3.cpp.o: ../funk1/funk_3.cpp \
   /usr/include/c++/11/bits/refwrap.h \
   /usr/include/c++/11/bits/std_function.h \
   /usr/include/string.h \
-  /usr/include/strings.h
+  /usr/include/strings.h \
+  ../funk1/struct.h
 
 CMakeFiles/task_1.dir/funk1/funk_4.cpp.o: ../funk1/funk_4.cpp \
   /usr/include/stdc-predef.h \
@@ -979,7 +983,8 @@ CMakeFiles/task_1.dir/funk1/funk_4.cpp.o: ../funk1/funk_4.cpp \
   /usr/include/c++/11/bits/refwrap.h \
   /usr/include/c++/11/bits/std_function.h \
   /usr/include/string.h \
-  /usr/include/strings.h
+  /usr/include/strings.h \
+  ../funk1/struct.h
 
 CMakeFiles/task_1.dir/funk1/funk_5.cpp.o: ../funk1/funk_5.cpp \
   /usr/include/stdc-predef.h \
@@ -1175,7 +1180,8 @@ CMakeFiles/task_1.dir/funk1/funk_5.cpp.o: ../funk1/funk_5.cpp \
   /usr/include/c++/11/bits/refwrap.h \
   /usr/include/c++/11/bits/std_function.h \
   /usr/include/string.h \
-  /usr/include/strings.h
+  /usr/include/strings.h \
+  ../funk1/struct.h
 
 CMakeFiles/task_1.dir/funk1/funk_6.cpp.o: ../funk1/funk_6.cpp \
   /usr/include/stdc-predef.h \
@@ -1371,7 +1377,8 @@ CMakeFiles/task_1.dir/funk1/funk_6.cpp.o: ../funk1/funk_6.cpp \
   /usr/include/c++/11/bits/refwrap.h \
   /usr/include/c++/11/bits/std_function.h \
   /usr/include/string.h \
-  /usr/include/strings.h
+  /usr/include/strings.h \
+  ../funk1/struct.h
 
 CMakeFiles/task_1.dir/funk1/funk_menu.cpp.o: ../funk1/funk_menu.cpp \
   /usr/include/stdc-predef.h \
@@ -1567,7 +1574,8 @@ CMakeFiles/task_1.dir/funk1/funk_menu.cpp.o: ../funk1/funk_menu.cpp \
   /usr/include/c++/11/bits/refwrap.h \
   /usr/include/c++/11/bits/std_function.h \
   /usr/include/string.h \
-  /usr/include/strings.h
+  /usr/include/strings.h \
+  ../funk1/struct.h
 
 CMakeFiles/task_1.dir/funk1/menu.cpp.o: ../funk1/menu.cpp \
   /usr/include/stdc-predef.h \
@@ -1757,6 +1765,8 @@ CMakeFiles/task_1.dir/funk1/menu.cpp.o: ../funk1/menu.cpp \
 ../funk1/funk_5.cpp:
 
 ../funk1/funk_2.cpp:
+
+../funk1/struct.h:
 
 /usr/include/string.h:
 

@@ -130,6 +130,15 @@
     "cstring": "cpp",
     "ctime": "cpp",
     "iomanip": "cpp",
-    "sstream": "cpp"
+    "sstream": "cpp",
+    "any": "cpp",
+    "bitset": "cpp",
+    "map": "cpp",
+    "set": "cpp",
+    "unordered_set": "cpp",
+    "optional": "cpp",
+    "fstream": "cpp",
+    "cinttypes": "cpp",
+    "variant": "cpp"
   }
 }

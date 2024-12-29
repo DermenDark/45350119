@@ -220,8 +220,7 @@ void update_file() {
     if (routes != NULL) {
         new_route = get_route_from_user(routes[index]);}
 
-    if (!new_route.punkt_drive) {
-        update_record(new_route, index, fl);} // Укажите путь к вашему файлу
+        update_record(new_route, index, fl);// Укажите путь к вашему файлу
 
     // Обновляем массив маршрутов и записываем его обратно в файл
     routes = readd(fl, count);

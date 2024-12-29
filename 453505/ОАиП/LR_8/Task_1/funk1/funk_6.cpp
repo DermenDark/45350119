@@ -118,11 +118,8 @@ void del() {
 
 
     bus_route new_route;
-    if (routes != NULL) {
-        new_route = create_deleted_route();}
-
-    if (!new_route.punkt_drive) {
-        update_record(new_route, index, fl);} // Укажите путь к вашему файлу
+    new_route = create_deleted_route();
+    update_record(new_route, index, fl); // Укажите путь к вашему файлу
 
     // Обновляем массив маршрутов и записываем его обратно в файл
     routes = readd(fl, count);
