@@ -202,7 +202,7 @@ void update_file() {
     } while (problem);
 
     size_t count;
-    vec_bus routes = readd(fl, count); // Укажите путь к вашему файлу
+    vec_bus routes = readd(fl, count); 
 
     int index=-1;
     if (routes != NULL) {

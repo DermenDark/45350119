@@ -12,10 +12,10 @@ void wri(const std::string &filename, const vec_bus routes, size_t count)
 
     for (size_t i = 0; i < count; ++i)
     {
-        // Write bus number based on type
+
         if (routes[i].is_double)
         {
-            out << routes[i].nomer.double_nomer; // Write as double
+            out << routes[i].nomer.double_nomer;
         }
         else
         {
@@ -32,104 +32,121 @@ void wri(const std::string &filename, const vec_bus routes, size_t count)
 }
 
 // добавление новых рейсов в справочник
-void new_bus_route() {
+void new_bus_route()
+{
     std::string input_size;
     int n = 0;
 
-    while (true) {
+    while (true)
+    {
         std::cout << "Введите количество рейсов, которые хотите добавить: ";
         std::getline(std::cin, input_size);
 
-        if (input_size.empty()) {
+        if (input_size.empty())
+        {
             std::cout << "Вы ничего не ввели.\n";
             continue;
         }
 
-        try {
+        try
+        {
             n = std::stoi(input_size);
-            if (n <= 0) {
+            if (n <= 0)
+            {
                 std::cout << "Нужно ввести положительное целое число.\n";
                 continue;
             }
             break;
-        } catch (...) {
+        }
+        catch (...)
+        {
             std::cout << "Ошибка: введите положительное целое число.\n";
         }
     }
 
     bus_route *spisok = (bus_route *)malloc(n * sizeof(bus_route));
-    if (spisok == NULL) {
+    if (spisok == NULL)
+    {
         std::cerr << "Ошибка выделения памяти\n";
         exit(1);
     }
 
-    for (int i = 0; i < n; ++i) {
+    for (int i = 0; i < n; ++i)
+    {
         char vopros;
         std::cout << "\nВведите данные для рейса " << (i + 1) << ":\n";
         bool probl = true;
 
-        do {
-            std::cout << "Выберите тип номера автобуса (1 - float, 2 - double): ";
+        do
+        {
+            std::cout << "Выберите тип числа свободных билетов (1 - float, 2 - double): ";
             int type_choice;
             std::cin >> type_choice;
-            std::cin.ignore(); // Clear the newline character from the input buffer
+            std::cin.ignore();
 
-            if (type_choice == 1) {
+            if (type_choice == 1)
+            {
                 float temp_float;
-                std::cout << "Введите номер автобуса (float): ";
+                std::cout << "Введите число свободных билетов (float): ";
                 std::cin >> temp_float;
                 spisok[i].nomer.float_nomer = temp_float;
                 spisok[i].is_double = false;
                 probl = false;
-            } else if (type_choice == 2) {
-                std::cout << "Введите номер автобуса (double): ";
+            }
+            else if (type_choice == 2)
+            {
+                std::cout << "Введите число свободных билетов (double): ";
                 double temp;
                 std::cin >> temp;
                 spisok[i].nomer.double_nomer = temp;
                 spisok[i].is_double = true;
                 probl = false;
-            } else {
+            }
+            else
+            {
                 probl = true;
                 continue;
             }
             std::cin.ignore();
         } while (probl);
 
-        std::cout << "Тип автобуса: ";
-        std::cin.getline(spisok[i].typ_bus, sizeof(spisok[i].typ_bus)); // Use std::cin.getline for char array
+        std::cout << "Дата выезда: ";
+        std::cin.getline(spisok[i].typ_bus, sizeof(spisok[i].typ_bus));
 
         std::cout << "Пункт назначения: ";
-        std::cin.getline(spisok[i].punkt_drive, sizeof(spisok[i].punkt_drive)); // Use std::cin.getline for char array
+        std::cin.getline(spisok[i].punkt_drive, sizeof(spisok[i].punkt_drive));
 
         std::cout << "Время отправления: ";
-        std::cin.getline(spisok[i].time_start, sizeof(spisok[i].time_start)); // Use std::cin.getline for char array
+        std::cin.getline(spisok[i].time_start, sizeof(spisok[i].time_start));
 
         std::cout << "Время прибытия: ";
-        std::cin.getline(spisok[i].time_end, sizeof(spisok[i].time_end)); // Use std::cin.getline for char array
+        std::cin.getline(spisok[i].time_end, sizeof(spisok[i].time_end));
     }
 
-    // Write the new routes to the file
-    std::ofstream out("file.txt", std::ios::app); // Open file in append mode
-    if (!out) {
+    std::ofstream out(fl, std::ios::app);
+    if (!out)
+    {
         std::cerr << "Ошибка при открытии файла для записи!" << std::endl;
-        free(spisok); // Free allocated memory
+        free(spisok);
         return;
     }
 
-    for (int i = 0; i < n; ++i) {
-        // Write bus number based on type
-        if (spisok[i].is_double) {
-            out << spisok[i].nomer.double_nomer; // Write as double
-        } else {
-            out << spisok[i].nomer.float_nomer; // Write as float
+    for (int i = 0; i < n; ++i)
+    {
+        if (spisok[i].is_double)
+        {
+            out << spisok[i].nomer.double_nomer;
         }
-        out << "," // Separator
+        else
+        {
+            out << spisok[i].nomer.float_nomer;
+        }
+        out << ","
             << spisok[i].typ_bus << ","
             << spisok[i].punkt_drive << ","
             << spisok[i].time_start << ","
-            << spisok[i].time_end << "\n"; // New line for each route
+            << spisok[i].time_end << "\n";
     }
 
-    out.close(); // Close the file
-    free(spisok); // Free allocated memory
+    out.close();
 }

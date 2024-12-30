@@ -1,15 +1,20 @@
 #include <begin.h>
 
 // Функция для сортировки выбором по убыванию
-void selection_sort(vec_bus routes, size_t count) {
-    for (size_t i = 0; i < count - 1; ++i) {
+void selection_sort(vec_bus routes, size_t count)
+{
+    for (size_t i = 0; i < count - 1; ++i)
+    {
         size_t max_index = i;
-        for (size_t j = i + 1; j < count; ++j) {
-            if (routes[j].time_end > routes[max_index].time_end) { // Use > operator for std::string
+        for (size_t j = i + 1; j < count; ++j)
+        {
+            if (routes[j].time_start > routes[max_index].time_start)
+            {
                 max_index = j;
             }
         }
-        if (max_index != i) {
+        if (max_index != i)
+        {
             bus_route temp = routes[i];
             routes[i] = routes[max_index];
             routes[max_index] = temp;
@@ -18,11 +23,14 @@ void selection_sort(vec_bus routes, size_t count) {
 }
 
 // Фильтр, который перебирает массив
-vec_bus filtr_prisnak(const vec_bus &rout, size_t count, const std::string &hour, size_t &new_count) {
+vec_bus filtr_prisnak(const vec_bus &rout, size_t count, const std::string &hour, size_t &new_count)
+{
     vec_bus filtr_vec(count); // Use vec_bus instead of malloc
     new_count = 0;
-    for (size_t i = 0; i < count; ++i) {
-        if (rout[i].time_end <= hour) { // Use <= operator for std::string
+    for (size_t i = 0; i < count; ++i)
+    {
+        if (rout[i].time_end <= hour)
+        { // Use <= operator for std::string
             filtr_vec[new_count++] = rout[i];
         }
     }
@@ -34,7 +42,7 @@ vec_bus filtr_prisnak(const vec_bus &rout, size_t count, const std::string &hour
 void filtr_time()
 {
     std::string hour;
-    std::cout << "Введите время (чч:мм): ";
+    std::cout << "Введите время отправления (чч:мм): ";
     std::cin >> hour;
 
     size_t count;
@@ -52,12 +60,11 @@ void filtr_time()
         if (new_count > 0)
         {
             std::cout << "Фильтрованные данные по времени:\n";
-            writen(filtered_data, new_count);
+            writen(filtered_data);
         }
         else
         {
             std::cout << "Нет данных, соответствующих заданному времени.\n";
         }
-
     }
 }
