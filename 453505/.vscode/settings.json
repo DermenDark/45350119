@@ -142,5 +142,6 @@
   "C_Cpp.codeAnalysis.clangTidy.checks.disabled": [
     "clang-diagnostic-error",
     "clang-diagnostic-error"
-  ]
+  ],
+  "cmake.sourceDirectory": "/home/karina/453505/453505/ОАиП"
 }
