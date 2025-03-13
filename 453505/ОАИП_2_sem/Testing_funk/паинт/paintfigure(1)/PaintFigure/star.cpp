@@ -16,7 +16,7 @@ Star::~Star()
 void Star::paint(QPainter *painter, const QStyleOptionGraphicsItem *option, QWidget *widget)
 {
     painter->setPen(QPen(Qt::black, 2));
-    painter->setBrush(Qt::yellow);  // Заполним звезду цветом
+    painter->setBrush(fillColor());  // Используем цвет заливки, заданный пользователем
 
     // Определяем радиус звезды как половину максимального расстояния по X или Y
     qreal radius = qMax(qAbs(endPoint().x() - startPoint().x()), qAbs(endPoint().y() - startPoint().y())) / 2.0;

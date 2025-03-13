@@ -30,6 +30,9 @@ public:
     QColor fillColor() const; // Метод для получения цвета заливки
     void setFillColor(const QColor &color); // Метод для установки цвета заливки
 
+    virtual QRectF boundingRect() const override;
+    void setRotation(int angle);
+
     QColor color = Qt::black;      // Цвет обводки по умолчанию
     QColor m_fillColor = Qt::transparent;
 signals:
@@ -39,9 +42,6 @@ signals:
 private:
     QPointF m_startPoint;   // Стартовая точка
     QPointF m_endPoint;     // Конечная точка
-
-    QRectF boundingRect() const;    // Область, в которой содержится фигура
-
 public slots:
     void updateRomb();     // Слот обновления области, в которой содержится фигура
 };

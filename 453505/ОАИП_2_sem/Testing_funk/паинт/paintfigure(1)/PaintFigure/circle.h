@@ -12,7 +12,6 @@ class Circle : public Figure
 public:
     explicit Circle(QPointF point, QObject *parent = 0);
     ~Circle();
-    QColor color = Qt::black;
 private:
     void paint(QPainter *painter, const QStyleOptionGraphicsItem *option, QWidget *widget);
 };

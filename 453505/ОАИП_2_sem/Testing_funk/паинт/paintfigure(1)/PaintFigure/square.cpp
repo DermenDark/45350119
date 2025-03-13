@@ -16,6 +16,7 @@ Square::~Square()
 void Square::paint(QPainter *painter, const QStyleOptionGraphicsItem *option, QWidget *widget)
 {
     painter->setPen(QPen(Qt::black, 2));
+    painter->setBrush(fillColor());  // Используем цвет заливки, заданный пользователем
 
     QRectF rect(endPoint().x() > startPoint().x() ? startPoint().x() : endPoint().x(),
                 endPoint().y() > startPoint().y() ? startPoint().y() : endPoint().y(),

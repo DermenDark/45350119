@@ -15,7 +15,7 @@ Hexagon::~Hexagon()
 void Hexagon::paint(QPainter *painter, const QStyleOptionGraphicsItem *option, QWidget *widget)
 {
     painter->setPen(QPen(Qt::black, 2));
-    painter->setBrush(Qt::cyan);  // Добавим цвет для наглядности
+    painter->setBrush(fillColor());  // Используем цвет заливки, заданный пользователем
 
     // Определяем радиус шестиугольника
     qreal radius = qMax(qAbs(endPoint().x() - startPoint().x()), qAbs(endPoint().y() - startPoint().y()));

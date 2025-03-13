@@ -16,6 +16,7 @@ Squaree::~Squaree()
 void Squaree::paint(QPainter *painter, const QStyleOptionGraphicsItem *option, QWidget *widget)
 {
     painter->setPen(QPen(Qt::black, 2));
+    painter->setBrush(fillColor());  // Используем цвет заливки, заданный пользователем
 
     // Определяем длину стороны квадрата как максимальное расстояние по X или Y
     qreal side = qMax(qAbs(endPoint().x() - startPoint().x()), qAbs(endPoint().y() - startPoint().y()));

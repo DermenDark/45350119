@@ -15,7 +15,7 @@
   </property>
   <widget class="QWidget" name="centralWidget">
    <layout class="QGridLayout" name="gridLayout">
-    <item row="0" column="0" colspan="2">
+    <item row="1" column="0" colspan="2">
      <widget class="QGraphicsView" name="graphicsView"/>
     </item>
    </layout>
@@ -46,9 +46,9 @@
     <property name="title">
      <string>свойства</string>
     </property>
-    <addaction name="action_9"/>
     <addaction name="action_10"/>
     <addaction name="action_11"/>
+    <addaction name="action_12"/>
    </widget>
    <addaction name="menu"/>
    <addaction name="menu_2"/>
@@ -93,11 +93,6 @@
     <string>Ромб</string>
    </property>
   </action>
-  <action name="action_9">
-   <property name="text">
-    <string>изменение фигуры</string>
-   </property>
-  </action>
   <action name="action_10">
    <property name="text">
     <string>выделение фигуры</string>
@@ -106,6 +101,11 @@
   <action name="action_11">
    <property name="text">
     <string>изменить цвет заливки</string>
+   </property>
+  </action>
+  <action name="action_12">
+   <property name="text">
+    <string>удалить всё</string>
    </property>
   </action>
  </widget>

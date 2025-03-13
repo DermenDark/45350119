@@ -16,6 +16,7 @@ Triangle::~Triangle()
 void Triangle::paint(QPainter *painter, const QStyleOptionGraphicsItem *option, QWidget *widget)
 {
     painter->setPen(QPen(Qt::black, 2));
+    painter->setBrush(fillColor());  // Используем цвет заливки, заданный пользователем
 
     QPolygonF polygon;
 

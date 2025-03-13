@@ -9,18 +9,19 @@ class PaintScene : public QGraphicsScene
 {
     Q_OBJECT
     // Свойство текущего типа используемой фигуры
-    Q_PROPERTY(int typeFigure
-               READ typeFigure WRITE setTypeFigure
-               NOTIFY typeFigureChanged)
+    Q_PROPERTY(int typeFigure READ typeFigure WRITE setTypeFigure NOTIFY typeFigureChanged)
+    Q_PROPERTY(QColor collorFill READ collorFill WRITE setCollorFill NOTIFY collorFillChanged)
 
 public:
-    explicit PaintScene(QObject *parent = 0);
+    explicit PaintScene(QObject *parent = nullptr);
     ~PaintScene();
 
-    int typeFigure() const;                 // Возвращение текщего типа
-    void setTypeFigure(const int type);     // Установка текущего типа
+    void selectItemAt(const QPointF &position);
 
-    // Перечисление типов используемых фигур
+    int typeFigure() const;
+    void setTypeFigure(const int type);
+
+    // Перечисление типов фигур
     enum FigureTypes {
         SquareType,
         RombType,
@@ -31,23 +32,27 @@ public:
         EllipseType,
         CircleType
     };
+
+    QColor collorFill() const { return m_collorFill; }  // Геттер
+    void setCollorFill(const QColor &color);           // Сеттер
+    void removeAllFigures();
+
 public slots:
-    void setFigureFillColor(const QColor &color); // Новый слот для установки цвета заливки
+    void setFigureFillColor(const QColor &color);
+
 signals:
-    void typeFigureChanged();               // Сигнал об изменении типа текущей фигуры
+
+    void typeFigureChanged();
+    void collorFillChanged();  // Новый сигнал
 
 private:
-    /* Объект для временного хранения рисуемой фигуры
-     * Является объектом базового класса для всех трёх типов фигур в примере
-     * */
     Figure *tempFigure;
-    int m_typeFigure;   // текущий тип фигуры
+    int m_typeFigure;
+    QColor m_collorFill = Qt::transparent; // Исправленная переменная
 
-private:
-    // Для рисования используем события мыши
     void mousePressEvent(QGraphicsSceneMouseEvent * event);
     void mouseMoveEvent(QGraphicsSceneMouseEvent *event);
-
 };
 
 #endif // PAINTSCENE_H
+

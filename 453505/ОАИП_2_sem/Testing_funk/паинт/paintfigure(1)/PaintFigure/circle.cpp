@@ -11,20 +11,20 @@ Circle::~Circle()
 {
 
 }
-// Реализуем метод отрисовки круга
 void Circle::paint(QPainter *painter, const QStyleOptionGraphicsItem *option, QWidget *widget)
 {
-    painter->setPen(QPen(color(), 2)); // Используем цвет обводки
-    painter->setBrush(QBrush(fillColor()));
+    painter->setPen(QPen(Qt::black, 2));
+    painter->setBrush(fillColor());  // Используем цвет заливки, заданный пользователем
 
-    qreal radius = qMax(qAbs(endPoint().x() - startPoint().x()), qAbs(endPoint().y() - startPoint().y()));
+    // Вычисляем ширину и высоту прямоугольника
+    qreal width = qAbs(endPoint().x() - startPoint().x());
+    qreal height = qAbs(endPoint().y() - startPoint().y());
+    // Берем минимальное значение, чтобы прямоугольник был квадратом
+    qreal side = qMin(width, height);
 
-    //(фиксируем startPoint() как центр)
-    QPointF center = startPoint();
-
-    // Создаем квадратную область для рисования окружности
-    QRectF rect(center.x() - radius, center.y() - radius, 2 * radius, 2 * radius);
-    painter->drawEllipse(rect);
+    // Создаем квадрат, используя startPoint() как верхний левый угол
+    QRectF rect(startPoint(), QSizeF(side, side));
+    painter->drawEllipse(rect);  // Рисуем круг, вписанный в квадрат
 
     Q_UNUSED(option)
     Q_UNUSED(widget)

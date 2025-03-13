@@ -15,6 +15,7 @@ TEMPLATE = app
 SOURCES += main.cpp\
     circle.cpp \
     ellipse.cpp \
+    figurepropertiesdialog.cpp \
     hexagon.cpp \
         mainwindow.cpp \
     romb.cpp \
@@ -28,6 +29,7 @@ SOURCES += main.cpp\
 HEADERS  += mainwindow.h \
     circle.h \
     ellipse.h \
+    figurepropertiesdialog.h \
     hexagon.h \
     romb.h \
     paintscene.h \
@@ -37,4 +39,6 @@ HEADERS  += mainwindow.h \
     triangle.h \
     square.h
 
-FORMS    += mainwindow.ui
+FORMS    += mainwindow.ui \
+        figurepropertiesdialog.ui \
+        figurepropertiesdialog.ui

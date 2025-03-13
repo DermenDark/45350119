@@ -16,7 +16,7 @@ Ellipse::~Ellipse()
 void Ellipse::paint(QPainter *painter, const QStyleOptionGraphicsItem *option, QWidget *widget)
 {
     painter->setPen(QPen(Qt::black, 2));
-    painter->setBrush(Qt::yellow);  // Добавим цвет для наглядности
+    painter->setBrush(fillColor());  // Используем цвет заливки, заданный пользователем
 
     // Определяем прямоугольник, в который вписывается эллипс
     QRectF rect;

@@ -4,6 +4,7 @@
 Figure::Figure(QPointF point, QObject *parent) :
     QObject(parent), QGraphicsItem()
 {
+    setFlags(QGraphicsItem::ItemIsSelectable | QGraphicsItem::ItemIsMovable | QGraphicsItem::ItemIsFocusable);
     // Устанавливаем стартовую координату для отрисовки фигуры
     this->setStartPoint(mapFromScene(point));
     this->setEndPoint(mapFromScene(point));
@@ -26,7 +27,6 @@ QColor Figure::fillColor() const
 void Figure::setFillColor(const QColor &color)
 {
     m_fillColor = color;
-    emit fillColorChanged();
 }
 
 QRectF Figure::boundingRect() const
@@ -59,6 +59,14 @@ void Figure::setEndPoint(const QPointF point)
 {
     m_endPoint = mapFromScene(point);
     emit pointChanged();
+}
+void Figure::setRotation(int angle)
+{
+    // Устанавливаем точку поворота в центр фигуры
+    setTransformOriginPoint(boundingRect().center());
+
+    // Поворачиваем фигуру
+    QGraphicsItem::setRotation(angle);
 }
 
 QPointF Figure::startPoint() const
